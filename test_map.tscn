@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b4sa5ynuv8cir"]
+
+[ext_resource type="Script" uid="uid://23u1outqk32v" path="res://clickable.gd" id="1_4qc02"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eflb2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4qc02"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4wuf8"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="TestMap" type="Node3D" unique_id=1291864704]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=681165623]
+transform = Transform3D(3.3312325, 0, 0, 0, 1, 0, 0, 0, 3.3312325, 0, 0, 0)
+mesh = SubResource("PlaneMesh_eflb2")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1252141720]
+transform = Transform3D(1, 0, 0, 0, 0.91180503, 0.41062337, 0, -0.41062337, 0.91180503, 0, 1.3708295, 0.40825248)
+fov = 102.73439
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=791269437]
+transform = Transform3D(-0.7762947, -0.5833248, 0.23895288, -0.4495607, 0.77803504, 0.4388126, -0.44188404, 0.23322412, -0.8662246, 0, 1.4031758, 0)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=2015766889]
+transform = Transform3D(0.48363823, 0.62503046, -0.6127239, -0.4495607, 0.77803516, 0.43881252, 0.7509921, 0.0632298, 0.6572771, 0, 1.4031758, 0)
+light_color = Color(0.68450004, 0.81443906, 0.8925588, 1)
+light_energy = 0.1
+shadow_enabled = true
+
+[node name="Boite" type="Area3D" parent="." unique_id=1628409756]
+script = ExtResource("1_4qc02")
+metadata/_custom_type_script = "uid://23u1outqk32v"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Boite" unique_id=1185518256]
+transform = Transform3D(0.96731055, 0, 0, 0, 1, 0, 0, 0, 0.2901264, 0, 0.37711734, -0.7996713)
+mesh = SubResource("BoxMesh_4qc02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boite" unique_id=71964784]
+transform = Transform3D(0.96731055, 0, 0, 0, 1, 0, 0, 0, 0.2901264, 0, 0.37711734, -0.7996713)
+shape = SubResource("ConcavePolygonShape3D_4wuf8")
