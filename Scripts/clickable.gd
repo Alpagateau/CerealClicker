@@ -8,8 +8,12 @@ signal clicked
 
 var hovered : bool = false
 
+func _ready() -> void:
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
+
 func _process(_delta: float) -> void:
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if Input.is_action_just_pressed("LeftClick"):
 		if hovered:
 			clicked.emit()
 

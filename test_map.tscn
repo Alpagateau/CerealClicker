@@ -1,23 +1,30 @@
 [gd_scene format=3 uid="uid://b4sa5ynuv8cir"]
 
-[ext_resource type="Script" uid="uid://23u1outqk32v" path="res://clickable.gd" id="1_4qc02"]
+[ext_resource type="Script" uid="uid://23u1outqk32v" path="res://Scripts/clickable.gd" id="1_4qc02"]
+[ext_resource type="Script" uid="uid://dbgn0dx3d10tr" path="res://Scripts/Box.gd" id="1_4wuf8"]
+[ext_resource type="Script" uid="uid://c1g7yaxq66k2v" path="res://Scripts/collector.gd" id="3_s02eq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_eflb2"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_s02eq"]
+size = Vector3(0.9968338, 1.0273438, 0.33764648)
+
 [sub_resource type="BoxMesh" id="BoxMesh_4qc02"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4wuf8"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[sub_resource type="Environment" id="Environment_4wuf8"]
+background_mode = 1
+background_color = Color(0.42745098, 0.9098039, 1, 1)
+ambient_light_color = Color(0.42720786, 0.9096576, 1, 1)
 
 [node name="TestMap" type="Node3D" unique_id=1291864704]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=681165623]
-transform = Transform3D(3.3312325, 0, 0, 0, 1, 0, 0, 0, 3.3312325, 0, 0, 0)
+[node name="Plane" type="MeshInstance3D" parent="." unique_id=681165623]
+transform = Transform3D(3.3312325, 0, 0, 0, 1, 0, 0, 0, 3.3312325, 0, 0.019970775, 0)
 mesh = SubResource("PlaneMesh_eflb2")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1252141720]
-transform = Transform3D(1, 0, 0, 0, 0.91180503, 0.41062337, 0, -0.41062337, 0.91180503, 0, 1.3708295, 0.40825248)
-fov = 102.73439
+transform = Transform3D(1, 0, 0, 0, 0.91180503, 0.41062337, 0, -0.41062337, 0.91180503, 0, 1.6005871, 0.48042572)
+fov = 103.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=791269437]
 transform = Transform3D(-0.7762947, -0.5833248, 0.23895288, -0.4495607, 0.77803504, 0.4388126, -0.44188404, 0.23322412, -0.8662246, 0, 1.4031758, 0)
@@ -26,17 +33,31 @@ shadow_enabled = true
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=2015766889]
 transform = Transform3D(0.48363823, 0.62503046, -0.6127239, -0.4495607, 0.77803516, 0.43881252, 0.7509921, 0.0632298, 0.6572771, 0, 1.4031758, 0)
 light_color = Color(0.68450004, 0.81443906, 0.8925588, 1)
-light_energy = 0.1
+light_energy = 0.585
 shadow_enabled = true
 
-[node name="Boite" type="Area3D" parent="." unique_id=1628409756]
+[node name="Box" type="Node3D" parent="." unique_id=1934348202]
+script = ExtResource("1_4wuf8")
+
+[node name="Clickable" type="Area3D" parent="Box" unique_id=866864446]
 script = ExtResource("1_4qc02")
 metadata/_custom_type_script = "uid://23u1outqk32v"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Boite" unique_id=1185518256]
-transform = Transform3D(0.96731055, 0, 0, 0, 1, 0, 0, 0, 0.2901264, 0, 0.37711734, -0.7996713)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Box/Clickable" unique_id=725869744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00062298775, 0.5056233, 0.00061035156)
+shape = SubResource("BoxShape3D_s02eq")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Box" unique_id=1185518256]
+transform = Transform3D(0.96731055, 0, 0, 0, 1, 0, 0, 0, 0.2901264, 0, 0.4982075, 0)
 mesh = SubResource("BoxMesh_4qc02")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boite" unique_id=71964784]
-transform = Transform3D(0.96731055, 0, 0, 0, 1, 0, 0, 0, 0.2901264, 0, 0.37711734, -0.7996713)
-shape = SubResource("ConcavePolygonShape3D_4wuf8")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=755682054]
+environment = SubResource("Environment_4wuf8")
+
+[node name="Collector" type="Node3D" parent="." unique_id=2064487329]
+script = ExtResource("3_s02eq")
+collectables_directory = "res://Collectables/"
+
+[connection signal="box_empty" from="Box" to="Box" method="_on_box_empty"]
+[connection signal="box_empty" from="Box" to="Collector" method="_on_box_box_empty"]
+[connection signal="clicked" from="Box/Clickable" to="Box" method="_on_clickable_clicked"]

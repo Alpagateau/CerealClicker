@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://kygpqnutvdw"]
+
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_qkedk"]
+
+[resource]
+script = ExtResource("1_qkedk")
+name = "Baybled"
+metadata/_custom_type_script = "uid://c5scos8dmblg"

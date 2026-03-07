@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5bi4l8of8soo"]
 
-[ext_resource type="Script" uid="uid://23u1outqk32v" path="res://clickable.gd" id="1_o0qct"]
+[ext_resource type="Script" uid="uid://23u1outqk32v" path="res://Scripts/clickable.gd" id="1_o0qct"]
 
 [node name="Clickable" type="Area3D" unique_id=1620261779]
 script = ExtResource("1_o0qct")
