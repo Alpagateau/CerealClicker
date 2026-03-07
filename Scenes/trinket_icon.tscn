@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bfscw1ja3uphy"]
+
+[ext_resource type="Script" uid="uid://dajbufd88m1wh" path="res://Scripts/trinket_icon.gd" id="1_xjd3g"]
+[ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="2_tm8ab"]
+
+[node name="TrinketIcon" type="MarginContainer" unique_id=1519460399]
+offset_right = 128.0
+offset_bottom = 128.0
+script = ExtResource("1_xjd3g")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1093649658]
+layout_mode = 2
+texture = ExtResource("2_tm8ab")
+stretch_mode = 3
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=904653692]
+layout_mode = 2
+vertical = true
+
+[node name="CheckBox" type="CheckBox" parent="BoxContainer" unique_id=1910379917]
+layout_mode = 2

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://q5sem8ituomc"]
+
+[ext_resource type="PackedScene" uid="uid://dqfbj1o0jqk21" path="res://Models/Main.blend" id="1_ig7tw"]
+
+[node name="Main" unique_id=835413071 instance=ExtResource("1_ig7tw")]
+
+[node name="CerealBox" parent="." index="18" unique_id=781434585]
+visible = false

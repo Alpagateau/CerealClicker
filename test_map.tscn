@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://23u1outqk32v" path="res://Scripts/clickable.gd" id="1_4qc02"]
 [ext_resource type="Script" uid="uid://dbgn0dx3d10tr" path="res://Scripts/Box.gd" id="1_4wuf8"]
 [ext_resource type="Script" uid="uid://c1g7yaxq66k2v" path="res://Scripts/collector.gd" id="3_s02eq"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_eflb2"]
+[ext_resource type="Script" uid="uid://d35646jw4i8ia" path="res://inventory.gd" id="5_qgarv"]
+[ext_resource type="PackedScene" uid="uid://q5sem8ituomc" path="res://main.tscn" id="5_r0pc2"]
+[ext_resource type="PackedScene" uid="uid://fssdsjlya4dp" path="res://Scenes/inventory_tab.tscn" id="6_r0pc2"]
+[ext_resource type="PackedScene" uid="uid://bfscw1ja3uphy" path="res://Scenes/trinket_icon.tscn" id="7_ssfg1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s02eq"]
-size = Vector3(0.9968338, 1.0273438, 0.33764648)
+size = Vector3(0.34613037, 0.50439453, 0.117614746)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4qc02"]
 
@@ -15,28 +17,12 @@ size = Vector3(0.9968338, 1.0273438, 0.33764648)
 background_mode = 1
 background_color = Color(0.42745098, 0.9098039, 1, 1)
 ambient_light_color = Color(0.42720786, 0.9096576, 1, 1)
+ambient_light_energy = 0.5
 
 [node name="TestMap" type="Node3D" unique_id=1291864704]
 
-[node name="Plane" type="MeshInstance3D" parent="." unique_id=681165623]
-transform = Transform3D(3.3312325, 0, 0, 0, 1, 0, 0, 0, 3.3312325, 0, 0.019970775, 0)
-mesh = SubResource("PlaneMesh_eflb2")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1252141720]
-transform = Transform3D(1, 0, 0, 0, 0.91180503, 0.41062337, 0, -0.41062337, 0.91180503, 0, 1.6005871, 0.48042572)
-fov = 103.0
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=791269437]
-transform = Transform3D(-0.7762947, -0.5833248, 0.23895288, -0.4495607, 0.77803504, 0.4388126, -0.44188404, 0.23322412, -0.8662246, 0, 1.4031758, 0)
-shadow_enabled = true
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=2015766889]
-transform = Transform3D(0.48363823, 0.62503046, -0.6127239, -0.4495607, 0.77803516, 0.43881252, 0.7509921, 0.0632298, 0.6572771, 0, 1.4031758, 0)
-light_color = Color(0.68450004, 0.81443906, 0.8925588, 1)
-light_energy = 0.585
-shadow_enabled = true
-
 [node name="Box" type="Node3D" parent="." unique_id=1934348202]
+transform = Transform3D(-3.7855173e-08, 0.5, 0.8660254, 2.1855694e-08, 0.8660254, -0.5, -1, 0, -4.371139e-08, 0.7952912, 1, 0)
 script = ExtResource("1_4wuf8")
 
 [node name="Clickable" type="Area3D" parent="Box" unique_id=866864446]
@@ -44,11 +30,11 @@ script = ExtResource("1_4qc02")
 metadata/_custom_type_script = "uid://23u1outqk32v"
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Box/Clickable" unique_id=725869744]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00062298775, 0.5056233, 0.00061035156)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0065167267, 0.37946415, -0.03768897)
 shape = SubResource("BoxShape3D_s02eq")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Box" unique_id=1185518256]
-transform = Transform3D(0.96731055, 0, 0, 0, 1, 0, 0, 0, 0.2901264, 0, 0.4982075, 0)
+transform = Transform3D(0.34524792, 0, 0, 0, 0.4960619, 0, 0, 0, 0.09928672, 8.682776e-17, 0.37857935, -0.03896376)
 mesh = SubResource("BoxMesh_4qc02")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=755682054]
@@ -57,6 +43,28 @@ environment = SubResource("Environment_4wuf8")
 [node name="Collector" type="Node3D" parent="." unique_id=2064487329]
 script = ExtResource("3_s02eq")
 collectables_directory = "res://Collectables/"
+
+[node name="Inventory" type="Node3D" parent="." unique_id=1350627999]
+script = ExtResource("5_qgarv")
+
+[node name="Main2" parent="." unique_id=835413071 instance=ExtResource("5_r0pc2")]
+
+[node name="Control" type="Control" parent="." unique_id=2141813144]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="IntoryTab" parent="Control" unique_id=2010534918 node_paths=PackedStringArray("inv", "database") instance=ExtResource("6_r0pc2")]
+layout_mode = 1
+inv = NodePath("../../Inventory")
+database = NodePath("../../Collector")
+default_icon = ExtResource("7_ssfg1")
 
 [connection signal="box_empty" from="Box" to="Box" method="_on_box_empty"]
 [connection signal="box_empty" from="Box" to="Collector" method="_on_box_box_empty"]

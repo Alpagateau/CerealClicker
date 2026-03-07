@@ -10,6 +10,8 @@ class_name Collectable
 @export var active : bool = true
 @export_group("Scenes")
 @export var spawnable : PackedScene
+@export var icon : Texture2D
+
 
 func _to_string() -> String:
 	return "{0} : <{1} {2}> (active : {3})".format([name, rarity, type, active])

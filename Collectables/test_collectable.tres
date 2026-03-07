@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://cn4eaq3cet6hi"]
 
+[ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="1_qiy2y"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_uvtwa"]
 
 [resource]
 script = ExtResource("1_uvtwa")
 rarity = 1
 name = "TestCollectable"
+icon = ExtResource("1_qiy2y")
 metadata/_custom_type_script = "uid://c5scos8dmblg"

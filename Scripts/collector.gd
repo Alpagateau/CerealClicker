@@ -1,4 +1,5 @@
 extends Node3D
+class_name Collector
 
 @export var RarityWeight : Array[int] = [
 	4,
@@ -21,7 +22,7 @@ func _ready() -> void:
 	print_rarity(Constants.Rarity.UNCOMMON)
 	print_rarity(Constants.Rarity.RARE)
 	print_rarity(Constants.Rarity.LEGENDARY)
-	
+
 func print_rarity(r : Constants.Rarity):
 	if r in collectables.keys():
 		print(collectables[r])
@@ -80,5 +81,7 @@ func choose_rarity() -> Constants.Rarity:
 	return ra
 
 func _on_box_box_empty() -> void:
-	print(random_draw())
+	var c : Collectable = random_draw()
+	print(c)
+	$"../Inventory".add(c)
 	pass # Replace with function body.
