@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://byr6dx4hv7gis"]
+
+[ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="1_ps4jc"]
+[ext_resource type="Script" uid="uid://bhclqmjcjigv6" path="res://Scripts/collision_marker.gd" id="2_askr5"]
+
+[node name="Node3D" type="Sprite3D" unique_id=1919856262]
+texture = ExtResource("1_ps4jc")
+script = ExtResource("2_askr5")
+
+[node name="Timer" type="Timer" parent="." unique_id=37532245]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

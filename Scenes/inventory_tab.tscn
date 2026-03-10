@@ -33,6 +33,7 @@ layout_mode = 2
 metadata/_tab_index = 0
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/TabContainer/Common" unique_id=646890451]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

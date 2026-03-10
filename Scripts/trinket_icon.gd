@@ -9,3 +9,10 @@ class_name TrinketIcon
 	set(v):
 		$BoxContainer/CheckBox.button_pressed = v
 		unlocked = v
+@export var percentage : float = 50
+
+func update_size() -> void:
+	pass
+
+func _on_screen_change_size() -> void:
+	pass

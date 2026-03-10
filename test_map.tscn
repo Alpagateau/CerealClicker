@@ -16,9 +16,10 @@ size = Vector3(0.34613037, 0.50439453, 0.117614746)
 
 [sub_resource type="Environment" id="Environment_4wuf8"]
 background_mode = 1
-background_color = Color(0.42745098, 0.9098039, 1, 1)
+background_color = Color(1, 1, 1, 1)
+background_energy_multiplier = 0.4
 ambient_light_color = Color(0.42720786, 0.9096576, 1, 1)
-ambient_light_energy = 0.5
+ambient_light_energy = 0.2
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gqtbx"]
 
@@ -104,6 +105,16 @@ shape = SubResource("BoxShape3D_gqtbx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=221904987]
 transform = Transform3D(0.9392441, 0, -0.34324992, 0, 1, 0, 0.34324992, 0, 0.9392441, -3.3930373, 1.6185768, -1.5691869)
 shape = SubResource("BoxShape3D_bu3ac")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=97969598]
+transform = Transform3D(-0.39673144, 0, -0.9179347, 0, 1, 0, 0.9179347, 0, -0.39673144, -2.9, 1.83912, -1.4)
+light_energy = 5.273
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_normal_bias = 6.155
+shadow_blur = 6.39
+spot_range = 9.226
+spot_angle = 70.11
 
 [connection signal="box_empty" from="Box" to="Box" method="_on_box_empty"]
 [connection signal="box_empty" from="Box" to="Collector" method="_on_box_box_empty"]
