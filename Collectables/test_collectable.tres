@@ -2,10 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="1_qiy2y"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_uvtwa"]
+[ext_resource type="PackedScene" uid="uid://q5sem8ituomc" path="res://main.tscn" id="3_47d5h"]
 
 [resource]
 script = ExtResource("1_uvtwa")
 rarity = 1
 name = "TestCollectable"
+spawnable = ExtResource("3_47d5h")
 icon = ExtResource("1_qiy2y")
 metadata/_custom_type_script = "uid://c5scos8dmblg"

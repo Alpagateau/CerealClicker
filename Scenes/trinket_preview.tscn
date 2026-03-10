@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ci0cvgsqdfish"]
 
-[sub_resource type="TorusMesh" id="TorusMesh_j3s8h"]
+[ext_resource type="Script" uid="uid://4r05yurdkl86" path="res://Scripts/trinket_preview.gd" id="1_v3hc1"]
 
 [node name="Control" type="Control" unique_id=665047551]
 layout_mode = 3
@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_v3hc1")
 
 [node name="CenterContainer" type="VBoxContainer" parent="." unique_id=316674387]
 layout_mode = 1
@@ -51,7 +52,4 @@ size = Vector2i(256, 256)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1995762447]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=2102510329]
-transform = Transform3D(1, 0, 0, 0, 0.8242547, -0.5662193, 0, 0.5662193, 0.8242547, 0, 0, -2.1139016)
-mesh = SubResource("TorusMesh_j3s8h")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
