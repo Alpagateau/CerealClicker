@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://7p38fywpbhv6"]
+
+[ext_resource type="Script" uid="uid://bcfi26d6w77ri" path="res://Scripts/empty_box.gd" id="1_ktbf6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24dec"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_24dec"]
+material = SubResource("StandardMaterial3D_24dec")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ktbf6"]
+size = Vector3(0.34692383, 0.49438477, 0.10992432)
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=954904744]
+script = ExtResource("1_ktbf6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=397421610]
+transform = Transform3D(0.34524792, 0, 0, 0, 0.4960619, 0, 0, 0, 0.09928672, 0, 0, 0)
+mesh = SubResource("BoxMesh_24dec")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=732260068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010986328, 0.007446289, -0.00015258789)
+shape = SubResource("BoxShape3D_ktbf6")
+
+[node name="StaticTimer" type="Timer" parent="." unique_id=1987886665]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="StaticTimer" to="." method="_on_static_timer_timeout"]
