@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ci0cvgsqdfish"]
 
 [ext_resource type="Script" uid="uid://4r05yurdkl86" path="res://Scripts/trinket_preview.gd" id="1_v3hc1"]
+[ext_resource type="Resource" uid="uid://cn4eaq3cet6hi" path="res://Collectables/test_collectable.tres" id="2_dk67i"]
 
 [node name="Control" type="Control" unique_id=665047551]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v3hc1")
+trinket = ExtResource("2_dk67i")
 
 [node name="CenterContainer" type="VBoxContainer" parent="." unique_id=316674387]
 layout_mode = 1
@@ -48,8 +50,18 @@ layout_mode = 2
 [node name="SubViewport" type="SubViewport" parent="CenterContainer2/SubViewportContainer" unique_id=1666907795]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(256, 256)
+size = Vector2i(300, 300)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1995762447]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5405379)
+fov = 58.013622
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1817794152]
+transform = Transform3D(0.44916308, -0.5252324, 0.72276103, 0, 0.8089555, 0.58787, -0.8934498, -0.26404953, 0.3633529, 0.70246315, 0, 0.38041288)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1104868844]
+transform = Transform3D(0.7857381, 0.36363262, -0.50038683, 1.4533263e-10, 0.80895543, 0.58787006, 0.61855936, -0.46191195, 0.63562715, 0.70246315, 0, 0.38041288)
+light_energy = 0.1
+
+[connection signal="body_entered" from="CenterContainer2/SubViewportContainer/SubViewport/RigidBody3D" to="CenterContainer2/SubViewportContainer/SubViewport/RigidBody3D" method="_on_body_entered"]

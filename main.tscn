@@ -4,7 +4,7 @@
 
 [node name="Main" unique_id=835413071 instance=ExtResource("1_ig7tw")]
 
-[node name="Light" parent="." index="0" unique_id=1653865511]
+[node name="Light" parent="." index="0" unique_id=1642441970]
 light_color = Color(1, 0.63529414, 0, 1)
 light_energy = 4.0
 shadow_enabled = true
@@ -12,14 +12,14 @@ omni_range = 21.661951
 omni_attenuation = 1.0
 omni_shadow_mode = 0
 
-[node name="Cube" parent="." index="2" unique_id=601899680]
+[node name="Cube" parent="." index="2" unique_id=2119873256]
 visible = false
 
-[node name="CerealBox" parent="." index="18" unique_id=183709406]
+[node name="CerealBox" parent="." index="18" unique_id=781434585]
 visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="19" unique_id=1370090799]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5.218292, 0)
+transform = Transform3D(0.95081353, 0, 0.30976382, -0.30976382, -4.371139e-08, 0.95081353, 1.3540207e-08, -1, -4.1561382e-08, 0.523252, 3.8155894, 6.131409e-08)
 light_color = Color(1, 0.654902, 0, 1)
 shadow_enabled = true
 spot_range = 8.908498
