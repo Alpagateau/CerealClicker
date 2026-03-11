@@ -20,7 +20,7 @@ func _ready() -> void:
 	for k in keys:
 		for c in database.collectables[k]:
 			var new_icon : TrinketIcon = default_icon.instantiate() as TrinketIcon
-			new_icon.texture = (c as Collectable).icon
+			new_icon.obj = (c as Collectable).spawnable
 			grids[k].add_child(new_icon)
 			pass
 	

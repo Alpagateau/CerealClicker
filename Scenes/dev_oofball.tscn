@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ct48676xpm0d6"]
+
+[ext_resource type="PackedScene" uid="uid://40kesrgjewea" path="res://Models/dev_oofball.glb" id="1_iqkkh"]
+
+[node name="dev_oofball" type="Node3D" unique_id=1663301285]
+
+[node name="dev_oofball" parent="." unique_id=1262053296 instance=ExtResource("1_iqkkh")]
+transform = Transform3D(0.25, 0, 0, 0, 0.18919744, -0.16341458, 0, 0.16341458, 0.18919744, 0, 0, 0)

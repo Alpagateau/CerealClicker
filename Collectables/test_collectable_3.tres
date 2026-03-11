@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_47xej"]
 [ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="1_ft665"]
+[ext_resource type="PackedScene" uid="uid://ct48676xpm0d6" path="res://Scenes/dev_oofball.tscn" id="3_g5ubl"]
 
 [resource]
 script = ExtResource("1_47xej")
 type = 1
 name = "Baybled 2"
+spawnable = ExtResource("3_g5ubl")
 icon = ExtResource("1_ft665")
 metadata/_custom_type_script = "uid://c5scos8dmblg"

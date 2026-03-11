@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bfscw1ja3uphy"]
 
 [ext_resource type="Script" uid="uid://dajbufd88m1wh" path="res://Scripts/trinket_icon.gd" id="1_xjd3g"]
-[ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="2_tm8ab"]
 
 [node name="TrinketIcon" type="MarginContainer" unique_id=1519460399]
 custom_minimum_size = Vector2(100, 100)
@@ -20,10 +19,28 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_xjd3g")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1093649658]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1286970800]
 layout_mode = 2
-texture = ExtResource("2_tm8ab")
-expand_mode = 1
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1843178879]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(128, 128)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=307510745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.94620645)
+fov = 43.65056
+
+[node name="Root" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=286180425]
+transform = Transform3D(0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, 0.8660253, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=148622612]
+transform = Transform3D(1, 0, 0, 0, 0.94985753, 0.31268308, 0, -0.31268308, 0.94985753, 0, 0.47692305, 0.6989321)
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=1368223826]
+transform = Transform3D(0.19743183, 0.5390871, -0.8187831, -0.052292794, 0.8398254, 0.54033214, 0.97892094, -0.063862294, 0.19399863, -1.3794701, 0.6563568, 0.08151561)
 
 [node name="BoxContainer" type="BoxContainer" parent="." unique_id=904653692]
 layout_mode = 2

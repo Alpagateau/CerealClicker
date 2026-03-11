@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ci0cvgsqdfish"]
 
 [ext_resource type="Script" uid="uid://4r05yurdkl86" path="res://Scripts/trinket_preview.gd" id="1_v3hc1"]
-[ext_resource type="Resource" uid="uid://cn4eaq3cet6hi" path="res://Collectables/test_collectable.tres" id="2_dk67i"]
+[ext_resource type="Resource" uid="uid://kygpqnutvdw" path="res://Collectables/test_collectable_2.tres" id="2_dk67i"]
 
 [sub_resource type="Animation" id="Animation_rsynw"]
 length = 0.001
@@ -23,7 +23,7 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Node3D")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, -4.371139e-08, 1.8666667, 1, 0, 0.13052619, 0, 0.9914449)
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, -4.371139e-08, 1.9333333, 1, 0, 0.13052619, 0, 0.9914449)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rsynw"]
 _data = {

@@ -2,9 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="1_j0ajv"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_qkedk"]
+[ext_resource type="PackedScene" uid="uid://ct48676xpm0d6" path="res://Scenes/dev_oofball.tscn" id="3_p6urt"]
 
 [resource]
 script = ExtResource("1_qkedk")
-name = "Baybled"
+rarity = 3
+name = "Dev Oofball"
+tags = Array[String](["oofball", "gnarly", "bugged"])
+spawnable = ExtResource("3_p6urt")
 icon = ExtResource("1_j0ajv")
 metadata/_custom_type_script = "uid://c5scos8dmblg"
