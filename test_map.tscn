@@ -81,6 +81,7 @@ database = NodePath("../../Collector")
 default_icon = ExtResource("7_ssfg1")
 
 [node name="MusicPlayer" parent="Control" unique_id=1180631370 instance=ExtResource("8_bu3ac")]
+visible = false
 layout_mode = 1
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1541006655]
