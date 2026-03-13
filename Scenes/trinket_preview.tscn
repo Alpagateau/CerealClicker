@@ -2,6 +2,13 @@
 
 [ext_resource type="Script" uid="uid://4r05yurdkl86" path="res://Scripts/trinket_preview.gd" id="1_v3hc1"]
 [ext_resource type="Resource" uid="uid://kygpqnutvdw" path="res://Collectables/test_collectable_2.tres" id="2_dk67i"]
+[ext_resource type="Shader" uid="uid://14ij22oeiyfx" path="res://Shader/trinket_preview_halo.gdshader" id="3_rsynw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yy0i6"]
+shader = ExtResource("3_rsynw")
+shader_parameter/scale = 0.4
+shader_parameter/width_multiplier = 0.8
+shader_parameter/threshold = 0.5
 
 [sub_resource type="Animation" id="Animation_rsynw"]
 length = 0.001
@@ -63,6 +70,15 @@ size_flags_vertical = 3
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1941978948]
+material = SubResource("ShaderMaterial_yy0i6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="CenterContainer2" type="CenterContainer" parent="." unique_id=1853530199]
 layout_mode = 1
