@@ -7,6 +7,7 @@ class_name Collectable
 @export var rarity : Constants.Rarity
 @export var type : Constants.CollectableType
 @export var name : String
+@export_multiline var descr : String
 @export var tags : Array[String]
 @export var active : bool = true
 @export_group("Scenes")

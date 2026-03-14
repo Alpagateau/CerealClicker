@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://fssdsjlya4dp" path="res://Scenes/inventory_tab.tscn" id="6_r0pc2"]
 [ext_resource type="PackedScene" uid="uid://bfscw1ja3uphy" path="res://Scenes/trinket_icon.tscn" id="7_ssfg1"]
 [ext_resource type="PackedScene" uid="uid://b1iuxstcl0tbc" path="res://Scenes/music_player.tscn" id="8_bu3ac"]
+[ext_resource type="PackedScene" uid="uid://ci0cvgsqdfish" path="res://Scenes/trinket_preview.tscn" id="9_5354r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s02eq"]
 size = Vector3(0.34613037, 0.50439453, 0.117614746)
@@ -29,7 +30,7 @@ height = 2.109375
 radius = 1.0063477
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gqtbx"]
-size = Vector3(1.2165833, 1.6693115, 1.1693115)
+size = Vector3(1.1776276, 4.1256714, 1.9891663)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bu3ac"]
 size = Vector3(0.9569092, 1, 0.8646774)
@@ -74,14 +75,18 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 
-[node name="IntoryTab" parent="Control" unique_id=2010534918 node_paths=PackedStringArray("inv", "database") instance=ExtResource("6_r0pc2")]
+[node name="IntoryTab" parent="Control" unique_id=2010534918 node_paths=PackedStringArray("inv", "database", "tp") instance=ExtResource("6_r0pc2")]
 layout_mode = 1
 inv = NodePath("../../Inventory")
 database = NodePath("../../Collector")
 default_icon = ExtResource("7_ssfg1")
+tp = NodePath("../Control")
 
 [node name="MusicPlayer" parent="Control" unique_id=1180631370 instance=ExtResource("8_bu3ac")]
 visible = false
+layout_mode = 1
+
+[node name="Control" parent="Control" unique_id=665047551 instance=ExtResource("9_5354r")]
 layout_mode = 1
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1541006655]
@@ -105,6 +110,10 @@ shape = SubResource("CylinderShape3D_gqtbx")
 
 [node name="Table2" type="CollisionShape3D" parent="StaticBody3D" unique_id=464371289]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3902435, 0.33465576, -1.5530396)
+shape = SubResource("BoxShape3D_gqtbx")
+
+[node name="Table3" type="CollisionShape3D" parent="StaticBody3D" unique_id=2063401344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4097214, 1.5628357, 3.4056244)
 shape = SubResource("BoxShape3D_gqtbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=221904987]

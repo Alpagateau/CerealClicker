@@ -17,10 +17,12 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 0
 script = ExtResource("1_xjd3g")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1286970800]
 layout_mode = 2
+mouse_filter = 0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1843178879]
 own_world_3d = true
@@ -42,9 +44,16 @@ transform = Transform3D(1, 0, 0, 0, 0.94985753, 0.31268308, 0, -0.31268308, 0.94
 [node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=1368223826]
 transform = Transform3D(0.19743183, 0.5390871, -0.8187831, -0.052292794, 0.8398254, 0.54033214, 0.97892094, -0.063862294, 0.19399863, -1.3794701, 0.6563568, 0.08151561)
 
+[node name="SpotLight3D3" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=1183158419]
+transform = Transform3D(-0.34012532, -0.31688127, -0.88538194, 0.12046749, 0.9190751, -0.37521857, 0.932632, -0.23428106, -0.27442682, -0.7970997, -0.43953505, -0.08423385)
+light_color = Color(1, 0.6627451, 0.29411766, 1)
+
 [node name="BoxContainer" type="BoxContainer" parent="." unique_id=904653692]
 layout_mode = 2
 vertical = true
 
 [node name="CheckBox" type="CheckBox" parent="BoxContainer" unique_id=1910379917]
 layout_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="gui_input" from="SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]

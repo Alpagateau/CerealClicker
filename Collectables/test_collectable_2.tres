@@ -8,6 +8,8 @@
 script = ExtResource("1_qkedk")
 rarity = 3
 name = "Dev Oofball"
+descr = "A great little toy. 
+It seems like it was never quite finished..."
 tags = Array[String](["oofball", "gnarly", "bugged"])
 spawnable = ExtResource("3_p6urt")
 icon = ExtResource("1_j0ajv")

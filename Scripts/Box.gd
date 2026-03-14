@@ -17,7 +17,8 @@ func throw_box() -> void:
 	throw_box.global_position = $MeshInstance3D2.global_position
 	throw_box.global_rotation = $MeshInstance3D2.global_rotation
 	
-	throw_box.apply_impulse(Vector3(-5, 3 + randf() * 0.8, -3  + randf()*0.7 ) )
+	var side_multiplier : float = (1 if randf() > 0.5 else -1) * randf()
+	throw_box.apply_impulse(Vector3(-5, 3 + randf() * 0.8, (-3  + randf()*0.7) * side_multiplier ) )
 
 func _on_clickable_clicked() -> void:
 	print("Miam")

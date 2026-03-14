@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://m3arfughr0bs"]
+
+[ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="1_e6elo"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_2s0hp"]
+[ext_resource type="PackedScene" uid="uid://dgalt74qj50li" path="res://Scenes/rat.tscn" id="3_0jrdy"]
+
+[resource]
+script = ExtResource("2_2s0hp")
+rarity = 1
+name = "Rat the rat"
+descr = "It's a rat
+doing rat things
+in a rat world"
+spawnable = ExtResource("3_0jrdy")
+icon = ExtResource("1_e6elo")
+metadata/_custom_type_script = "uid://c5scos8dmblg"

@@ -7,7 +7,10 @@
 [resource]
 script = ExtResource("1_uvtwa")
 rarity = 1
-name = "TestCollectable"
+name = "Rat the rat"
+descr = "It's a rat
+doing rat things
+in a rat world"
 spawnable = ExtResource("3_47d5h")
 icon = ExtResource("1_qiy2y")
 metadata/_custom_type_script = "uid://c5scos8dmblg"

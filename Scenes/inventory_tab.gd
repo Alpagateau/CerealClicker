@@ -4,6 +4,7 @@ class_name InventoryTab
 @export var inv : Inventory
 @export var database : Collector
 @export var default_icon : PackedScene
+@export var tp : trinket_preview
 
 var opened : bool = false
 
@@ -20,7 +21,8 @@ func _ready() -> void:
 	for k in keys:
 		for c in database.collectables[k]:
 			var new_icon : TrinketIcon = default_icon.instantiate() as TrinketIcon
-			new_icon.obj = (c as Collectable).spawnable
+			new_icon.obj = c
+			new_icon.clicked.connect(show_preview)
 			grids[k].add_child(new_icon)
 			pass
 	
@@ -29,6 +31,11 @@ func _ready() -> void:
 	else:
 		close()
 	
+func show_preview(trinket : Collectable):
+	tp.trinket = trinket
+	tp.update_trinket()
+	tp.visible = true
+	pass
 
 func open():
 	$MarginContainer.visible = true
@@ -37,7 +44,8 @@ func open():
 func close():
 	$MarginContainer.visible = false
 	$Button.text = '>'
-	
+	tp.visible = false
+
 func _on_button_pressed() -> void:
 	opened = !opened 
 	if opened:
