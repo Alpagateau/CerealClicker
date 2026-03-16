@@ -3,6 +3,7 @@ shader_type canvas_item;
 uniform float scale = 5;
 uniform float width_multiplier = 2.6;
 uniform float threshold = 0.8;
+uniform vec4 albedo : source_color;
 
 void fragment() {
 	// Called for every pixel the material is visible on.
@@ -11,5 +12,5 @@ void fragment() {
 	
 	float baseline = (1.0 - d > threshold) ? 1.0 : 0.0;
 	float falloff = ((1.0 - d) - threshold)*4.0;
-	COLOR = vec4(baseline, baseline, falloff, falloff);
+	COLOR = vec4(baseline * albedo.r, baseline * albedo.g, baseline * albedo.b, falloff * albedo.a);
 }

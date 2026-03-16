@@ -14,7 +14,7 @@ signal clicked(r : Collectable)
 		obj = t
 @export var unlocked : bool : 
 	set(v):
-		$BoxContainer/CheckBox.button_pressed = v
+		$ColorRect.color.a = 0 if v else 1
 		unlocked = v
 @export var percentage : float = 50
 
@@ -27,5 +27,5 @@ func _on_screen_change_size() -> void:
 	pass
 
 func _on_gui_input(event: InputEvent) -> void:
-	if event.is_action_pressed("LeftClick"):
+	if event.is_action_pressed("LeftClick") and unlocked:
 		clicked.emit(obj)

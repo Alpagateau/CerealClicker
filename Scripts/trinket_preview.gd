@@ -1,11 +1,10 @@
-@tool
+
 extends Control
 class_name trinket_preview
 
 @export var trinket : Collectable
 var vis : Node3D = null
 
-@export_tool_button("Update Trinket", "Callable") var ut_action : Callable = update_trinket
 
 func update_trinket() -> void:
 	if vis != null:
@@ -18,7 +17,7 @@ func update_trinket() -> void:
 		$CenterContainer/VBoxContainer/RarityLabel.text = Constants.rarity2str(trinket.rarity)
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("Escape"):
+	if Input.is_action_just_pressed("Esc"):
 		visible = false
 
 func _on_gui_input(event: InputEvent) -> void:

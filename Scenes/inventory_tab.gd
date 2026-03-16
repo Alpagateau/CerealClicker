@@ -46,6 +46,14 @@ func close():
 	$Button.text = '>'
 	tp.visible = false
 
+func unlock(c : Collectable):
+	var grd : GridContainer = grids[c.rarity]
+	for ch in grd.get_children():
+		if ch is TrinketIcon:
+			ch = ch as TrinketIcon
+			if ch.obj == c:
+				ch.unlocked = true
+
 func _on_button_pressed() -> void:
 	opened = !opened 
 	if opened:

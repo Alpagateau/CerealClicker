@@ -48,12 +48,10 @@ transform = Transform3D(0.19743183, 0.5390871, -0.8187831, -0.052292794, 0.83982
 transform = Transform3D(-0.34012532, -0.31688127, -0.88538194, 0.12046749, 0.9190751, -0.37521857, 0.932632, -0.23428106, -0.27442682, -0.7970997, -0.43953505, -0.08423385)
 light_color = Color(1, 0.6627451, 0.29411766, 1)
 
-[node name="BoxContainer" type="BoxContainer" parent="." unique_id=904653692]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1182789775]
 layout_mode = 2
-vertical = true
-
-[node name="CheckBox" type="CheckBox" parent="BoxContainer" unique_id=1910379917]
-layout_mode = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="gui_input" from="SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]

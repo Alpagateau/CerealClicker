@@ -61,8 +61,10 @@ environment = SubResource("Environment_4wuf8")
 script = ExtResource("3_s02eq")
 collectables_directory = "res://Collectables/"
 
-[node name="Inventory" type="Node3D" parent="." unique_id=1350627999]
+[node name="Inventory" type="Node3D" parent="." unique_id=1350627999 node_paths=PackedStringArray("tk_preview", "tk_grd")]
 script = ExtResource("5_qgarv")
+tk_preview = NodePath("../Control/Control")
+tk_grd = NodePath("../Control/IntoryTab")
 
 [node name="Control" type="Control" parent="." unique_id=2141813144]
 layout_mode = 3
@@ -129,6 +131,12 @@ shadow_normal_bias = 6.155
 shadow_blur = 6.39
 spot_range = 9.226
 spot_angle = 70.11
+
+[node name="Camera" type="Camera3D" parent="." unique_id=2110018624]
+transform = Transform3D(-0.0037007332, -0.059316725, 0.9982323, -2.5760382e-06, 0.99823916, 0.05931712, -0.99999315, 0.00021694414, -0.003694415, 2.0056999, 1.769315, -0.01726622)
+fov = 35.9834
+near = 0.1
+far = 100.0
 
 [connection signal="box_empty" from="Box" to="Box" method="_on_box_empty"]
 [connection signal="box_empty" from="Box" to="Collector" method="_on_box_box_empty"]

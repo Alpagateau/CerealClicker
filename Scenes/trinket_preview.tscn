@@ -2,11 +2,19 @@
 
 [ext_resource type="Script" uid="uid://4r05yurdkl86" path="res://Scripts/trinket_preview.gd" id="1_v3hc1"]
 [ext_resource type="Shader" uid="uid://b3ubfndp718gm" path="res://Shader/band.gdshader" id="3_rsynw"]
+[ext_resource type="Shader" uid="uid://14ij22oeiyfx" path="res://Shader/trinket_preview_halo.gdshader" id="3_yy0i6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yy0i6"]
 shader = ExtResource("3_rsynw")
 shader_parameter/center_height = 0.8010000380475
 shader_parameter/albedo = Color(0.15294118, 0.15294118, 0.15294118, 0.77254903)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l37bu"]
+shader = ExtResource("3_yy0i6")
+shader_parameter/scale = 5.0
+shader_parameter/width_multiplier = 2.6
+shader_parameter/threshold = 0.8
+shader_parameter/albedo = Color(0.15686275, 0.15686275, 0.15686275, 1)
 
 [sub_resource type="Animation" id="Animation_rsynw"]
 length = 0.001
@@ -87,6 +95,15 @@ theme_override_font_sizes/font_size = 26
 text = "A great little toy. 
 It seems like it was never quite finished..."
 horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=191304178]
+material = SubResource("ShaderMaterial_l37bu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="CenterContainer2" type="CenterContainer" parent="." unique_id=1853530199]
 layout_mode = 1
