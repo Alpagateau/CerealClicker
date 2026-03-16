@@ -137,6 +137,10 @@ fov = 70.0
 [node name="SpotLight3D" type="SpotLight3D" parent="CenterContainer2/SubViewportContainer/SubViewport/Node3D" unique_id=191192556]
 transform = Transform3D(0.9310367, -0.23435481, 0.27972928, 0, 0.76653796, 0.64219904, -0.36492553, -0.5979109, 0.71367496, 0.44441468, 0.3883826, 0.9526361)
 
+[node name="SpotLight3D2" type="SpotLight3D" parent="CenterContainer2/SubViewportContainer/SubViewport/Node3D" unique_id=199544819]
+transform = Transform3D(0.9310368, -0.23435478, 0.27972928, 0.03735314, -0.70131075, -0.71187633, 0.3630088, 0.6732318, -0.64419204, -0.7423524, -0.7551419, -0.7097984)
+light_energy = 0.7
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1687398180]
 libraries/ = SubResource("AnimationLibrary_rsynw")
 autoplay = &"rotate"

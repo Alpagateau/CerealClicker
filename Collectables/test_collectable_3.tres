@@ -2,13 +2,17 @@
 
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_47xej"]
 [ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="1_ft665"]
-[ext_resource type="PackedScene" uid="uid://ct48676xpm0d6" path="res://Scenes/dev_oofball.tscn" id="3_g5ubl"]
+[ext_resource type="PackedScene" uid="uid://dqaa8spvays6e" path="res://Scenes/gd_oofball.tscn" id="3_g5ubl"]
 
 [resource]
 script = ExtResource("1_47xej")
+rarity = 2
 type = 1
-name = "Baybled 2"
-descr = "azertyuio"
+name = "Godot Oofball"
+descr = "Throw that robot on the wall
+it bounces, that's not all
+it's also a very nice friend 
+that you'll keep til the very end"
 spawnable = ExtResource("3_g5ubl")
 icon = ExtResource("1_ft665")
 metadata/_custom_type_script = "uid://c5scos8dmblg"
