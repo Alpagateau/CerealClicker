@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://t2lbusobgkda"]
+
+[ext_resource type="Script" uid="uid://dq1h22opbje0s" path="res://Scripts/arms.gd" id="1_0vnww"]
+[ext_resource type="PackedScene" uid="uid://dmypkwdednkex" path="res://Models/arms_rigged.glb" id="2_0vnww"]
+
+[node name="Arms" type="Node3D" unique_id=1790799430 node_paths=PackedStringArray("skeleton")]
+script = ExtResource("1_0vnww")
+skeleton = NodePath("")
+
+[node name="arms_rigged" parent="." unique_id=1670621909 instance=ExtResource("2_0vnww")]
+
+[node name="Skeleton3D" parent="arms_rigged/rig" parent_id_path=PackedInt32Array(1670621909, 1017877164) index="0" unique_id=1965655661]
+bones/5/rotation = Quaternion(-0.10306718, 0.003876868, 0.03738817, 0.99396396)
+bones/10/rotation = Quaternion(-5.1874764e-07, 0.0019438902, 2.5518287e-07, 0.99999815)
+bones/23/rotation = Quaternion(-0.021706287, 0.019870061, 0.00043159374, 0.99956685)
+bones/25/rotation = Quaternion(0.09196334, 0.93966365, -0.2735348, 0.18372199)
+bones/35/rotation = Quaternion(-0.10306718, -0.003876868, -0.03738817, 0.99396396)
+bones/40/rotation = Quaternion(-5.1874764e-07, -0.0019438902, -2.5518287e-07, 0.99999815)
+bones/53/rotation = Quaternion(-0.021706287, -0.019870061, -0.00043159374, 0.99956685)
+bones/55/rotation = Quaternion(-0.09196334, 0.93966365, -0.2735348, -0.18372199)
+
+[node name="Spoon_Bone" parent="arms_rigged" index="2" unique_id=1527653068]
+transform = Transform3D(0.00728899, -0.015594851, -0.058086637, -0.055244423, 0.021395054, -0.012676389, 0.02377624, 0.054492556, -0.011646369, -0.6926687, 1.2749532, -0.13211255)
+
+[node name="Flatbox" parent="arms_rigged" index="3" unique_id=1775369636]
+transform = Transform3D(0.16371472, -0.9711822, -0.17321235, -0.57859707, -0.23673934, 0.7804998, -0.79901373, -0.02755916, -0.60068095, -0.7975658, 0.70966864, 0.10223061)
+
+[editable path="arms_rigged"]

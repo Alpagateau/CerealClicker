@@ -10,9 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://bfscw1ja3uphy" path="res://Scenes/trinket_icon.tscn" id="7_ssfg1"]
 [ext_resource type="PackedScene" uid="uid://b1iuxstcl0tbc" path="res://Scenes/music_player.tscn" id="8_bu3ac"]
 [ext_resource type="PackedScene" uid="uid://ci0cvgsqdfish" path="res://Scenes/trinket_preview.tscn" id="9_5354r"]
+[ext_resource type="PackedScene" uid="uid://t2lbusobgkda" path="res://Scenes/arms.tscn" id="10_yobqo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s02eq"]
-size = Vector3(0.34613037, 0.50439453, 0.117614746)
+size = Vector3(0.34613037, 0.49401855, 0.096847534)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4qc02"]
 
@@ -38,20 +39,20 @@ size = Vector3(0.9569092, 1, 0.8646774)
 [node name="TestMap" type="Node3D" unique_id=1291864704]
 
 [node name="Box" type="Node3D" parent="." unique_id=1934348202]
-transform = Transform3D(-3.7855173e-08, 0.5, 0.8660254, 2.1855694e-08, 0.8660254, -0.5, -1, 0, -4.371139e-08, 0.7952912, 1, 0)
 script = ExtResource("1_4wuf8")
 empty_box = ExtResource("2_gqtbx")
 
 [node name="Clickable" type="Area3D" parent="Box" unique_id=866864446]
+transform = Transform3D(1.9106855e-15, -1, 4.371139e-08, -4.371139e-08, -4.371139e-08, -1, 1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_4qc02")
 metadata/_custom_type_script = "uid://23u1outqk32v"
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Box/Clickable" unique_id=725869744]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0065167267, 0.37946415, -0.03768897)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00651673, 8.583069e-06, 0.0018999577)
 shape = SubResource("BoxShape3D_s02eq")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Box" unique_id=1185518256]
-transform = Transform3D(0.34524792, 0, 0, 0, 0.4960619, 0, 0, 0, 0.09928672, 8.682776e-17, 0.37857935, -0.03896376)
+transform = Transform3D(1.8862274e-15, -0.49606195, 4.3399604e-09, -1.5091269e-08, -2.1683556e-08, -0.09928672, 0.34524792, 0, -4.339961e-09, 0, 0, 0)
 mesh = SubResource("BoxMesh_4qc02")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=755682054]
@@ -90,6 +91,11 @@ layout_mode = 1
 
 [node name="Control" parent="Control" unique_id=665047551 instance=ExtResource("9_5354r")]
 layout_mode = 1
+
+[node name="Arms" parent="." unique_id=1790799430 node_paths=PackedStringArray("box", "in_hand") instance=ExtResource("10_yobqo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.7863841, 0, 0)
+box = NodePath("../Box")
+in_hand = NodePath("../Box")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1541006655]
 
@@ -133,7 +139,7 @@ spot_range = 9.226
 spot_angle = 70.11
 
 [node name="Camera" type="Camera3D" parent="." unique_id=2110018624]
-transform = Transform3D(-0.0037007332, -0.059316725, 0.9982323, -2.5760382e-06, 0.99823916, 0.05931712, -0.99999315, 0.00021694414, -0.003694415, 2.0056999, 1.769315, -0.01726622)
+transform = Transform3D(-0.0037007332, -0.05931673, 0.99823236, -2.5760382e-06, 0.9982392, 0.059317123, -0.99999315, 0.00021694537, -0.0036943697, 2.0056999, 1.769315, -0.01726622)
 fov = 35.9834
 near = 0.1
 far = 100.0

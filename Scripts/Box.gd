@@ -2,9 +2,11 @@ extends Node3D
 class_name Box
 
 signal box_empty
+signal eating
 
-@export var capacity : int = 30
+@export var capacity : int = 90
 var filling : int
+@export var can_eat : bool
 @export var bitesize : int = 16
 @export var empty_box : PackedScene
 
@@ -26,7 +28,8 @@ func _on_clickable_clicked() -> void:
 	if filling > 0:
 		filling -= bitesize
 		if filling <= 0:
-			
 			throw_box()
 			filling = capacity
 			box_empty.emit()
+		else:
+			eating.emit()

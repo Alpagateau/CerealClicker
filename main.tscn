@@ -1,10 +1,40 @@
 [gd_scene format=3 uid="uid://q5sem8ituomc"]
 
 [ext_resource type="PackedScene" uid="uid://dqfbj1o0jqk21" path="res://Models/Main.blend" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://b4mpmwjqinfsr" path="res://Models/Textures/wall.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cdnkg0mc3ad3c" path="res://Models/Textures/wood.png" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://4eptqi6eru7m" path="res://Models/Textures/cathode.png" id="4_7mycd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_texture = ExtResource("2_1bvp3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
+albedo_texture = ExtResource("2_1bvp3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+albedo_texture = ExtResource("2_1bvp3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4c57u"]
+albedo_texture = ExtResource("3_lquwl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efxa6"]
+albedo_texture = ExtResource("3_lquwl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dg77c"]
+albedo_texture = ExtResource("4_7mycd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ycdy4"]
+albedo_texture = ExtResource("3_lquwl")
 
 [node name="Main" unique_id=835413071 instance=ExtResource("1_ig7tw")]
 
-[node name="Light" parent="." index="0" unique_id=1642441970]
+[node name="Wall_001" parent="." index="0" unique_id=1429939447]
+material_override = SubResource("StandardMaterial3D_272bh")
+
+[node name="Wall_002" parent="." index="1" unique_id=623749743]
+material_override = SubResource("StandardMaterial3D_5vw27")
+
+[node name="Light" parent="." index="2" unique_id=1695345911]
 light_color = Color(1, 0.63529414, 0, 1)
 light_energy = 4.0
 shadow_enabled = true
@@ -12,16 +42,28 @@ omni_range = 21.661951
 omni_attenuation = 1.0
 omni_shadow_mode = 0
 
-[node name="Camera" parent="." index="1" unique_id=1107865897]
+[node name="Camera" parent="." index="3" unique_id=217773389]
 visible = false
 
-[node name="Cube" parent="." index="2" unique_id=2119873256]
+[node name="Wall" parent="." index="6" unique_id=1786511783]
+material_override = SubResource("StandardMaterial3D_kek77")
+
+[node name="Table" parent="." index="7" unique_id=1135260588]
+material_override = SubResource("StandardMaterial3D_4c57u")
+
+[node name="TVStand" parent="." index="8" unique_id=1022471082]
+material_override = SubResource("StandardMaterial3D_efxa6")
+
+[node name="TV" parent="." index="9" unique_id=2071285881]
+material_override = SubResource("StandardMaterial3D_dg77c")
+
+[node name="Bookshelf" parent="." index="10" unique_id=953171194]
+material_override = SubResource("StandardMaterial3D_ycdy4")
+
+[node name="CerealBox" parent="." index="13" unique_id=1181582040]
 visible = false
 
-[node name="CerealBox" parent="." index="18" unique_id=781434585]
-visible = false
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." index="19" unique_id=1370090799]
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="14" unique_id=1370090799]
 transform = Transform3D(0.95081353, 0, 0.30976382, -0.30976382, -4.371139e-08, 0.95081353, 1.3540207e-08, -1, -4.1561382e-08, 0.523252, 3.8155894, 6.131409e-08)
 light_color = Color(1, 0.654902, 0, 1)
 shadow_enabled = true
