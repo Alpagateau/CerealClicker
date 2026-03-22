@@ -6,53 +6,32 @@ class_name InventoryTab
 @export var default_icon : PackedScene
 @export var tp : trinket_preview
 
+@export var custom_tab : CustomTabView
+
 var opened : bool = false
 
-@onready var grids : Array[Control] = [
-	$MarginContainer/TabContainer/Common/CenterContainer/GridContainer,
-	$MarginContainer/TabContainer/Uncommon/CenterContainer/GridContainer,
-	$MarginContainer/TabContainer/Rare/CenterContainer/GridContainer,
-	$MarginContainer/TabContainer/Legendary/CenterContainer/GridContainer
-]
-
 func _ready() -> void:
-	#Read inventory
-	var keys = database.collectables.keys()
-	for k in keys:
-		for c in database.collectables[k]:
-			var new_icon : TrinketIcon = default_icon.instantiate() as TrinketIcon
-			new_icon.obj = c
-			new_icon.clicked.connect(show_preview)
-			grids[k].add_child(new_icon)
-			pass
-	
+	custom_tab.inv = inv 
+	custom_tab.database = database 
+	custom_tab.default_icon = default_icon 
+	custom_tab.tp = tp
 	if opened:
 		open()
 	else:
 		close()
+	custom_tab.setup_ready()
 	
-func show_preview(trinket : Collectable):
-	tp.trinket = trinket
-	tp.update_trinket()
-	tp.visible = true
-	pass
 
 func open():
-	$MarginContainer.visible = true
+	#$MarginContainer.visible = true
+	$MarginContainer/SubViewportContainer.visible = true
 	$Button.text = '<'
 
 func close():
-	$MarginContainer.visible = false
+	#$MarginContainer.visible = false
+	$MarginContainer/SubViewportContainer.visible = false
 	$Button.text = '>'
 	tp.visible = false
-
-func unlock(c : Collectable):
-	var grd : GridContainer = grids[c.rarity]
-	for ch in grd.get_children():
-		if ch is TrinketIcon:
-			ch = ch as TrinketIcon
-			if ch.obj == c:
-				ch.unlocked = true
 
 func _on_button_pressed() -> void:
 	opened = !opened 

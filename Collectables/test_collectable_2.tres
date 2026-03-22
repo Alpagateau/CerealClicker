@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_qkedk")
-rarity = 3
+rarity = 2
 name = "Dev Oofball"
 descr = "A great little toy. 
 It seems like it was never quite finished..."

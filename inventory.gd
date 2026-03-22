@@ -11,7 +11,7 @@ func add(c : Collectable):
 		inv += [c]
 		tk_preview.visible = true
 		tk_preview.trinket = c
-		tk_grd.unlock(c)
+		tk_grd.custom_tab.unlock(c) # To Do
 		tk_preview.clicks_to_quit = 2
 		tk_preview.update_trinket()
 

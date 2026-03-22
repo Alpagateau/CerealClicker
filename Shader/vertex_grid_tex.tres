@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bj05j1ku0ebyj"]
+
+[ext_resource type="Shader" uid="uid://b1uv4cbpsbejk" path="res://Shader/standard_vertx.gdshader" id="1_0gfur"]
+[ext_resource type="Texture2D" uid="uid://chiy2l8coecpm" path="res://oofball_godot.png" id="2_jy7gy"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_0gfur")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_jy7gy")
+shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/scale = 0.02

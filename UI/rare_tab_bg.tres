@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://bmw7pg8w86l5m"]
+
+[ext_resource type="Texture2D" uid="uid://dvcgj7dcsiqx4" path="res://UI/UI_thebiggestspritesheetthatseverlived.png" id="1_xuraq"]
+
+[resource]
+atlas = ExtResource("1_xuraq")
+region = Rect2(224, 0, 224, 128)

@@ -14,7 +14,7 @@ signal clicked(r : Collectable)
 		obj = t
 @export var unlocked : bool : 
 	set(v):
-		$ColorRect.color.a = 0 if v else 1
+		$SubViewportContainer.material.set("shader_parameter/hidden", !v)
 		unlocked = v
 @export var percentage : float = 50
 

@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://fssdsjlya4dp"]
 
 [ext_resource type="Script" uid="uid://5y2f2r7q5cpy" path="res://Scenes/inventory_tab.gd" id="1_52mpa"]
+[ext_resource type="PackedScene" uid="uid://c73hr8x671k44" path="res://UI/custom_tab_view.tscn" id="5_dmhrg"]
 
-[node name="Control" type="Control" unique_id=2010534918]
+[node name="Control" type="Control" unique_id=2010534918 node_paths=PackedStringArray("custom_tab")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("1_52mpa")
+custom_tab = NodePath("MarginContainer/SubViewportContainer/SubViewport/CustomTabView")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=175311195]
 layout_mode = 1
@@ -19,82 +21,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="TabContainer" type="TabContainer" parent="MarginContainer" unique_id=1501304056]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer" unique_id=1540555052]
 layout_mode = 2
-current_tab = 0
+mouse_behavior_recursive = 2
+mouse_target = true
 
-[node name="Common" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1305006650]
-layout_mode = 2
-metadata/_tab_index = 0
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/SubViewportContainer" unique_id=1025085118]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+canvas_item_default_texture_filter = 0
+physics_object_picking = true
+gui_embed_subwindows = true
+size = Vector2i(1024, 1024)
+render_target_update_mode = 4
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/TabContainer/Common" unique_id=646890451]
-clip_contents = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/TabContainer/Common/CenterContainer" unique_id=1981770686]
-layout_mode = 2
-columns = 7
-
-[node name="Uncommon" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1765846835]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/TabContainer/Uncommon" unique_id=587148955]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/TabContainer/Uncommon/CenterContainer" unique_id=35275664]
-layout_mode = 2
-columns = 7
-
-[node name="Rare" type="TabBar" parent="MarginContainer/TabContainer" unique_id=1124499653]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/TabContainer/Rare" unique_id=1572783862]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/TabContainer/Rare/CenterContainer" unique_id=179774714]
-layout_mode = 2
-columns = 7
-
-[node name="Legendary" type="TabBar" parent="MarginContainer/TabContainer" unique_id=2015741088]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 3
-
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/TabContainer/Legendary" unique_id=1929262314]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/TabContainer/Legendary/CenterContainer" unique_id=1817194333]
-layout_mode = 2
-columns = 7
+[node name="CustomTabView" parent="MarginContainer/SubViewportContainer/SubViewport" unique_id=680653263 instance=ExtResource("5_dmhrg")]
+position = Vector2(574, 510)
+scale = Vector2(4, 4)
 
 [node name="Button" type="Button" parent="." unique_id=234783931]
 layout_mode = 1

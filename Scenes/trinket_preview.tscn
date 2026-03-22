@@ -127,19 +127,19 @@ render_target_update_mode = 4
 transform = Transform3D(0.7857381, 0.36363262, -0.50038683, 1.4533263e-10, 0.80895543, 0.58787006, 0.61855936, -0.46191195, 0.63562715, 0.70246315, 0, 0.38041288)
 light_energy = 0.1
 
-[node name="Node3D" type="Node3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1945714917]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-
-[node name="Camera3D" type="Camera3D" parent="CenterContainer2/SubViewportContainer/SubViewport/Node3D" unique_id=1995762447]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.2766368)
+[node name="Camera3D" type="Camera3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1995762447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.2766367)
 fov = 70.0
 
-[node name="SpotLight3D" type="SpotLight3D" parent="CenterContainer2/SubViewportContainer/SubViewport/Node3D" unique_id=191192556]
-transform = Transform3D(0.9310367, -0.23435481, 0.27972928, 0, 0.76653796, 0.64219904, -0.36492553, -0.5979109, 0.71367496, 0.44441468, 0.3883826, 0.9526361)
+[node name="SpotLight3D" type="SpotLight3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=191192556]
+transform = Transform3D(0.9310368, -0.23435478, 0.2797293, 0, 0.76653796, 0.642199, -0.36492553, -0.5979108, 0.713675, 0.44441465, 0.3883826, 0.95263606)
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="CenterContainer2/SubViewportContainer/SubViewport/Node3D" unique_id=199544819]
-transform = Transform3D(0.9310368, -0.23435478, 0.27972928, 0.03735314, -0.70131075, -0.71187633, 0.3630088, 0.6732318, -0.64419204, -0.7423524, -0.7551419, -0.7097984)
+[node name="SpotLight3D2" type="SpotLight3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=199544819]
+transform = Transform3D(0.9310367, -0.23435475, 0.2797293, 0.03735314, -0.7013108, -0.71187633, 0.36300877, 0.6732318, -0.6441922, -0.74235237, -0.7551419, -0.70979834)
 light_energy = 0.7
+
+[node name="Node3D" type="Node3D" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1945714917]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1687398180]
 libraries/ = SubResource("AnimationLibrary_rsynw")

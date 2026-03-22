@@ -13,7 +13,7 @@ func update_trinket() -> void:
 		vis.queue_free()
 	if trinket != null:
 		vis = trinket.spawnable.instantiate()
-		$CenterContainer2/SubViewportContainer/SubViewport.add_child(vis)
+		$CenterContainer2/SubViewportContainer/SubViewport/Node3D.add_child(vis)
 		$CenterContainer/VBoxContainer/ItemName.text = trinket.name
 		$CenterContainer/VBoxContainer2/DescriptionLabel.text = trinket.descr
 		$CenterContainer/VBoxContainer/RarityLabel.text = Constants.rarity2str(trinket.rarity)

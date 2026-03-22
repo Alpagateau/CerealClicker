@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://bfscw1ja3uphy"]
 
 [ext_resource type="Script" uid="uid://dajbufd88m1wh" path="res://Scripts/trinket_icon.gd" id="1_xjd3g"]
+[ext_resource type="Texture2D" uid="uid://lie8fxiee8hi" path="res://UI/common_icon.tres" id="2_xjd3g"]
+[ext_resource type="Shader" uid="uid://btxxwj05m35nk" path="res://Scenes/trinket_icon.gdshader" id="3_tm8ab"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_826ni"]
+resource_local_to_scene = true
+shader = ExtResource("3_tm8ab")
+shader_parameter/hidden = true
 
 [node name="TrinketIcon" type="MarginContainer" unique_id=1519460399]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(16, 16)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -15,20 +22,23 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 mouse_filter = 0
 script = ExtResource("1_xjd3g")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1286970800]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=816533320]
 layout_mode = 2
-mouse_filter = 0
+texture = ExtResource("2_xjd3g")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1286970800]
+material = SubResource("ShaderMaterial_826ni")
+layout_mode = 2
+mouse_filter = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1843178879]
 own_world_3d = true
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(128, 128)
+size = Vector2i(32, 32)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=307510745]
@@ -49,6 +59,7 @@ transform = Transform3D(-0.34012532, -0.31688127, -0.88538194, 0.12046749, 0.919
 light_color = Color(1, 0.6627451, 0.29411766, 1)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1182789775]
+visible = false
 layout_mode = 2
 mouse_filter = 1
 color = Color(0, 0, 0, 1)

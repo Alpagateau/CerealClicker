@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://dqaa8spvays6e"]
 
 [ext_resource type="PackedScene" uid="uid://40kesrgjewea" path="res://Models/dev_oofball.glb" id="1_p8wnf"]
-[ext_resource type="Texture2D" uid="uid://chiy2l8coecpm" path="res://oofball_godot.png" id="2_r7eew"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4rrx"]
-albedo_texture = ExtResource("2_r7eew")
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="2_r7eew"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avk2u"]
 
@@ -14,7 +11,7 @@ albedo_texture = ExtResource("2_r7eew")
 transform = Transform3D(0.25, 0, 0, 0, 0.18919744, -0.16341458, 0, 0.16341458, 0.18919744, 0, 0, 0)
 
 [node name="Cube" parent="dev_oofball" index="0" unique_id=1017186834]
-material_override = SubResource("StandardMaterial3D_m4rrx")
+material_override = ExtResource("2_r7eew")
 surface_material_override/0 = SubResource("StandardMaterial3D_avk2u")
 
 [editable path="dev_oofball"]
