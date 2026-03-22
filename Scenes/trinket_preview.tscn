@@ -14,7 +14,7 @@ shader = ExtResource("3_yy0i6")
 shader_parameter/scale = 5.0
 shader_parameter/width_multiplier = 2.6
 shader_parameter/threshold = 0.8
-shader_parameter/albedo = Color(0.15686275, 0.15686275, 0.15686275, 1)
+shader_parameter/albedo = Color(1, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_rsynw"]
 length = 0.001
@@ -96,7 +96,7 @@ text = "A great little toy.
 It seems like it was never quite finished..."
 horizontal_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=191304178]
+[node name="Halo" type="ColorRect" parent="." unique_id=191304178]
 material = SubResource("ShaderMaterial_l37bu")
 layout_mode = 1
 anchors_preset = 15

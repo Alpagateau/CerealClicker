@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c611dp4h8bd3n"]
+
+[ext_resource type="Script" uid="uid://cwwp1d4pxwil7" path="res://Scenes/day_cycle.gd" id="1_irvno"]
+
+[node name="DayCycle" type="Node3D" unique_id=514222879]
+script = ExtResource("1_irvno")
+
+[node name="Timer" type="Timer" parent="." unique_id=1275377742]
+wait_time = 30.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

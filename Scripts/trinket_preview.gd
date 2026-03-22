@@ -4,7 +4,9 @@ class_name trinket_preview
 
 @export var trinket : Collectable
 var vis : Node3D = null
-
+@export var clicks_to_quit : int = 1
+var remaining_clicks : int = 0
+var was_hidden : bool = true
 
 func update_trinket() -> void:
 	if vis != null:
@@ -17,10 +19,16 @@ func update_trinket() -> void:
 		$CenterContainer/VBoxContainer/RarityLabel.text = Constants.rarity2str(trinket.rarity)
 
 func _process(_delta: float) -> void:
+	if was_hidden && visible:
+		remaining_clicks = clicks_to_quit
 	if Input.is_action_just_pressed("Esc"):
 		visible = false
+	was_hidden = not visible
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("LeftClick"):
-		visible = false
+		remaining_clicks -= 1
+		if remaining_clicks <= 0:
+			visible = false
+			clicks_to_quit = 1
 	pass # Replace with function body.
