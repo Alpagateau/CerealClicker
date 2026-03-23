@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dbgn0dx3d10tr" path="res://Scripts/Box.gd" id="1_4wuf8"]
 [ext_resource type="PackedScene" uid="uid://7p38fywpbhv6" path="res://Scenes/empty_box.tscn" id="2_gqtbx"]
 [ext_resource type="Script" uid="uid://c1g7yaxq66k2v" path="res://Scripts/collector.gd" id="3_s02eq"]
+[ext_resource type="AudioStream" uid="uid://d160l0nydbbkg" path="res://freesound_community-cartoon-bite-39234.mp3" id="4_dj26u"]
 [ext_resource type="Script" uid="uid://d35646jw4i8ia" path="res://inventory.gd" id="5_qgarv"]
 [ext_resource type="PackedScene" uid="uid://q5sem8ituomc" path="res://main.tscn" id="5_r0pc2"]
 [ext_resource type="PackedScene" uid="uid://fssdsjlya4dp" path="res://Scenes/inventory_tab.tscn" id="6_r0pc2"]
@@ -106,10 +107,15 @@ layout_mode = 1
 combination_file = "res://Combinations"
 inv = NodePath("../../Inventory")
 
-[node name="Arms" parent="." unique_id=1790799430 node_paths=PackedStringArray("box", "in_hand") instance=ExtResource("10_yobqo")]
+[node name="Arms" parent="." unique_id=1790799430 node_paths=PackedStringArray("box", "in_hand", "audio") instance=ExtResource("10_yobqo")]
 transform = Transform3D(-4.371139e-08, 0.15205438, -0.98837215, 0, 0.98837215, 0.15205438, 1, 6.6465087e-09, -4.3203116e-08, 1.6859668, 0.009706233, -4.389378e-09)
 box = NodePath("../Box")
 in_hand = NodePath("../Box")
+audio = NodePath("AudioStreamPlayer3D")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Arms" unique_id=9747029]
+transform = Transform3D(-4.3711385e-08, -4.440892e-16, 1, 0.15205438, 0.98837215, 6.6465082e-09, -0.98837215, 0.15205438, -4.320312e-08, 3.4373937e-08, 1.8628467, 0.98062336)
+stream = ExtResource("4_dj26u")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1541006655]
 

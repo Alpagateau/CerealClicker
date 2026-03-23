@@ -4,6 +4,7 @@ extends Node3D
 @export var box : Box
 @export var in_hand : Node3D
 @export var skeleton : Skeleton3D
+@export var audio : AudioStreamPlayer3D
 
 func _ready() -> void:
 	anim_player.speed_scale = 2
@@ -22,6 +23,7 @@ func _process(delta: float) -> void:
 
 func _on_box_eating():
 	anim_player.play("Eating")
+	$AudioStreamPlayer3D.play()
 
 func _on_box_empty():
 	anim_player.play("Readying")
