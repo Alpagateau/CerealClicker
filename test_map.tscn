@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bfscw1ja3uphy" path="res://Scenes/trinket_icon.tscn" id="7_ssfg1"]
 [ext_resource type="PackedScene" uid="uid://b1iuxstcl0tbc" path="res://Scenes/music_player.tscn" id="8_bu3ac"]
 [ext_resource type="PackedScene" uid="uid://ci0cvgsqdfish" path="res://Scenes/trinket_preview.tscn" id="9_5354r"]
-[ext_resource type="PackedScene" uid="uid://bbd3fovm21skx" path="res://Scenes/end_day_ui.tscn" id="10_1wgsg"]
+[ext_resource type="PackedScene" path="res://Scenes/end_day_ui.tscn" id="10_1wgsg"]
 [ext_resource type="PackedScene" uid="uid://t2lbusobgkda" path="res://Scenes/arms.tscn" id="10_yobqo"]
 [ext_resource type="PackedScene" uid="uid://c611dp4h8bd3n" path="res://Scenes/day_cycle.tscn" id="12_dj26u"]
 
