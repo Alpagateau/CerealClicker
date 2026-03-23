@@ -58,11 +58,26 @@ transform = Transform3D(0.19743183, 0.5390871, -0.8187831, -0.052292794, 0.83982
 transform = Transform3D(-0.34012532, -0.31688127, -0.88538194, 0.12046749, 0.9190751, -0.37521857, 0.932632, -0.23428106, -0.27442682, -0.7970997, -0.43953505, -0.08423385)
 light_color = Color(1, 0.6627451, 0.29411766, 1)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1182789775]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2017313581]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=800118670]
+layout_mode = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=142639401]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1098148467]
 visible = false
 layout_mode = 2
-mouse_filter = 1
-color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "4"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="gui_input" from="SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]

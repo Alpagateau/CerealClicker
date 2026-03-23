@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://cc74lykoaqeqi" path="res://icon.svg" id="1_deelo"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_3v01i"]
-[ext_resource type="PackedScene" uid="uid://ct48676xpm0d6" path="res://Scenes/dev_oofball.tscn" id="3_ciaay"]
+[ext_resource type="PackedScene" uid="uid://dqaa8spvays6e" path="res://Scenes/gd_oofball.tscn" id="3_deelo"]
 
 [resource]
 script = ExtResource("2_3v01i")
 type = 1
-name = "Baybled 2"
-descr = "azertyuio"
-spawnable = ExtResource("3_ciaay")
+name = "Godot Oofball"
+descr = "Is it a self insert ???"
+spawnable = ExtResource("3_deelo")
 icon = ExtResource("1_deelo")
 metadata/_custom_type_script = "uid://c5scos8dmblg"

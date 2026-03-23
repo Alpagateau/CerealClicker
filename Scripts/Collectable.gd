@@ -14,6 +14,8 @@ class_name Collectable
 @export var spawnable : PackedScene
 @export var icon : Texture2D
 
+var count : int
+
 
 func _to_string() -> String:
 	return "{0} : <{1} {2}> (active : {3})".format([name, rarity, type, active])

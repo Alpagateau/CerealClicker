@@ -15,10 +15,12 @@ signal clicked(r : Collectable)
 @export var unlocked : bool : 
 	set(v):
 		$SubViewportContainer.material.set("shader_parameter/hidden", !v)
+		$MarginContainer/VBoxContainer/HBoxContainer/Label.visible = v
+		count = count+1 if v else 0
+		$MarginContainer/VBoxContainer/HBoxContainer/Label.text = str(count)
 		unlocked = v
-@export var percentage : float = 50
 
-
+@export var count : int = 0
 
 func update_size() -> void:
 	pass

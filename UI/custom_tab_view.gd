@@ -17,6 +17,8 @@ var current_tab : int = 0
 	$Rare/Control/CenterContainer/rgrid
 ]
 
+@export var icon_bg : Array[Texture2D]
+
 func setup_ready() -> void:
 	#Read inventory
 	var keys = database.collectables.keys()
@@ -25,6 +27,7 @@ func setup_ready() -> void:
 			var new_icon : TrinketIcon = default_icon.instantiate() as TrinketIcon
 			new_icon.obj = c
 			new_icon.clicked.connect(show_preview)
+			(new_icon.get_child(0) as TextureRect).texture = icon_bg[k]
 			grids[k].add_child(new_icon)
 
 func update_current_tab(idx : int):

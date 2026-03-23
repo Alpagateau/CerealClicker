@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://bfscw1ja3uphy" path="res://Scenes/trinket_icon.tscn" id="7_ssfg1"]
 [ext_resource type="PackedScene" uid="uid://b1iuxstcl0tbc" path="res://Scenes/music_player.tscn" id="8_bu3ac"]
 [ext_resource type="PackedScene" uid="uid://ci0cvgsqdfish" path="res://Scenes/trinket_preview.tscn" id="9_5354r"]
+[ext_resource type="PackedScene" uid="uid://bbd3fovm21skx" path="res://Scenes/end_day_ui.tscn" id="10_1wgsg"]
 [ext_resource type="PackedScene" uid="uid://t2lbusobgkda" path="res://Scenes/arms.tscn" id="10_yobqo"]
+[ext_resource type="PackedScene" uid="uid://c611dp4h8bd3n" path="res://Scenes/day_cycle.tscn" id="12_dj26u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s02eq"]
 size = Vector3(2.0302048, 2.0776215, 2.05894)
@@ -92,6 +94,12 @@ layout_mode = 1
 [node name="Control" parent="Control" unique_id=665047551 instance=ExtResource("9_5354r")]
 layout_mode = 1
 
+[node name="EndDayUI" parent="Control" unique_id=258286538 node_paths=PackedStringArray("inv") instance=ExtResource("10_1wgsg")]
+visible = false
+layout_mode = 1
+combination_file = "res://Combinations"
+inv = NodePath("../../Inventory")
+
 [node name="Arms" parent="." unique_id=1790799430 node_paths=PackedStringArray("box", "in_hand") instance=ExtResource("10_yobqo")]
 transform = Transform3D(-4.371139e-08, 0.15205438, -0.98837215, 0, 0.98837215, 0.15205438, 1, 6.6465087e-09, -4.3203116e-08, 1.6859668, 0.009706233, -4.389378e-09)
 box = NodePath("../Box")
@@ -143,6 +151,8 @@ transform = Transform3D(-0.0037007332, -0.05931673, 0.99823236, -2.5760382e-06, 
 fov = 35.9834
 near = 0.1
 far = 100.0
+
+[node name="DayCycle" parent="." unique_id=514222879 instance=ExtResource("12_dj26u")]
 
 [connection signal="box_empty" from="Box" to="Box" method="_on_box_empty"]
 [connection signal="box_empty" from="Box" to="Collector" method="_on_box_box_empty"]
