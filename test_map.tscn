@@ -40,6 +40,12 @@ size = Vector3(0.9569092, 1, 0.8646774)
 
 [node name="TestMap" type="Node3D" unique_id=1291864704]
 
+[node name="Camera" type="Camera3D" parent="." unique_id=2110018624]
+transform = Transform3D(-0.0037007332, -0.05931673, 0.99823236, -2.5760382e-06, 0.9982392, 0.059317123, -0.99999315, 0.00021694537, -0.0036943697, 9.213538, 2.1875288, -0.01726622)
+fov = 35.9834
+near = 0.1
+far = 100.0
+
 [node name="Box" type="Node3D" parent="." unique_id=1934348202]
 script = ExtResource("1_4wuf8")
 empty_box = ExtResource("2_gqtbx")
@@ -145,12 +151,6 @@ shadow_normal_bias = 6.155
 shadow_blur = 6.39
 spot_range = 9.226
 spot_angle = 70.11
-
-[node name="Camera" type="Camera3D" parent="." unique_id=2110018624]
-transform = Transform3D(-0.0037007332, -0.05931673, 0.99823236, -2.5760382e-06, 0.9982392, 0.059317123, -0.99999315, 0.00021694537, -0.0036943697, 2.0056999, 1.769315, -0.01726622)
-fov = 35.9834
-near = 0.1
-far = 100.0
 
 [node name="DayCycle" parent="." unique_id=514222879 instance=ExtResource("12_dj26u")]
 
