@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dyb07xyejojnu"]
+
+[sub_resource type="Animation" id="Animation_684qc"]
+resource_name = "Boing"
+length = 3.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 4
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668, 0.46666667, 0.8, 1.3666667, 2.5333333, 3.9666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.2042771838760873, -1.1693705988362009, 0.8726646259971648, -0.8203047484373349, 0.5235987755982988, -0.2617993877991494, 0.08726646259971647, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xme1q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o0ave"]
+_data = {
+&"Boing": SubResource("Animation_684qc"),
+&"RESET": SubResource("Animation_xme1q")
+}
+
+[node name="RotatingLabel" type="Label" unique_id=1671622265]
+offset_right = 91.0
+offset_bottom = 23.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 25
+text = "Hello Wolrd"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=509481311]
+libraries/ = SubResource("AnimationLibrary_o0ave")
+autoplay = &"Boing"
