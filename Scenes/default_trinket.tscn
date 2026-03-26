@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://fdcvuhptvk4b"]
+
+[ext_resource type="Script" uid="uid://vu3y1g7opc4b" path="res://Scripts/default_trinket.gd" id="1_duwvn"]
+
+[node name="DefaultTrinket" type="Node3D" unique_id=508200677]
+script = ExtResource("1_duwvn")

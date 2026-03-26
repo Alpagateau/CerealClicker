@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dxqel466fofuf"]
+
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_d3ind"]
+[ext_resource type="PackedScene" uid="uid://c6p2knxsgjw6y" path="res://Scenes/trinkets/oofball_brazil.tscn" id="2_jv7g4"]
+
+[resource]
+script = ExtResource("1_d3ind")
+name = "Brazil Oofball"
+descr = "Is being mentioned ! "
+spawnable = ExtResource("2_jv7g4")
+metadata/_custom_type_script = "uid://c5scos8dmblg"

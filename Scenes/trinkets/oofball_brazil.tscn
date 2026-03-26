@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://dqaa8spvays6e"]
+[gd_scene format=3 uid="uid://c6p2knxsgjw6y"]
 
-[ext_resource type="PackedScene" uid="uid://40kesrgjewea" path="res://Models/dev_oofball.glb" id="1_p8wnf"]
-[ext_resource type="Texture2D" uid="uid://chiy2l8coecpm" path="res://oofball_godot.png" id="2_r7eew"]
+[ext_resource type="PackedScene" uid="uid://rxthnd52tnga" path="res://Models/oofball_brazil.glb" id="1_lib3b"]
+[ext_resource type="Texture2D" uid="uid://y5sfkwyun45q" path="res://Models/oofball_brazil_oofball_brazil.png" id="3_apv8n"]
 
-[sub_resource type="Shader" id="Shader_m4rrx"]
+[sub_resource type="Shader" id="Shader_yge1m"]
 resource_local_to_scene = true
 code = "// NOTE: Shader automatically converted from Godot Engine 4.6.1.stable's StandardMaterial3D.
 
@@ -55,12 +55,12 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_avk2u"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u3rvm"]
 resource_local_to_scene = true
 render_priority = 0
-shader = SubResource("Shader_m4rrx")
+shader = SubResource("Shader_yge1m")
 shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/texture_albedo = ExtResource("2_r7eew")
+shader_parameter/texture_albedo = ExtResource("3_apv8n")
 shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
 shader_parameter/point_size = 1.0
 shader_parameter/roughness = 1.0
@@ -73,15 +73,12 @@ shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
 shader_parameter/scale = 0.02
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avk2u"]
+[node name="Brazil" type="Node3D" unique_id=745681051]
 
-[node name="dev_oofball" type="Node3D" unique_id=1663301285]
+[node name="oofball_brazil" parent="." unique_id=1670645301 instance=ExtResource("1_lib3b")]
+transform = Transform3D(0.25, 0, 0, 0, 0.21650635, -0.125, 0, 0.125, 0.21650635, 0, 0, 0)
 
-[node name="dev_oofball" parent="." unique_id=1262053296 instance=ExtResource("1_p8wnf")]
-transform = Transform3D(0.25, 0, 0, 0, 0.18919744, -0.16341458, 0, 0.16341458, 0.18919744, 0, 0, 0)
+[node name="Cube" parent="oofball_brazil" index="0" unique_id=1325239891]
+material_override = SubResource("ShaderMaterial_u3rvm")
 
-[node name="Cube" parent="dev_oofball" index="0" unique_id=1017186834]
-material_override = SubResource("ShaderMaterial_avk2u")
-surface_material_override/0 = SubResource("StandardMaterial3D_avk2u")
-
-[editable path="dev_oofball"]
+[editable path="oofball_brazil"]

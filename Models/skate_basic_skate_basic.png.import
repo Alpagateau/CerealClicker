@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvcgj7dcsiqx4"
-path.s3tc="res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"
+uid="uid://dgulehwe3esed"
+path.s3tc="res://.godot/imported/skate_basic_skate_basic.png-f5f4e91243b6da16de26f60a13abe81d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "dd5cf5d713f4bfb68a885c71a1251f5c"
+}
 
 [deps]
 
-source_file="res://UI/UI_thebiggestspritesheetthatseverlived.png"
-dest_files=["res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"]
+source_file="res://Models/skate_basic_skate_basic.png"
+dest_files=["res://.godot/imported/skate_basic_skate_basic.png-f5f4e91243b6da16de26f60a13abe81d.s3tc.ctex"]
 
 [params]
 

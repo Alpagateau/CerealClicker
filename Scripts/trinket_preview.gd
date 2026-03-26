@@ -11,8 +11,10 @@ var was_hidden : bool = true
 func update_trinket() -> void:
 	if vis != null:
 		vis.queue_free()
+		vis = null
 	if trinket != null:
-		vis = trinket.spawnable.instantiate()
+		vis = DefaultTrinket.new()
+		vis.trinket = trinket
 		$CenterContainer2/SubViewportContainer/SubViewport/Node3D.add_child(vis)
 		$CenterContainer/VBoxContainer/ItemName.text = trinket.name
 		$CenterContainer/VBoxContainer2/DescriptionLabel.text = trinket.descr

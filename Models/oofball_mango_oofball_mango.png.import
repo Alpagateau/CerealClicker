@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvcgj7dcsiqx4"
-path.s3tc="res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"
+uid="uid://ctwv6mo477xqi"
+path.s3tc="res://.godot/imported/oofball_mango_oofball_mango.png-c25a897688afcd3e5f06dffd85fc6656.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "d81a4d1cf172cc8175569977d7951fa9"
+}
 
 [deps]
 
-source_file="res://UI/UI_thebiggestspritesheetthatseverlived.png"
-dest_files=["res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"]
+source_file="res://Models/oofball_mango_oofball_mango.png"
+dest_files=["res://.godot/imported/oofball_mango_oofball_mango.png-c25a897688afcd3e5f06dffd85fc6656.s3tc.ctex"]
 
 [params]
 

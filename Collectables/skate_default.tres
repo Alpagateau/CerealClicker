@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dx1vqqdcg8trv"]
+
+[ext_resource type="PackedScene" uid="uid://w23672i1ybrm" path="res://Models/skate_basic.glb" id="1_guk0i"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_xxtvw"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_lbt0f"]
+[ext_resource type="Texture2D" uid="uid://dgulehwe3esed" path="res://Models/skate_basic_skate_basic.png" id="4_42u8i"]
+
+[resource]
+script = ExtResource("1_xxtvw")
+name = "Skateboard"
+descr = "ahrjtkhngbdvscdn"
+model = ExtResource("1_guk0i")
+shader = ExtResource("3_lbt0f")
+texture = ExtResource("4_42u8i")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

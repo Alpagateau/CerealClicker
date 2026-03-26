@@ -9,7 +9,8 @@ signal clicked(r : Collectable)
 		for c in cs:
 			c.queue_free()
 		if t != null:
-			var nt = t.spawnable.instantiate()
+			var nt = DefaultTrinket.new()
+			nt.trinket = t
 			$SubViewportContainer/SubViewport/Root.add_child(nt)
 		obj = t
 @export var unlocked : bool : 

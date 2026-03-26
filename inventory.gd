@@ -7,7 +7,7 @@ var inv : Dictionary
 @export var tk_grd : InventoryTab
 
 func add(c : Collectable):
-	tk_preview.visible = (c not in inv.keys())
+	tk_preview.visible = true
 	inv[c] = 1 if (c not in inv.keys()) else inv[c] + 1
 	tk_preview.trinket = c
 	tk_grd.custom_tab.unlock(c) # To Do

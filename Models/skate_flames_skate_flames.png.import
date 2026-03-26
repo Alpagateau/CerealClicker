@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvcgj7dcsiqx4"
-path.s3tc="res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"
+uid="uid://ddyxybk4soqs5"
+path.s3tc="res://.godot/imported/skate_flames_skate_flames.png-bc18c23013808e8a5ddccec3367dfec4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "697ccd52ff9bba315f99d5875005bb1b"
+}
 
 [deps]
 
-source_file="res://UI/UI_thebiggestspritesheetthatseverlived.png"
-dest_files=["res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"]
+source_file="res://Models/skate_flames_skate_flames.png"
+dest_files=["res://.godot/imported/skate_flames_skate_flames.png-bc18c23013808e8a5ddccec3367dfec4.s3tc.ctex"]
 
 [params]
 

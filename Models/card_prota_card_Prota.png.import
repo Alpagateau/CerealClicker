@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvcgj7dcsiqx4"
-path.s3tc="res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"
+uid="uid://d2qegtbhlno5l"
+path.s3tc="res://.godot/imported/card_prota_card_Prota.png-5feea054a94abc58da79309eee12c8d9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "16f3c5f699f6f24164603c888756a108"
+}
 
 [deps]
 
-source_file="res://UI/UI_thebiggestspritesheetthatseverlived.png"
-dest_files=["res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"]
+source_file="res://Models/card_prota_card_Prota.png"
+dest_files=["res://.godot/imported/card_prota_card_Prota.png-5feea054a94abc58da79309eee12c8d9.s3tc.ctex"]
 
 [params]
 

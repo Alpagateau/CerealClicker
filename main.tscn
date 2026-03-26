@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://en1hiuy8ik8n" path="res://Models/Textures/floor.png" id="2_272bh"]
 [ext_resource type="Texture2D" uid="uid://cdnkg0mc3ad3c" path="res://Models/Textures/wood.png" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://4eptqi6eru7m" path="res://Models/Textures/cathode.png" id="4_7mycd"]
-[ext_resource type="Texture2D" uid="uid://b1l2l03ix7nxo" path="res://Models/Textures/TVstand.png" id="5_5vw27"]
+[ext_resource type="Shader" uid="uid://b1uv4cbpsbejk" path="res://Shader/standard_vertx.gdshader" id="4_kek77"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="6_5vw27"]
 [ext_resource type="Texture2D" uid="uid://boanoacvmn7qw" path="res://Models/Textures/bookshelf.png" id="7_kek77"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
@@ -33,17 +34,44 @@ albedo_texture = ExtResource("2_5vw27")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efxa6"]
 albedo_texture = ExtResource("2_272bh")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
-albedo_texture = ExtResource("2_1bvp3")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4c57u"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_kek77")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_1bvp3")
+shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/scale = 0.02
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4c57u"]
 albedo_texture = ExtResource("3_lquwl")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ycdy4"]
-albedo_texture = ExtResource("5_5vw27")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dg77c"]
-albedo_texture = ExtResource("4_7mycd")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kek77"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_kek77")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_7mycd")
+shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/scale = 0.02
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w48qg"]
 albedo_texture = ExtResource("7_kek77")
@@ -53,7 +81,7 @@ albedo_texture = ExtResource("3_lquwl")
 
 [node name="Main" unique_id=835413071 instance=ExtResource("1_ig7tw")]
 
-[node name="Light" parent="." index="0" unique_id=886414393]
+[node name="Light" parent="." index="0" unique_id=495761497]
 light_color = Color(1, 0.63529414, 0, 1)
 light_energy = 4.0
 shadow_enabled = true
@@ -61,54 +89,50 @@ omni_range = 21.661951
 omni_attenuation = 1.0
 omni_shadow_mode = 0
 
-<<<<<<< HEAD
-[node name="Camera" parent="." index="1" unique_id=765616494]
-visible = false
-
-[node name="cap" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(1895599413) index="0" unique_id=28165574]
+[node name="cap" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(381591058) index="0" unique_id=295141961]
 material_override = SubResource("StandardMaterial3D_5vw27")
 
-[node name="head" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(1895599413) index="1" unique_id=487909203]
+[node name="head" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(381591058) index="1" unique_id=2040912955]
 surface_material_override/0 = SubResource("StandardMaterial3D_vivmo")
 
-[node name="rim" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(1895599413) index="2" unique_id=120406736]
+[node name="rim" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(381591058) index="2" unique_id=119631137]
 material_override = SubResource("StandardMaterial3D_2cqfq")
 
-[node name="robe" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(1895599413) index="3" unique_id=1080829709]
+[node name="robe" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(381591058) index="3" unique_id=1511027676]
 material_override = SubResource("StandardMaterial3D_yaehf")
 
-[node name="scarf1" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(1895599413) index="4" unique_id=1052377088]
+[node name="scarf1" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(381591058) index="4" unique_id=1381540449]
 material_override = SubResource("StandardMaterial3D_074og")
 
-[node name="scarf2" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(1895599413) index="5" unique_id=1079247035]
+[node name="scarf2" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(381591058) index="5" unique_id=313095268]
 transform = Transform3D(0.11537663, 0.27769068, -0.037285805, -0.26909083, 0.12105696, 0.06891618, 0.07805425, 0.006870941, 0.29270184, 0.29060555, -0.12215805, 0.15496397)
 material_override = SubResource("StandardMaterial3D_cegan")
 
-[node name="stand" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(1895599413) index="6" unique_id=1455546017]
+[node name="stand" parent="Trnkt_Prota" parent_id_path=PackedInt32Array(381591058) index="6" unique_id=1626661666]
 material_override = SubResource("StandardMaterial3D_82xsv")
 
-[node name="Floor" parent="." index="3" unique_id=568916995]
+[node name="Floor" parent="." index="3" unique_id=2013949290]
 material_override = SubResource("StandardMaterial3D_efxa6")
 
-[node name="Wall" parent="." index="4" unique_id=1281193954]
-material_override = SubResource("StandardMaterial3D_kek77")
+[node name="Wall" parent="." index="4" unique_id=193532393]
+material_override = SubResource("ShaderMaterial_4c57u")
 
-[node name="Table" parent="." index="5" unique_id=1653994021]
+[node name="Table" parent="." index="5" unique_id=2066169899]
 material_override = SubResource("StandardMaterial3D_4c57u")
 
-[node name="TVStand" parent="." index="6" unique_id=487200758]
-material_override = SubResource("StandardMaterial3D_ycdy4")
+[node name="TVStand" parent="." index="6" unique_id=1873956585]
+material_override = ExtResource("6_5vw27")
 
-[node name="TV" parent="." index="7" unique_id=1355710206]
-material_override = SubResource("StandardMaterial3D_dg77c")
+[node name="TV" parent="." index="7" unique_id=24008429]
+material_override = SubResource("ShaderMaterial_kek77")
 
-[node name="Bookshelf" parent="." index="8" unique_id=575545531]
+[node name="Bookshelf" parent="." index="8" unique_id=699144343]
 material_override = SubResource("StandardMaterial3D_w48qg")
 
-[node name="Shelf" parent="." index="9" unique_id=1069274947]
+[node name="Shelf" parent="." index="9" unique_id=1103079588]
 material_override = SubResource("StandardMaterial3D_getpj")
 
-[node name="CerealBox" parent="." index="11" unique_id=1601481614]
+[node name="CerealBox" parent="." index="11" unique_id=1306297094]
 visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="12" unique_id=1370090799]

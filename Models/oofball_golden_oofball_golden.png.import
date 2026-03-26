@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvcgj7dcsiqx4"
-path.s3tc="res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"
+uid="uid://m48jmqfa7s1g"
+path.s3tc="res://.godot/imported/oofball_golden_oofball_golden.png-cbbf616fd7628c7093a59b103470f220.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "384af56805f7671d99c847b1c3c6a934"
+}
 
 [deps]
 
-source_file="res://UI/UI_thebiggestspritesheetthatseverlived.png"
-dest_files=["res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"]
+source_file="res://Models/oofball_golden_oofball_golden.png"
+dest_files=["res://.godot/imported/oofball_golden_oofball_golden.png-cbbf616fd7628c7093a59b103470f220.s3tc.ctex"]
 
 [params]
 

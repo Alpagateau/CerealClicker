@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvcgj7dcsiqx4"
-path.s3tc="res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"
+uid="uid://bv3367xnw8xlj"
+path.s3tc="res://.godot/imported/skate_mcfly_skate_mcfly.png-f34e3800faad6bbc6ff8880ca7806767.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "98d4f41dc374740ee3b5d6ec254f09c4"
+}
 
 [deps]
 
-source_file="res://UI/UI_thebiggestspritesheetthatseverlived.png"
-dest_files=["res://.godot/imported/UI_thebiggestspritesheetthatseverlived.png-e5b80907310152205904fee87c2e48a7.s3tc.ctex"]
+source_file="res://Models/skate_mcfly_skate_mcfly.png"
+dest_files=["res://.godot/imported/skate_mcfly_skate_mcfly.png-f34e3800faad6bbc6ff8880ca7806767.s3tc.ctex"]
 
 [params]
 
