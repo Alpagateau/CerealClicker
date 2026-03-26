@@ -61,6 +61,7 @@ omni_range = 21.661951
 omni_attenuation = 1.0
 omni_shadow_mode = 0
 
+<<<<<<< HEAD
 [node name="Camera" parent="." index="1" unique_id=765616494]
 visible = false
 
