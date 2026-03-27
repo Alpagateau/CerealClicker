@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://1pha0ss4ohuc"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_orxoj"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_pbom5"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_pwjqd"]
+[ext_resource type="Texture2D" uid="uid://dra0q74hb8otm" path="res://Models/oofball_cyan_oofball_cyan.png" id="4_orxoj"]
+
+[resource]
+script = ExtResource("2_pbom5")
+name = "Cyan Oofball"
+descr = "Looks like a bus seat now that I think about it..."
+model = ExtResource("1_orxoj")
+shader = ExtResource("3_pwjqd")
+texture = ExtResource("4_orxoj")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

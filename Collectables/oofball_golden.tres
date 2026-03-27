@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://d1fpripn4eeci"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_j8qb4"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_ay0x3"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_53ypk"]
+[ext_resource type="Texture2D" uid="uid://c2oaudbgdwkp5" path="res://Models/Textures/Trinkets/oofball_golden.png" id="4_j8qb4"]
+
+[resource]
+script = ExtResource("2_ay0x3")
+name = "Golden Oofball"
+descr = "This one goes faster I swear"
+model = ExtResource("1_j8qb4")
+shader = ExtResource("3_53ypk")
+texture = ExtResource("4_j8qb4")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

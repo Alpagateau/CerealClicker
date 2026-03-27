@@ -1,14 +1,16 @@
 [gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dcnn0xxg17a0q"]
 
-[ext_resource type="PackedScene" uid="uid://gkwswt36vemg" path="res://Models/oofball_france.glb" id="1_33stb"]
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_33stb"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_vpoqm"]
 [ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_jxfrl"]
 [ext_resource type="Texture2D" uid="uid://1vxpgqe6vd3y" path="res://Models/oofball_france_oofball_france.png" id="4_3ixd1"]
 
 [resource]
 script = ExtResource("1_vpoqm")
-name = "France Offball"
-descr = "ferfzadeabtrzazrfe"
+name = "France Oofball"
+descr = "Can't believe they allow them* in internationnal sport events...
+
+*us"
 model = ExtResource("1_33stb")
 shader = ExtResource("3_jxfrl")
 texture = ExtResource("4_3ixd1")

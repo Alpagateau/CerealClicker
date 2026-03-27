@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca8nx4e8os6rh"
-path="res://.godot/imported/keychain_orangehorse.png-ebcad6a39de5f887c3d92b4f505bbf31.ctex"
+uid="uid://bt5rk2mcwoq24"
+path="res://.godot/imported/card_NotJanus.png-f0423a69f17bae20a6f9b167cafc75f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/Textures/Trinkets/keychain_orangehorse.png"
-dest_files=["res://.godot/imported/keychain_orangehorse.png-ebcad6a39de5f887c3d92b4f505bbf31.ctex"]
+source_file="res://Models/Textures/Trinkets/card_NotJanus.png"
+dest_files=["res://.godot/imported/card_NotJanus.png-f0423a69f17bae20a6f9b167cafc75f0.ctex"]
 
 [params]
 

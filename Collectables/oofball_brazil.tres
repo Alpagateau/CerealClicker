@@ -1,11 +1,17 @@
 [gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dxqel466fofuf"]
 
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_7e0ya"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_d3ind"]
-[ext_resource type="PackedScene" uid="uid://c6p2knxsgjw6y" path="res://Scenes/trinkets/oofball_brazil.tscn" id="2_jv7g4"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_m4bqo"]
+[ext_resource type="Texture2D" uid="uid://djbxd37x54lyv" path="res://Models/Textures/Trinkets/oofball_brazil.png" id="4_wwcbr"]
 
 [resource]
 script = ExtResource("1_d3ind")
 name = "Brazil Oofball"
-descr = "Is being mentioned ! "
-spawnable = ExtResource("2_jv7g4")
+descr = "Is being mentionned ! "
+model = ExtResource("1_7e0ya")
+shader = ExtResource("3_m4bqo")
+texture = ExtResource("4_wwcbr")
+position = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

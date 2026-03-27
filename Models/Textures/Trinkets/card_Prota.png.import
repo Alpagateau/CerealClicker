@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drf075cu0ebig"
-path="res://.godot/imported/keychain_springonion.png-98532d97c5c0d8e8a26478ea41abe8fa.ctex"
+uid="uid://fwemn7iutq2"
+path="res://.godot/imported/card_Prota.png-9331a2facfd6ddf198370e08cd595fc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/Textures/Trinkets/keychain_springonion.png"
-dest_files=["res://.godot/imported/keychain_springonion.png-98532d97c5c0d8e8a26478ea41abe8fa.ctex"]
+source_file="res://Models/Textures/Trinkets/card_Prota.png"
+dest_files=["res://.godot/imported/card_Prota.png-9331a2facfd6ddf198370e08cd595fc2.ctex"]
 
 [params]
 

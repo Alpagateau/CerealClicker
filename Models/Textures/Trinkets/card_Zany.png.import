@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qbotnvkxj20f"
-path="res://.godot/imported/keychain_pinkhorse.png-0a02b5c2e000dfebb766ec485d639f9d.ctex"
+uid="uid://dm0y48jerke8g"
+path="res://.godot/imported/card_Zany.png-037d34bfe921d832c18f56d4146f167c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/Textures/Trinkets/keychain_pinkhorse.png"
-dest_files=["res://.godot/imported/keychain_pinkhorse.png-0a02b5c2e000dfebb766ec485d639f9d.ctex"]
+source_file="res://Models/Textures/Trinkets/card_Zany.png"
+dest_files=["res://.godot/imported/card_Zany.png-037d34bfe921d832c18f56d4146f167c.ctex"]
 
 [params]
 

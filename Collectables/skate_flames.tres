@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://d0700hxxtc2bq"]
+
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_8kc8p"]
+[ext_resource type="PackedScene" uid="uid://b6u8rafopuicc" path="res://Models/trinket_skate.glb" id="1_klbhc"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_lhqbx"]
+[ext_resource type="Texture2D" uid="uid://ddyxybk4soqs5" path="res://Models/skate_flames_skate_flames.png" id="4_swrg3"]
+
+[resource]
+script = ExtResource("1_8kc8p")
+name = "Flame Fingerskate"
+descr = "Hell yeah"
+model = ExtResource("1_klbhc")
+shader = ExtResource("3_lhqbx")
+texture = ExtResource("4_swrg3")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

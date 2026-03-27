@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://bmgs702lof7f2"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_fgild"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_n4jsc"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_agaj1"]
+[ext_resource type="Texture2D" uid="uid://byxisw0ofmgkx" path="res://Models/dev_oofball_Untitled.png" id="4_foirk"]
+
+[resource]
+script = ExtResource("2_n4jsc")
+type = 1
+name = "Dev Oofball"
+descr = "Is it a self insert ???"
+model = ExtResource("1_fgild")
+shader = ExtResource("3_agaj1")
+texture = ExtResource("4_foirk")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df2imu0leb13m"
-path="res://.godot/imported/keychain_dice.png-50cb689b4ac95793e54d551034fb0ffd.ctex"
+uid="uid://cpeqsnaelek3o"
+path.s3tc="res://.godot/imported/trinket_keychain_keychain_orangehorse.png-5fcd5eccccea6d65266cd2fdd91d960d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "319c23ac0ea191047bba0068fdbc5f0c"
 }
 
 [deps]
 
-source_file="res://Models/Textures/Trinkets/keychain_dice.png"
-dest_files=["res://.godot/imported/keychain_dice.png-50cb689b4ac95793e54d551034fb0ffd.ctex"]
+source_file="res://Models/trinket_keychain_keychain_orangehorse.png"
+dest_files=["res://.godot/imported/trinket_keychain_keychain_orangehorse.png-5fcd5eccccea6d65266cd2fdd91d960d.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

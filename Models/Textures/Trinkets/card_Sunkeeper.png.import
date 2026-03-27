@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dotyp3rf5mwsc"
-path="res://.godot/imported/keychain_leek.png-1fbfe6cbe2ee0eca8d69e7f30b734826.ctex"
+uid="uid://ow3bbkmr5gbu"
+path="res://.godot/imported/card_Sunkeeper.png-14c8babda79e060c5a0af1478f24a38e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/Textures/Trinkets/keychain_leek.png"
-dest_files=["res://.godot/imported/keychain_leek.png-1fbfe6cbe2ee0eca8d69e7f30b734826.ctex"]
+source_file="res://Models/Textures/Trinkets/card_Sunkeeper.png"
+dest_files=["res://.godot/imported/card_Sunkeeper.png-14c8babda79e060c5a0af1478f24a38e.ctex"]
 
 [params]
 

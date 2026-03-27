@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lscc3e7g8msw"
-path="res://.godot/imported/keychain_pinkhorseBack.png-9ffe5a04cf1df41a4b9bc3ba588a23fa.ctex"
+uid="uid://b8apq552opyod"
+path="res://.godot/imported/card_Banditkeeper.png-7152da443015747194f93655cc86c46c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/Textures/Trinkets/keychain_pinkhorseBack.png"
-dest_files=["res://.godot/imported/keychain_pinkhorseBack.png-9ffe5a04cf1df41a4b9bc3ba588a23fa.ctex"]
+source_file="res://Models/Textures/Trinkets/card_Banditkeeper.png"
+dest_files=["res://.godot/imported/card_Banditkeeper.png-7152da443015747194f93655cc86c46c.ctex"]
 
 [params]
 

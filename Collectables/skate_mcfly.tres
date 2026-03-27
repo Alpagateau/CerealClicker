@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://c4tuv765fofqx"]
+
+[ext_resource type="PackedScene" uid="uid://b6u8rafopuicc" path="res://Models/trinket_skate.glb" id="1_1lst7"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_fib7a"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_7hlg0"]
+[ext_resource type="Texture2D" uid="uid://bv3367xnw8xlj" path="res://Models/skate_mcfly_skate_mcfly.png" id="4_l3tu0"]
+
+[resource]
+script = ExtResource("1_fib7a")
+name = "Mcfly Fingerskate"
+descr = "Can't wait for 2015 !"
+model = ExtResource("1_1lst7")
+shader = ExtResource("3_7hlg0")
+texture = ExtResource("4_l3tu0")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"
