@@ -9,7 +9,7 @@ var filling : int
 @export var can_eat : bool
 @export var bitesize : int = 16
 @export var empty_box : PackedScene
-
+@export var box_animator : AnimationPlayer
 
 func _ready() -> void:
 	filling = capacity
@@ -22,7 +22,8 @@ func throw_box() -> void:
 	
 	var side_multiplier : float = (1 if randf() > 0.5 else -1) * randf()
 	thrown_box.apply_impulse(Vector3(-5, 3 + randf() * 0.8, (-3  + randf()*0.7) * side_multiplier ) )
-
+	box_animator.play("Open")
+	
 func _on_clickable_clicked() -> void:
 	print("Miam")
 	if filling > 0:

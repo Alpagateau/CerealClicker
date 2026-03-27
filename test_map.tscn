@@ -4,9 +4,12 @@
 [ext_resource type="Script" uid="uid://dbgn0dx3d10tr" path="res://Scripts/Box.gd" id="1_4wuf8"]
 [ext_resource type="PackedScene" uid="uid://7p38fywpbhv6" path="res://Scenes/empty_box.tscn" id="2_gqtbx"]
 [ext_resource type="Script" uid="uid://c1g7yaxq66k2v" path="res://Scripts/collector.gd" id="3_s02eq"]
+[ext_resource type="PackedScene" uid="uid://e8kv8u57dks3" path="res://Models/cereal_box.blend" id="4_3qa0k"]
 [ext_resource type="AudioStream" uid="uid://d160l0nydbbkg" path="res://freesound_community-cartoon-bite-39234.mp3" id="4_dj26u"]
+[ext_resource type="Shader" uid="uid://b1uv4cbpsbejk" path="res://Shader/standard_vertx.gdshader" id="5_1ygvo"]
 [ext_resource type="Script" uid="uid://d35646jw4i8ia" path="res://inventory.gd" id="5_qgarv"]
 [ext_resource type="PackedScene" uid="uid://q5sem8ituomc" path="res://main.tscn" id="5_r0pc2"]
+[ext_resource type="Texture2D" uid="uid://f2muik67bqbe" path="res://Models/Textures/cereal_box.png" id="6_khah1"]
 [ext_resource type="PackedScene" uid="uid://fssdsjlya4dp" path="res://Scenes/inventory_tab.tscn" id="6_r0pc2"]
 [ext_resource type="PackedScene" uid="uid://bfscw1ja3uphy" path="res://Scenes/trinket_icon.tscn" id="7_ssfg1"]
 [ext_resource type="PackedScene" uid="uid://b1iuxstcl0tbc" path="res://Scenes/music_player.tscn" id="8_bu3ac"]
@@ -20,6 +23,24 @@
 size = Vector3(2.0302048, 2.0776215, 2.05894)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4qc02"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ygvo"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("5_1ygvo")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("6_khah1")
+shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/scale = 0.015
 
 [sub_resource type="Environment" id="Environment_4wuf8"]
 background_mode = 1
@@ -46,9 +67,10 @@ size = Vector3(0.9569092, 0.9366455, 0.8646774)
 
 [node name="TestMap" type="Node3D" unique_id=1291864704]
 
-[node name="Box" type="Node3D" parent="." unique_id=1934348202]
+[node name="Box" type="Node3D" parent="." unique_id=1934348202 node_paths=PackedStringArray("box_animator")]
 script = ExtResource("1_4wuf8")
 empty_box = ExtResource("2_gqtbx")
+box_animator = NodePath("cereal_box/AnimationPlayer")
 
 [node name="Clickable" type="Area3D" parent="Box" unique_id=866864446]
 transform = Transform3D(3.5527137e-15, 8.742278e-08, 1, -4.371139e-08, -1, 8.742278e-08, 1, -4.371139e-08, 0, 0, 0, 0)
@@ -61,7 +83,24 @@ shape = SubResource("BoxShape3D_s02eq")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Box" unique_id=1185518256]
 transform = Transform3D(-1.5099577e-07, 1.7484558e-07, 2, -3.019916e-07, -2, 1.7484555e-07, 2, -3.019916e-07, 1.509958e-07, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_4qc02")
+
+[node name="cereal_box" parent="Box" unique_id=926527861 instance=ExtResource("4_3qa0k")]
+transform = Transform3D(6.9444656e-07, 1.8063384e-14, -16.205494, 4.7683713e-07, -3.240218, 8.5265115e-14, -5.2956944, -2.3841852e-07, -2.1250935e-06, 0, 0.8972169, 0)
+
+[node name="Skeleton3D" parent="Box/cereal_box/Armature" parent_id_path=PackedInt32Array(926527861, 1678850224) index="0" unique_id=1232860949]
+bones/1/rotation = Quaternion(-2.0325135e-07, 2.1925524e-07, -0.7983939, -0.6021356)
+bones/2/rotation = Quaternion(-1.5765433e-07, -2.2842806e-07, 0.7648497, -0.6442087)
+bones/3/rotation = Quaternion(-0.7112747, -2.350304e-16, 3.4266758e-16, -0.7029142)
+bones/4/rotation = Quaternion(-0.70312154, -9.098252e-07, 8.996554e-07, 0.7110697)
+
+[node name="Cube" parent="Box/cereal_box/Armature/Skeleton3D" index="0" unique_id=1299154808]
+material_override = SubResource("ShaderMaterial_1ygvo")
+
+[node name="AnimationPlayer" parent="Box/cereal_box" index="1" unique_id=1394215376]
+autoplay = &"Open"
+speed_scale = 2.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=755682054]
 environment = SubResource("Environment_4wuf8")
@@ -161,7 +200,7 @@ spot_angle = 70.11
 [node name="DayCycle" parent="." unique_id=514222879 instance=ExtResource("12_dj26u")]
 
 [node name="Camera" type="Camera3D" parent="." unique_id=2110018624]
-transform = Transform3D(-0.0037007332, -0.05931673, 0.99823236, -2.5760382e-06, 0.9982392, 0.059317123, -0.99999315, 0.00021694537, -0.0036943697, 9.213538, 2.1875288, -0.01726622)
+transform = Transform3D(-0.0037007332, -0.05931673, 0.99823236, -2.5760382e-06, 0.9982392, 0.059317123, -0.99999315, 0.00021694537, -0.0036943697, 4.0207987, 2.3111656, -0.01726622)
 fov = 35.9834
 near = 0.1
 far = 100.0
@@ -170,3 +209,5 @@ far = 100.0
 [connection signal="box_empty" from="Box" to="Collector" method="_on_box_box_empty"]
 [connection signal="clicked" from="Box/Clickable" to="Box" method="_on_clickable_clicked"]
 [connection signal="day_end" from="DayCycle" to="Control/EndDayUI" method="_on_day_cycle_day_end"]
+
+[editable path="Box/cereal_box"]

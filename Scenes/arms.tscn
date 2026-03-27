@@ -9,11 +9,11 @@ skeleton = NodePath("arms_rigged/Root/rig/Skeleton3D")
 
 [node name="arms_rigged" parent="." unique_id=2016391443 instance=ExtResource("2_0vnww")]
 
-[node name="Camera" parent="arms_rigged" index="1" unique_id=683440876]
-transform = Transform3D(-1, 1.623149e-08, -8.590274e-08, 0, 0.9826128, 0.18566662, 8.742278e-08, 0.18566662, -0.9826128, -0.0032731825, 1.871727, -0.48974675)
-fov = 30.0
+[node name="Camera" parent="arms_rigged" index="1" unique_id=1512333491]
+transform = Transform3D(-1, 1.8828949e-08, -8.537413e-08, -1.2248234e-09, 0.97341925, 0.22903053, 8.741723e-08, 0.22903053, -0.97341925, -0.0032731825, 1.8900788, -0.43102103)
+fov = 35.0
 
-[node name="Skeleton3D" parent="arms_rigged/Root/rig" parent_id_path=PackedInt32Array(2016391443, 337214666) index="0" unique_id=1368774907]
+[node name="Skeleton3D" parent="arms_rigged/Root/rig" parent_id_path=PackedInt32Array(2016391443, 172053371) index="0" unique_id=422372032]
 bones/3/rotation = Quaternion(0.5551589, 0.58299685, -0.54592, 0.23213072)
 bones/3/scale = Vector3(1.3436877, 1.3436884, 1.3436875)
 bones/4/rotation = Quaternion(3.9304103e-15, -4.168371e-08, -4.8964125e-08, 1)
@@ -85,10 +85,10 @@ bones/76/rotation = Quaternion(0.015831841, 0.0055881287, 0.9985629, -0.05089577
 bones/77/position = Vector3(-0.63104194, 1.2664974, -0.029718684)
 bones/77/rotation = Quaternion(-0.622848, 0.43594936, -0.3437307, -0.55123305)
 
-[node name="Box" parent="arms_rigged/Root/rig/Skeleton3D" index="0" unique_id=1436613194]
+[node name="Box" parent="arms_rigged/Root/rig/Skeleton3D" index="0" unique_id=1549795524]
 transform = Transform3D(-0.994318, 0.10182218, 0.03104935, -0.10146832, -0.99475664, 0.0127717415, 0.032187004, 0.0095486455, 0.99943626, 0.043245733, 1.5099447, 0.72277534)
 
-[node name="CerealBoxFlat" parent="arms_rigged/Root/rig/Skeleton3D/Box" index="0" unique_id=877223721]
+[node name="CerealBoxFlat" parent="arms_rigged/Root/rig/Skeleton3D/Box" index="0" unique_id=394575800]
 visible = false
 
 [editable path="arms_rigged"]

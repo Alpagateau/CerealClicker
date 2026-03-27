@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://7p38fywpbhv6"]
 
 [ext_resource type="Script" uid="uid://bcfi26d6w77ri" path="res://Scripts/empty_box.gd" id="1_ktbf6"]
+[ext_resource type="PackedScene" uid="uid://e8kv8u57dks3" path="res://Models/cereal_box.blend" id="2_p73lg"]
+[ext_resource type="Shader" uid="uid://b1uv4cbpsbejk" path="res://Shader/standard_vertx.gdshader" id="3_5vngm"]
+[ext_resource type="Texture2D" uid="uid://f2muik67bqbe" path="res://Models/Textures/cereal_box.png" id="4_srhg4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktbf6"]
 albedo_color = Color(1, 0, 0, 1)
@@ -11,11 +14,30 @@ material = SubResource("StandardMaterial3D_ktbf6")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ktbf6"]
 size = Vector3(0.34692383, 0.49438477, 0.10992432)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fudu3"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("3_5vngm")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_srhg4")
+shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/scale = 0.015
+
 [node name="RigidBody3D" type="RigidBody3D" unique_id=954904744]
 script = ExtResource("1_ktbf6")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=397421610]
 transform = Transform3D(0.34524792, 0, 0, 0, 0.4960619, 0, 0, 0, 0.09928672, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_24dec")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=732260068]
@@ -27,5 +49,13 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
+[node name="cereal_box" parent="." unique_id=926527861 instance=ExtResource("2_p73lg")]
+transform = Transform3D(0.9156201, 0, 0, 0, 0.7947737, 0, 0, 0, 0.7456142, 0, -0.24141127, 0)
+
+[node name="Cube" parent="cereal_box/Armature/Skeleton3D" parent_id_path=PackedInt32Array(926527861, 1232860949) index="0" unique_id=1299154808]
+material_override = SubResource("ShaderMaterial_fudu3")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="StaticTimer" to="." method="_on_static_timer_timeout"]
+
+[editable path="cereal_box"]
