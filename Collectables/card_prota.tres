@@ -7,12 +7,13 @@
 
 [resource]
 script = ExtResource("1_cre32")
+rarity = 1
 name = "Prota Trading Card"
 descr = "Just a little guy (gender neutral)"
 model = ExtResource("1_27s6n")
 shader = ExtResource("3_no1ik")
 texture = ExtResource("4_ma37u")
 position = Vector3(0, -0.1, 0)
-rotation = Vector3(0, 180, 10)
+rotation = Vector3(10, 180, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

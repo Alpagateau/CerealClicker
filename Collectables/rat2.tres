@@ -5,10 +5,8 @@
 
 [resource]
 script = ExtResource("2_g3aym")
-rarity = 1
-name = "Rat the rat"
-descr = "It's a rat
-doing rat things
-in a rat world"
+rarity = 2
+name = "Rat the rat The Second"
+descr = "It's another rat, doing ohter rat things, in another rat world"
 spawnable = ExtResource("3_8rdrw")
 metadata/_custom_type_script = "uid://c5scos8dmblg"

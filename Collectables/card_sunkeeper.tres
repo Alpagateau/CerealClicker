@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://bqq6pclui4ak4"]
+
+[ext_resource type="PackedScene" uid="uid://ctmwy8hbe6kw6" path="res://Models/trinket_card.glb" id="1_i628n"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_6k8he"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_xe5dw"]
+[ext_resource type="Texture2D" uid="uid://ow3bbkmr5gbu" path="res://Models/Textures/Trinkets/card_Sunkeeper.png" id="4_i628n"]
+
+[resource]
+script = ExtResource("2_6k8he")
+name = "Sunkeeper Trading Card"
+descr = "Praising the sun"
+model = ExtResource("1_i628n")
+shader = ExtResource("3_xe5dw")
+texture = ExtResource("4_i628n")
+position = Vector3(0, -0.1, 0)
+rotation = Vector3(10, 180, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

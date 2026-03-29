@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://g7mi7ed3gjr2"]
+
+[ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_7apal"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_1sek0"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_72yme"]
+[ext_resource type="Texture2D" uid="uid://c1n8f34wwmcqf" path="res://Models/Textures/Trinkets/keychain_dice.png" id="4_7apal"]
+
+[resource]
+script = ExtResource("2_1sek0")
+name = "Dice Keychain"
+descr = "Gambling 101"
+model = ExtResource("1_7apal")
+shader = ExtResource("3_72yme")
+texture = ExtResource("4_7apal")
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://4w51oqbsogrs"]
+
+[ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_781mf"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_5awyx"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_bnno5"]
+[ext_resource type="Texture2D" uid="uid://bxldf5uen1yy5" path="res://Models/Textures/Trinkets/keychain_shatteredmaskm.png" id="4_781mf"]
+
+[resource]
+script = ExtResource("2_5awyx")
+name = "Shattered Mask Keychain"
+descr = "The remains of a moody one"
+model = ExtResource("1_781mf")
+shader = ExtResource("3_bnno5")
+texture = ExtResource("4_781mf")
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

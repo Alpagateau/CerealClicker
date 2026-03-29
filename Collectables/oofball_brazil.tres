@@ -8,7 +8,7 @@
 [resource]
 script = ExtResource("1_d3ind")
 name = "Brazil Oofball"
-descr = "Is being mentionned ! "
+descr = "Is being mentionned (and great at football) ! "
 model = ExtResource("1_7e0ya")
 shader = ExtResource("3_m4bqo")
 texture = ExtResource("4_wwcbr")

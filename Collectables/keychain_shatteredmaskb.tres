@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://d25b63x3nlitq"]
+
+[ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_0rqkn"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_b12i2"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_vw3mq"]
+[ext_resource type="Texture2D" uid="uid://bxmeydjmqsqbw" path="res://Models/Textures/Trinkets/keychain_shatteredmaskb.png" id="4_0rqkn"]
+
+[resource]
+script = ExtResource("2_b12i2")
+name = "Shattered Mask Keychain"
+descr = "The remains of a mischievious one"
+model = ExtResource("1_0rqkn")
+shader = ExtResource("3_vw3mq")
+texture = ExtResource("4_0rqkn")
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

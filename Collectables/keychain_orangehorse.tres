@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("1_0sjeq")
+rarity = 2
 name = "Orange Horse Keychain"
 descr = "\"This was not the moment to be jovial. This was not the moment to be merry. This was the moment to be the greatest of all time.\""
 model = ExtResource("1_ccfsn")

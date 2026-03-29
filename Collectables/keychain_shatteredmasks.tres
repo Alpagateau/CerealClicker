@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://b5pdud6myndaa"]
+
+[ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_346ti"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_x7v3v"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_m3jqp"]
+[ext_resource type="Texture2D" uid="uid://be3m4exlhttqw" path="res://Models/Textures/Trinkets/keychain_shatteredmasks.png" id="4_346ti"]
+
+[resource]
+script = ExtResource("2_x7v3v")
+name = "Shattered Mask Keychain"
+descr = "The remains of a bright one"
+model = ExtResource("1_346ti")
+shader = ExtResource("3_m3jqp")
+texture = ExtResource("4_346ti")
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

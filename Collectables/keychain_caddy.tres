@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://cxirm4k36dcqw"]
+
+[ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_q2jje"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_k343k"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_i8m0n"]
+[ext_resource type="Texture2D" uid="uid://xds8au1ug53y" path="res://Models/Textures/Trinkets/keychain_caddy.png" id="4_q2jje"]
+
+[resource]
+script = ExtResource("2_k343k")
+name = "Caddy Keychain"
+descr = "Me when my caddy is super market"
+model = ExtResource("1_q2jje")
+shader = ExtResource("3_i8m0n")
+texture = ExtResource("4_q2jje")
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

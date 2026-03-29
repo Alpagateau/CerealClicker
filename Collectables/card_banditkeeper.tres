@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dstnwpj7flvcp"]
+
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_n15wb"]
+[ext_resource type="PackedScene" uid="uid://ctmwy8hbe6kw6" path="res://Models/trinket_card.glb" id="1_qmmdj"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_1oyfw"]
+[ext_resource type="Texture2D" uid="uid://b8apq552opyod" path="res://Models/Textures/Trinkets/card_Banditkeeper.png" id="4_qmmdj"]
+
+[resource]
+script = ExtResource("1_n15wb")
+name = "Banditkeeper Trading Card"
+descr = "A thief, if you will"
+model = ExtResource("1_qmmdj")
+shader = ExtResource("3_1oyfw")
+texture = ExtResource("4_qmmdj")
+position = Vector3(0, -0.1, 0)
+rotation = Vector3(10, 180, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

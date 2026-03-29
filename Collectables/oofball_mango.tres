@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("2_ay0x3")
+rarity = 1
 name = "Mango Oofball"
 descr = "Is mango colored :)"
 model = ExtResource("1_j8qb4")

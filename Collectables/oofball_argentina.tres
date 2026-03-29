@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://ce8x0m7dayofq"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_pu1do"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_8vkkr"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_med0a"]
+[ext_resource type="Texture2D" uid="uid://ffni64nwax6e" path="res://Models/Textures/Trinkets/oofball_argentina.png" id="4_pu1do"]
+
+[resource]
+script = ExtResource("2_8vkkr")
+name = "Argentina Oofball"
+descr = "Is very good at football"
+model = ExtResource("1_pu1do")
+shader = ExtResource("3_med0a")
+texture = ExtResource("4_pu1do")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

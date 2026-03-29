@@ -7,8 +7,8 @@
 
 [resource]
 script = ExtResource("1_xxtvw")
-name = "Skateboard"
-descr = "ahrjtkhngbdvscdn"
+name = "Classic Fingerskate"
+descr = "Kicks AND flips"
 model = ExtResource("1_guk0i")
 shader = ExtResource("3_lbt0f")
 texture = ExtResource("4_42u8i")

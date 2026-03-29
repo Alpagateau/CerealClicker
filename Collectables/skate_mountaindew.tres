@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://3pyt2pcrcfyn"]
+
+[ext_resource type="PackedScene" uid="uid://b6u8rafopuicc" path="res://Models/trinket_skate.glb" id="1_001bo"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_2srps"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_katqr"]
+[ext_resource type="Texture2D" uid="uid://dgulehwe3esed" path="res://Models/skate_basic_skate_basic.png" id="4_ekf85"]
+
+[resource]
+script = ExtResource("2_2srps")
+name = "Toxic Fingerskate"
+descr = "G4m3r juice colored"
+model = ExtResource("1_001bo")
+shader = ExtResource("3_katqr")
+texture = ExtResource("4_ekf85")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

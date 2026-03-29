@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://3j7f0irhcyj4"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_yppf1"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_b7d8l"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_0cm8a"]
+[ext_resource type="Texture2D" uid="uid://dh53ss76omr0c" path="res://Models/Textures/Trinkets/oofball_Spain.png" id="4_yppf1"]
+
+[resource]
+script = ExtResource("2_b7d8l")
+name = "Spain Oofball"
+descr = "Is ok at football"
+model = ExtResource("1_yppf1")
+shader = ExtResource("3_0cm8a")
+texture = ExtResource("4_yppf1")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://4pd4h6dkotu0"]
+
+[ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_kojn6"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_7mfe0"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_0hp57"]
+[ext_resource type="Texture2D" uid="uid://b40f1b5fh3t80" path="res://Models/Textures/Trinkets/keychain_fedora.png" id="4_kojn6"]
+
+[resource]
+script = ExtResource("2_7mfe0")
+name = "Fedora Keychain"
+descr = "M'lady..."
+model = ExtResource("1_kojn6")
+shader = ExtResource("3_0hp57")
+texture = ExtResource("4_kojn6")
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

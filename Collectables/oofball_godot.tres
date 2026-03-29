@@ -3,18 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_f0dxk"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_o31wl"]
 [ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_kxwl1"]
-[ext_resource type="Texture2D" uid="uid://chiy2l8coecpm" path="res://oofball_godot.png" id="4_q4u3a"]
+[ext_resource type="Texture2D" uid="uid://dwpndnqc3nbjy" path="res://Models/Textures/Trinkets/oofball_godot.png" id="4_f0dxk"]
 
 [resource]
 script = ExtResource("2_o31wl")
-rarity = 2
+rarity = 1
 type = 1
 name = "Godot Oofball"
 descr = "Throw that robot on the wall. It bounces, but that's not all. It's also a very nice friend 
 that you'll keep til the very end !"
 model = ExtResource("1_f0dxk")
 shader = ExtResource("3_kxwl1")
-texture = ExtResource("4_q4u3a")
+texture = ExtResource("4_f0dxk")
 rotation = Vector3(20, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

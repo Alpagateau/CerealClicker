@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://b8tgnln6gncr7"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_q74ou"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_gjg8q"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_0yarr"]
+[ext_resource type="Texture2D" uid="uid://cqe1tgyk6ks4l" path="res://Models/Textures/Trinkets/oofball_uruguay.png" id="4_q74ou"]
+
+[resource]
+script = ExtResource("2_gjg8q")
+name = "Uruguay Oofball"
+descr = "Is the OG of being good at football"
+model = ExtResource("1_q74ou")
+shader = ExtResource("3_0yarr")
+texture = ExtResource("4_q74ou")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://bxrcogyxsu0qo"]
+
+[ext_resource type="PackedScene" uid="uid://ctmwy8hbe6kw6" path="res://Models/trinket_card.glb" id="1_ilxhy"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_ovcxx"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_buxbq"]
+[ext_resource type="Texture2D" uid="uid://b01kbfkyrmsjn" path="res://Models/Textures/Trinkets/card_Gambelus.png" id="4_ilxhy"]
+
+[resource]
+script = ExtResource("2_ovcxx")
+rarity = 1
+name = "Gambelus Trading Card"
+descr = "\"You can stop at any moment. But if you give up, you loose all of your earnings\""
+model = ExtResource("1_ilxhy")
+shader = ExtResource("3_buxbq")
+texture = ExtResource("4_ilxhy")
+position = Vector3(0, -0.1, 0)
+rotation = Vector3(10, 180, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

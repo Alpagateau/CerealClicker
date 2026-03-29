@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://oindswjv7wij"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_cwql7"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_qmrxt"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_rk3sd"]
+[ext_resource type="Texture2D" uid="uid://bf2a4n7qom4kq" path="res://Models/Textures/Trinkets/oofball_germany.png" id="4_cwql7"]
+
+[resource]
+script = ExtResource("2_qmrxt")
+name = "Germany Oofball"
+descr = "Is alright at football"
+model = ExtResource("1_cwql7")
+shader = ExtResource("3_rk3sd")
+texture = ExtResource("4_cwql7")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"
