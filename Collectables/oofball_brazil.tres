@@ -12,6 +12,6 @@ descr = "Is being mentionned ! "
 model = ExtResource("1_7e0ya")
 shader = ExtResource("3_m4bqo")
 texture = ExtResource("4_wwcbr")
-position = Vector3(20, 0, 0)
+rotation = Vector3(20, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

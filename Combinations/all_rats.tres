@@ -1,19 +1,23 @@
 [gd_resource type="Resource" script_class="TrinketCombination" format=3 uid="uid://cn8vx2jnpume5"]
 
 [ext_resource type="Script" uid="uid://bjywo53f3kko4" path="res://Scripts/TrinketValuePair.gd" id="1_qc7ns"]
-[ext_resource type="Resource" path="res://Collectables/dev_oofball.tres" id="2_x8kq5"]
 [ext_resource type="Resource" uid="uid://bmgs702lof7f2" path="res://Collectables/oofball_dev.tres" id="3_571wc"]
+[ext_resource type="Resource" uid="uid://1pha0ss4ohuc" path="res://Collectables/oofball_cyan.tres" id="3_chsqa"]
 [ext_resource type="Resource" uid="uid://dff6bav4ow2q3" path="res://Collectables/oofball_godot.tres" id="4_nyuki"]
 [ext_resource type="Script" uid="uid://dq7dmgs4rtutb" path="res://Scripts/trinket_combination.gd" id="4_y2qs6"]
+[ext_resource type="Resource" uid="uid://04f6c2ijoied" path="res://Collectables/oofball_mango.tres" id="5_eou7h"]
+[ext_resource type="Resource" uid="uid://dxqel466fofuf" path="res://Collectables/oofball_brazil.tres" id="6_7rlsm"]
+[ext_resource type="Resource" uid="uid://d1fpripn4eeci" path="res://Collectables/oofball_golden.tres" id="7_e0ljy"]
+[ext_resource type="Resource" uid="uid://dcnn0xxg17a0q" path="res://Collectables/oofball_france.tres" id="8_inttf"]
 
 [sub_resource type="Resource" id="Resource_nyuki"]
 script = ExtResource("1_qc7ns")
-trinket = ExtResource("2_x8kq5")
+trinket = ExtResource("3_571wc")
 metadata/_custom_type_script = "uid://bjywo53f3kko4"
 
 [sub_resource type="Resource" id="Resource_chsqa"]
 script = ExtResource("1_qc7ns")
-trinket = ExtResource("3_571wc")
+trinket = ExtResource("3_chsqa")
 metadata/_custom_type_script = "uid://bjywo53f3kko4"
 
 [sub_resource type="Resource" id="Resource_eou7h"]
@@ -21,9 +25,29 @@ script = ExtResource("1_qc7ns")
 trinket = ExtResource("4_nyuki")
 metadata/_custom_type_script = "uid://bjywo53f3kko4"
 
+[sub_resource type="Resource" id="Resource_0703a"]
+script = ExtResource("1_qc7ns")
+trinket = ExtResource("5_eou7h")
+metadata/_custom_type_script = "uid://bjywo53f3kko4"
+
+[sub_resource type="Resource" id="Resource_rpcq1"]
+script = ExtResource("1_qc7ns")
+trinket = ExtResource("6_7rlsm")
+metadata/_custom_type_script = "uid://bjywo53f3kko4"
+
+[sub_resource type="Resource" id="Resource_pvpdm"]
+script = ExtResource("1_qc7ns")
+trinket = ExtResource("7_e0ljy")
+metadata/_custom_type_script = "uid://bjywo53f3kko4"
+
+[sub_resource type="Resource" id="Resource_u6j0e"]
+script = ExtResource("1_qc7ns")
+trinket = ExtResource("8_inttf")
+metadata/_custom_type_script = "uid://bjywo53f3kko4"
+
 [resource]
 script = ExtResource("4_y2qs6")
 name = "Get All Oofballs"
 value = 300
-needed = Array[ExtResource("1_qc7ns")]([SubResource("Resource_nyuki"), SubResource("Resource_chsqa"), SubResource("Resource_eou7h")])
+needed = Array[ExtResource("1_qc7ns")]([SubResource("Resource_nyuki"), SubResource("Resource_chsqa"), SubResource("Resource_eou7h"), SubResource("Resource_0703a"), SubResource("Resource_rpcq1"), SubResource("Resource_pvpdm"), SubResource("Resource_u6j0e")])
 metadata/_custom_type_script = "uid://dq7dmgs4rtutb"

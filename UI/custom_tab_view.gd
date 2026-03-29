@@ -11,11 +11,7 @@ var current_tab : int = 0
 @export var default_icon : PackedScene
 @export var tp : trinket_preview
 
-@onready var grids : Array[Control] = [
-	$Common/Control/CenterContainer/cgrid,
-	$Uncommon/Control/CenterContainer/ugrid,
-	$Rare/Control/CenterContainer/rgrid
-]
+@export var grids : Array[Control] = []
 
 @export var icon_bg : Array[Texture2D]
 

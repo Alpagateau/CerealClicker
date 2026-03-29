@@ -89,16 +89,16 @@ mesh = SubResource("BoxMesh_4qc02")
 [node name="cereal_box" parent="Box" unique_id=926527861 instance=ExtResource("4_3qa0k")]
 transform = Transform3D(6.9444656e-07, 1.8063384e-14, -16.205494, 4.7683713e-07, -3.240218, 8.5265115e-14, -5.2956944, -2.3841852e-07, -2.1250935e-06, 0, 0.8972169, 0)
 
-[node name="Skeleton3D" parent="Box/cereal_box/Armature" parent_id_path=PackedInt32Array(926527861, 486051768) index="0" unique_id=294390333]
+[node name="Skeleton3D" parent="Box/cereal_box/Armature" parent_id_path=PackedInt32Array(926527861, 1677855192) index="0" unique_id=432200960]
 bones/1/rotation = Quaternion(-2.0325135e-07, 2.1925524e-07, -0.7983939, -0.6021356)
 bones/2/rotation = Quaternion(-1.5765433e-07, -2.2842806e-07, 0.7648497, -0.6442087)
 bones/3/rotation = Quaternion(-0.7112747, -2.350304e-16, 3.4266758e-16, -0.7029142)
 bones/4/rotation = Quaternion(-0.70312154, -9.098252e-07, 8.996554e-07, 0.7110697)
 
-[node name="Cube" parent="Box/cereal_box/Armature/Skeleton3D" index="0" unique_id=1349339627]
+[node name="Cube" parent="Box/cereal_box/Armature/Skeleton3D" index="0" unique_id=1131665803]
 material_override = SubResource("ShaderMaterial_1ygvo")
 
-[node name="AnimationPlayer" parent="Box/cereal_box" index="1" unique_id=1465097198]
+[node name="AnimationPlayer" parent="Box/cereal_box" index="1" unique_id=1281746502]
 autoplay = &"Open"
 speed_scale = 2.0
 
