@@ -12,13 +12,15 @@ class_name Collectable
 @export_group("Scenes")
 @export_subgroup("Legacy")
 @export var spawnable : PackedScene
-@export_subgroup("Defautl")
+@export_subgroup("Default")
 @export var model : PackedScene
-@export var shader : ShaderMaterial
+@export var shader : Material
 @export var texture : Texture2D
 @export var position : Vector3
 @export var rotation : Vector3
 @export var scale    : Vector3
+@export_group("Do not touch")
+var file_name : String
 
 
 var count : int

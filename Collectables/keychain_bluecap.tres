@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_a4sin"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_bwggw"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_1h528"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_a4sin"]
 [ext_resource type="Texture2D" uid="uid://d0oypf01iolpg" path="res://Models/Textures/Trinkets/keychain_bluecap.png" id="4_a4sin"]
 
 [resource]
@@ -10,7 +10,9 @@ script = ExtResource("2_bwggw")
 name = "Blue Cap Keychain"
 descr = "Is blue"
 model = ExtResource("1_a4sin")
-shader = ExtResource("3_1h528")
+shader = ExtResource("3_a4sin")
 texture = ExtResource("4_a4sin")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

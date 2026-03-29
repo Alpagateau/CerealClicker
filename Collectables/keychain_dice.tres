@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_7apal"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_1sek0"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_72yme"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_7apal"]
 [ext_resource type="Texture2D" uid="uid://c1n8f34wwmcqf" path="res://Models/Textures/Trinkets/keychain_dice.png" id="4_7apal"]
 
 [resource]
@@ -10,7 +10,9 @@ script = ExtResource("2_1sek0")
 name = "Dice Keychain"
 descr = "Gambling 101"
 model = ExtResource("1_7apal")
-shader = ExtResource("3_72yme")
+shader = ExtResource("3_7apal")
 texture = ExtResource("4_7apal")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

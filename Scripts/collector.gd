@@ -48,11 +48,16 @@ func get_all_collectables():
 				var c : Collectable = res
 				if c.active:
 					print("> Loaded ", c.name)
+					c.file_name = file_name
 					if c.rarity in collectables.keys():
 						collectables[c.rarity] += [c]
 					else:
 						collectables[c.rarity] = [c]
 		file_name = dir.get_next()
+	(collectables[0] as Array).sort_custom(func(a, b): return a.file_name.naturalnocasecmp_to(b.file_name) < 0)
+	(collectables[1] as Array).sort_custom(func(a, b): return a.file_name.naturalnocasecmp_to(b.file_name) < 0)
+	(collectables[2] as Array).sort_custom(func(a, b): return a.file_name.naturalnocasecmp_to(b.file_name) < 0)
+	(collectables[3] as Array).sort_custom(func(a, b): return a.file_name.naturalnocasecmp_to(b.file_name) < 0)
 
 func random_draw() -> Collectable:
 	var rarity : Constants.Rarity = choose_rarity()

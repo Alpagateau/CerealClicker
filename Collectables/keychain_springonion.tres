@@ -12,5 +12,7 @@ descr = "It's not a leek it's a spring onion"
 model = ExtResource("1_iypb0")
 shader = ExtResource("3_qkfxf")
 texture = ExtResource("4_iypb0")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

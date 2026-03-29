@@ -12,5 +12,7 @@ descr = "It's red, and the original"
 model = ExtResource("1_rib64")
 shader = ExtResource("3_27051")
 texture = ExtResource("4_rib64")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

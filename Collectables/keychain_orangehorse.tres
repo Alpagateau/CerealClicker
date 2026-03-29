@@ -13,5 +13,7 @@ descr = "\"This was not the moment to be jovial. This was not the moment to be m
 model = ExtResource("1_ccfsn")
 shader = ExtResource("3_dpfoo")
 texture = ExtResource("4_8u7hj")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

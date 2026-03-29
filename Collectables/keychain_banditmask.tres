@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_ao5jm"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_15rgl"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_ehqbv"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_ao5jm"]
 [ext_resource type="Texture2D" uid="uid://x34lokpru8do" path="res://Models/Textures/Trinkets/keychain_banditmask.png" id="4_ao5jm"]
 
 [resource]
@@ -11,7 +11,9 @@ rarity = 1
 name = "Bandit Mask Keychain"
 descr = "A mischievious mask"
 model = ExtResource("1_ao5jm")
-shader = ExtResource("3_ehqbv")
+shader = ExtResource("3_ao5jm")
 texture = ExtResource("4_ao5jm")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

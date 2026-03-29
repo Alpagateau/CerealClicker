@@ -12,5 +12,7 @@ descr = "The remains of a mischievious one"
 model = ExtResource("1_0rqkn")
 shader = ExtResource("3_vw3mq")
 texture = ExtResource("4_0rqkn")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

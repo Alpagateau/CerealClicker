@@ -12,5 +12,7 @@ descr = "Is green (maybe even in-between)"
 model = ExtResource("1_0qkg5")
 shader = ExtResource("3_ssqoq")
 texture = ExtResource("4_0qkg5")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

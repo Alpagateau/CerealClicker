@@ -22,5 +22,6 @@ func _ready():
 			print(c.name)
 			c.material_override = trinket.shader.duplicate(true)
 			c.material_override.set("shader_parameter/texture_albedo", trinket.texture)
+			c.material_override.set("albedo_texture", trinket.texture)
 	add_child(m)
 			

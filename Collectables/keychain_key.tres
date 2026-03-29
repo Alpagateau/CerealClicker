@@ -12,5 +12,7 @@ descr = "How meta"
 model = ExtResource("1_htoaw")
 shader = ExtResource("3_bfm28")
 texture = ExtResource("4_cjvk0")
+position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"
