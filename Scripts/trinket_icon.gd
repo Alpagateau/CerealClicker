@@ -5,20 +5,20 @@ signal clicked(r : Collectable)
 
 @export var obj : Collectable : 
 	set(t):
-		var cs = $SubViewportContainer/SubViewport/Root.get_children()
+		var cs = $TK/SubViewportContainer/SubViewport/Root.get_children()
 		for c in cs:
 			c.queue_free()
 		if t != null:
 			var nt = DefaultTrinket.new()
 			nt.trinket = t
-			$SubViewportContainer/SubViewport/Root.add_child(nt)
+			$TK/SubViewportContainer/SubViewport/Root.add_child(nt)
 		obj = t
 @export var unlocked : bool : 
 	set(v):
-		$SubViewportContainer.material.set("shader_parameter/hidden", !v)
-		$MarginContainer/VBoxContainer/HBoxContainer/Label.visible = v
+		$TK/SubViewportContainer.material.set("shader_parameter/hidden", !v)
+		$TK/MarginContainer/VBoxContainer/HBoxContainer/Label.visible = v
 		count = count+1 if v else 0
-		$MarginContainer/VBoxContainer/HBoxContainer/Label.text = str(count)
+		$TK/MarginContainer/VBoxContainer/HBoxContainer/Label.text = str(count)
 		unlocked = v
 
 @export var count : int = 0

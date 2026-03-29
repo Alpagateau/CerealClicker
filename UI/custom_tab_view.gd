@@ -23,7 +23,7 @@ func setup_ready() -> void:
 			var new_icon : TrinketIcon = default_icon.instantiate() as TrinketIcon
 			new_icon.obj = c
 			new_icon.clicked.connect(show_preview)
-			(new_icon.get_child(0) as TextureRect).texture = icon_bg[k]
+			(new_icon.get_child(0).get_child(0) as TextureRect).texture = icon_bg[k]
 			grids[k].add_child(new_icon)
 
 func update_current_tab(idx : int):

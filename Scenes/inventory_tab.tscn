@@ -45,8 +45,8 @@ size = Vector2i(1024, 1024)
 render_target_update_mode = 4
 
 [node name="CustomTabView" parent="MarginContainer/SubViewportContainer/SubViewport" unique_id=680653263 instance=ExtResource("5_dmhrg")]
-position = Vector2(574, 510)
-scale = Vector2(4, 4)
+position = Vector2(530, 539)
+scale = Vector2(2, 2)
 
 [node name="Button" type="Button" parent="." unique_id=234783931]
 layout_mode = 1

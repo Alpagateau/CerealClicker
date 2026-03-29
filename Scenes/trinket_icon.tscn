@@ -9,75 +9,76 @@ resource_local_to_scene = true
 shader = ExtResource("3_tm8ab")
 shader_parameter/hidden = true
 
-[node name="TrinketIcon" type="MarginContainer" unique_id=1519460399]
-custom_minimum_size = Vector2(16, 16)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 0
+[node name="TI" type="Control" unique_id=1171290970]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 128.0
 script = ExtResource("1_xjd3g")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=816533320]
+[node name="TK" type="MarginContainer" parent="." unique_id=1519460399]
+layout_mode = 1
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 0
+
+[node name="TextureRect" type="TextureRect" parent="TK" unique_id=816533320]
 layout_mode = 2
 texture = ExtResource("2_xjd3g")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1286970800]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="TK" unique_id=1286970800]
 material = SubResource("ShaderMaterial_826ni")
 layout_mode = 2
 mouse_filter = 2
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1843178879]
+[node name="SubViewport" type="SubViewport" parent="TK/SubViewportContainer" unique_id=1843178879]
 own_world_3d = true
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(32, 32)
+scaling_3d_scale = 2.0
+size = Vector2i(64, 64)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=307510745]
+[node name="Camera3D" type="Camera3D" parent="TK/SubViewportContainer/SubViewport" unique_id=307510745]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.94620645)
 fov = 43.65056
 
-[node name="Root" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=286180425]
+[node name="Root" type="Node3D" parent="TK/SubViewportContainer/SubViewport" unique_id=286180425]
 transform = Transform3D(0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, 0.8660253, 0, 0, 0)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=148622612]
+[node name="SpotLight3D" type="SpotLight3D" parent="TK/SubViewportContainer/SubViewport" unique_id=148622612]
 transform = Transform3D(1, 0, 0, 0, 0.94985753, 0.31268308, 0, -0.31268308, 0.94985753, 0, 0.47692305, 0.6989321)
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=1368223826]
+[node name="SpotLight3D2" type="SpotLight3D" parent="TK/SubViewportContainer/SubViewport" unique_id=1368223826]
 transform = Transform3D(0.19743183, 0.5390871, -0.8187831, -0.052292794, 0.8398254, 0.54033214, 0.97892094, -0.063862294, 0.19399863, -1.3794701, 0.6563568, 0.08151561)
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=1183158419]
+[node name="SpotLight3D3" type="SpotLight3D" parent="TK/SubViewportContainer/SubViewport" unique_id=1183158419]
 transform = Transform3D(-0.34012532, -0.31688127, -0.88538194, 0.12046749, 0.9190751, -0.37521857, 0.932632, -0.23428106, -0.27442682, -0.7970997, -0.43953505, -0.08423385)
 light_color = Color(1, 0.6627451, 0.29411766, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2017313581]
+[node name="MarginContainer" type="MarginContainer" parent="TK" unique_id=2017313581]
 layout_mode = 2
 theme_override_constants/margin_left = 2
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=800118670]
+[node name="VBoxContainer" type="VBoxContainer" parent="TK/MarginContainer" unique_id=800118670]
 layout_mode = 2
 alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=142639401]
+[node name="HBoxContainer" type="HBoxContainer" parent="TK/MarginContainer/VBoxContainer" unique_id=142639401]
 layout_mode = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1098148467]
+[node name="Label" type="Label" parent="TK/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1098148467]
 visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
 text = "4"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="gui_input" from="SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]
+[connection signal="gui_input" from="TK" to="." method="_on_gui_input"]
+[connection signal="gui_input" from="TK/SubViewportContainer" to="TK" method="_on_sub_viewport_container_gui_input"]
