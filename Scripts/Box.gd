@@ -25,7 +25,6 @@ func throw_box() -> void:
 	box_animator.play("Open")
 	
 func _on_clickable_clicked() -> void:
-	print("Miam")
 	if filling > 0:
 		filling -= bitesize
 		if filling <= 0:

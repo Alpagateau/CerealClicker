@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_icvw2"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_25u0x"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_yra8s"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_icvw2"]
 [ext_resource type="Texture2D" uid="uid://byvtwslatmahs" path="res://Models/Textures/Trinkets/keychain_moonmask.png" id="4_icvw2"]
 
 [resource]
@@ -11,7 +11,7 @@ rarity = 1
 name = "Moon Mask Keychain"
 descr = "Hides only half your face"
 model = ExtResource("1_icvw2")
-shader = ExtResource("3_yra8s")
+shader = ExtResource("3_icvw2")
 texture = ExtResource("4_icvw2")
 position = Vector3(0, -0.2, 0)
 rotation = Vector3(0, 200, 0)

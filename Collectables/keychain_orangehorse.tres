@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_0sjeq"]
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_ccfsn"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_dpfoo"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_ccfsn"]
 [ext_resource type="Texture2D" uid="uid://ca8nx4e8os6rh" path="res://Models/Textures/Trinkets/keychain_orangehorse.png" id="4_8u7hj"]
 
 [resource]
@@ -11,7 +11,7 @@ rarity = 2
 name = "Orange Horse Keychain"
 descr = "\"This was not the moment to be jovial. This was not the moment to be merry. This was the moment to be the greatest of all time.\""
 model = ExtResource("1_ccfsn")
-shader = ExtResource("3_dpfoo")
+shader = ExtResource("3_ccfsn")
 texture = ExtResource("4_8u7hj")
 position = Vector3(0, -0.2, 0)
 rotation = Vector3(0, 200, 0)

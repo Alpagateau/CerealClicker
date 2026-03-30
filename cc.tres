@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://dw8n6yq48ag62"]
 
 [ext_resource type="Texture2D" uid="uid://dvcgj7dcsiqx4" path="res://UI/UI_thebiggestspritesheetthatseverlived.png" id="1_mpugi"]
+[ext_resource type="FontFile" uid="uid://b6un0h6471b5q" path="res://Jersey10-Regular.ttf" id="2_lqor1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mpugi"]
 texture = ExtResource("1_mpugi")
@@ -31,7 +32,35 @@ content_margin_right = 6.0
 texture = ExtResource("1_mpugi")
 region_rect = Rect2(240, 224, 32, 16)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dygu6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1gc2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l34uw"]
+bg_color = Color(1, 0.6666667, 0.43137255, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing = false
+
 [resource]
+default_font = ExtResource("2_lqor1")
+Label/colors/font_outline_color = Color(0.44705883, 0.2, 0.32156864, 1)
+Label/constants/outline_size = 32
+ScrollContainer/colors/scroll_hint_horizontal_color = Color(0, 0, 0, 1)
 TabBar/styles/button_highlight = SubResource("StyleBoxTexture_mpugi")
 TabBar/styles/button_pressed = SubResource("StyleBoxFlat_mpugi")
 TabBar/styles/tab_focus = SubResource("StyleBoxTexture_lqor1")
@@ -39,3 +68,6 @@ TabBar/styles/tab_selected = SubResource("StyleBoxFlat_lqor1")
 TabContainer/styles/panel = SubResource("StyleBoxTexture_dygu6")
 TabContainer/styles/tab_focus = SubResource("StyleBoxTexture_l34uw")
 TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_r1gc2")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_dygu6")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_r1gc2")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_l34uw")

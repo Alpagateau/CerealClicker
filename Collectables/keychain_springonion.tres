@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_iypb0"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_3g11h"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_qkfxf"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_iypb0"]
 [ext_resource type="Texture2D" uid="uid://b05kly532vm1o" path="res://Models/Textures/Trinkets/keychain_springonion.png" id="4_iypb0"]
 
 [resource]
@@ -10,7 +10,7 @@ script = ExtResource("2_3g11h")
 name = "Leek Keychain"
 descr = "It's not a leek it's a spring onion"
 model = ExtResource("1_iypb0")
-shader = ExtResource("3_qkfxf")
+shader = ExtResource("3_iypb0")
 texture = ExtResource("4_iypb0")
 position = Vector3(0, -0.2, 0)
 rotation = Vector3(0, 200, 0)

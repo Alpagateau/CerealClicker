@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_781mf"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_5awyx"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_bnno5"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_781mf"]
 [ext_resource type="Texture2D" uid="uid://bxldf5uen1yy5" path="res://Models/Textures/Trinkets/keychain_shatteredmaskm.png" id="4_781mf"]
 
 [resource]
@@ -10,7 +10,7 @@ script = ExtResource("2_5awyx")
 name = "Shattered Mask Keychain"
 descr = "The remains of a moody one"
 model = ExtResource("1_781mf")
-shader = ExtResource("3_bnno5")
+shader = ExtResource("3_781mf")
 texture = ExtResource("4_781mf")
 position = Vector3(0, -0.2, 0)
 rotation = Vector3(0, 200, 0)

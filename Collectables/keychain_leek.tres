@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_htoaw"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_nme2q"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_bfm28"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_htoaw"]
 [ext_resource type="Texture2D" uid="uid://bns4notfh5wth" path="res://Models/Textures/Trinkets/keychain_leek.png" id="4_htoaw"]
 
 [resource]
@@ -11,7 +11,7 @@ rarity = 2
 name = "Leek Keychain"
 descr = "It's not a leek it's a- WAIT IT'S REAL ???"
 model = ExtResource("1_htoaw")
-shader = ExtResource("3_bfm28")
+shader = ExtResource("3_htoaw")
 texture = ExtResource("4_htoaw")
 position = Vector3(0, -0.2, 0)
 rotation = Vector3(0, 200, 0)

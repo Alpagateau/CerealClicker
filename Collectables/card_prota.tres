@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ctmwy8hbe6kw6" path="res://Models/trinket_card.glb" id="1_27s6n"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="1_cre32"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_no1ik"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_27s6n"]
 [ext_resource type="Texture2D" uid="uid://fwemn7iutq2" path="res://Models/Textures/Trinkets/card_Prota.png" id="4_ma37u"]
 
 [resource]
@@ -11,7 +11,7 @@ rarity = 1
 name = "Prota Trading Card"
 descr = "Just a little guy (gender neutral)"
 model = ExtResource("1_27s6n")
-shader = ExtResource("3_no1ik")
+shader = ExtResource("3_27s6n")
 texture = ExtResource("4_ma37u")
 position = Vector3(0, -0.1, 0)
 rotation = Vector3(10, 180, 0)

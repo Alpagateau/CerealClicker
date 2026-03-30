@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ctmwy8hbe6kw6" path="res://Models/trinket_card.glb" id="1_c1cxu"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_l4rnl"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_5mq84"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_c1cxu"]
 [ext_resource type="Texture2D" uid="uid://cb8fm2aapoinf" path="res://Models/Textures/Trinkets/card_Beekeeper.png" id="4_c1cxu"]
 
 [resource]
@@ -10,7 +10,7 @@ script = ExtResource("2_l4rnl")
 name = "Beekeeper Trading Card"
 descr = "It's all in the name(?)"
 model = ExtResource("1_c1cxu")
-shader = ExtResource("3_5mq84")
+shader = ExtResource("3_c1cxu")
 texture = ExtResource("4_c1cxu")
 position = Vector3(0, -0.1, 0)
 rotation = Vector3(10, 180, 0)

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_htoaw"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_nme2q"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_bfm28"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_fkwxw"]
 [ext_resource type="Texture2D" uid="uid://x76imdb7ori7" path="res://Models/Textures/Trinkets/keychain_key.png" id="4_cjvk0"]
 
 [resource]
@@ -10,7 +10,7 @@ script = ExtResource("2_nme2q")
 name = "Key Keychain"
 descr = "How meta"
 model = ExtResource("1_htoaw")
-shader = ExtResource("3_bfm28")
+shader = ExtResource("3_fkwxw")
 texture = ExtResource("4_cjvk0")
 position = Vector3(0, -0.2, 0)
 rotation = Vector3(0, 200, 0)

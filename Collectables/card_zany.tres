@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ctmwy8hbe6kw6" path="res://Models/trinket_card.glb" id="1_ccx0r"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_ntfmb"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_sa2st"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_ccx0r"]
 [ext_resource type="Texture2D" uid="uid://dm0y48jerke8g" path="res://Models/Textures/Trinkets/card_Zany.png" id="4_ccx0r"]
 
 [resource]
@@ -11,7 +11,7 @@ rarity = 2
 name = "Zany Joker"
 descr = "Freak of nature"
 model = ExtResource("1_ccx0r")
-shader = ExtResource("3_sa2st")
+shader = ExtResource("3_ccx0r")
 texture = ExtResource("4_ccx0r")
 position = Vector3(0, -0.1, 0)
 rotation = Vector3(10, 180, 0)

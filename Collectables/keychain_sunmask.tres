@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_penwc"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_imgn1"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_ecmev"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_penwc"]
 [ext_resource type="Texture2D" uid="uid://tiwmjs0g6m8t" path="res://Models/Textures/Trinkets/keychain_sunmask.png" id="4_penwc"]
 
 [resource]
@@ -11,7 +11,7 @@ rarity = 1
 name = "Sun Mask Keychain"
 descr = "How regal of you"
 model = ExtResource("1_penwc")
-shader = ExtResource("3_ecmev")
+shader = ExtResource("3_penwc")
 texture = ExtResource("4_penwc")
 position = Vector3(0, -0.2, 0)
 rotation = Vector3(0, 200, 0)

@@ -15,4 +15,5 @@ func start_day():
 	day_begin.emit()
 
 func _on_timer_timeout() -> void:
+	print("That's the end")
 	day_end.emit()

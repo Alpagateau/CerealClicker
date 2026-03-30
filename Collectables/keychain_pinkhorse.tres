@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6t2r8csdxj8" path="res://Models/trinket_keychain.glb" id="1_y70fg"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_ik7j0"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_c0awd"]
+[ext_resource type="Material" uid="uid://c28803jeq8hm5" path="res://Shader/standard.tres" id="3_y70fg"]
 [ext_resource type="Texture2D" uid="uid://byjopsyp7eymb" path="res://Models/Textures/Trinkets/keychain_pinkhorse.png" id="4_y70fg"]
 
 [resource]
@@ -11,7 +11,7 @@ rarity = 1
 name = "Pink Horse Keychain"
 descr = "When it comes to apples, always bet on Comely"
 model = ExtResource("1_y70fg")
-shader = ExtResource("3_c0awd")
+shader = ExtResource("3_y70fg")
 texture = ExtResource("4_y70fg")
 position = Vector3(0, -0.2, 0)
 rotation = Vector3(0, 200, 0)
