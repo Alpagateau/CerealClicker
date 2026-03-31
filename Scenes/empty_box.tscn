@@ -14,7 +14,7 @@ material = SubResource("StandardMaterial3D_ktbf6")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ktbf6"]
 size = Vector3(0.34692383, 0.49438477, 0.10992432)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fudu3"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5vngm"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("3_5vngm")
@@ -52,8 +52,8 @@ autostart = true
 [node name="cereal_box" parent="." unique_id=926527861 instance=ExtResource("2_p73lg")]
 transform = Transform3D(0.9156201, 0, 0, 0, 0.7947737, 0, 0, 0, 0.7456142, 0, -0.24141127, 0)
 
-[node name="Cube" parent="cereal_box/Armature/Skeleton3D" parent_id_path=PackedInt32Array(926527861, 1232860949) index="0" unique_id=1299154808]
-material_override = SubResource("ShaderMaterial_fudu3")
+[node name="Cube" parent="cereal_box/Armature/Skeleton3D" parent_id_path=PackedInt32Array(926527861, 762394492) index="0" unique_id=1521769910]
+material_override = SubResource("ShaderMaterial_5vngm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="StaticTimer" to="." method="_on_static_timer_timeout"]

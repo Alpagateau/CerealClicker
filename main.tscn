@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cdnkg0mc3ad3c" path="res://Models/Textures/wood.png" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://4eptqi6eru7m" path="res://Models/Textures/cathode.png" id="4_7mycd"]
 [ext_resource type="Shader" uid="uid://b1uv4cbpsbejk" path="res://Shader/standard_vertx.gdshader" id="4_kek77"]
-[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="6_5vw27"]
+[ext_resource type="Texture2D" uid="uid://b1l2l03ix7nxo" path="res://Models/Textures/TVstand.png" id="7_4c57u"]
 [ext_resource type="Texture2D" uid="uid://boanoacvmn7qw" path="res://Models/Textures/bookshelf.png" id="7_kek77"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
@@ -34,7 +34,7 @@ albedo_texture = ExtResource("2_5vw27")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efxa6"]
 albedo_texture = ExtResource("2_272bh")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4c57u"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_efxa6"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("4_kek77")
@@ -55,7 +55,25 @@ shader_parameter/scale = 0.02
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4c57u"]
 albedo_texture = ExtResource("3_lquwl")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kek77"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dg77c"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_kek77")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("7_4c57u")
+shader_parameter/albedo_texture_size = Vector2i(1024, 1024)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/scale = 0.015
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ycdy4"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("4_kek77")
@@ -82,6 +100,7 @@ albedo_texture = ExtResource("3_lquwl")
 [node name="Main" unique_id=835413071 instance=ExtResource("1_ig7tw")]
 
 [node name="Light" parent="." index="0" unique_id=495761497]
+visible = false
 light_color = Color(1, 0.63529414, 0, 1)
 light_energy = 4.0
 shadow_enabled = true
@@ -115,16 +134,17 @@ material_override = SubResource("StandardMaterial3D_82xsv")
 material_override = SubResource("StandardMaterial3D_efxa6")
 
 [node name="Wall" parent="." index="4" unique_id=193532393]
-material_override = SubResource("ShaderMaterial_4c57u")
+material_override = SubResource("ShaderMaterial_efxa6")
 
 [node name="Table" parent="." index="5" unique_id=2066169899]
+transform = Transform3D(1, 0, 0, 0, -0.100000024, 0, 0, 0, 1, 0, 0.9358384, 0)
 material_override = SubResource("StandardMaterial3D_4c57u")
 
 [node name="TVStand" parent="." index="6" unique_id=1873956585]
-material_override = ExtResource("6_5vw27")
+material_override = SubResource("ShaderMaterial_dg77c")
 
 [node name="TV" parent="." index="7" unique_id=24008429]
-material_override = SubResource("ShaderMaterial_kek77")
+material_override = SubResource("ShaderMaterial_ycdy4")
 
 [node name="Bookshelf" parent="." index="8" unique_id=699144343]
 material_override = SubResource("StandardMaterial3D_w48qg")
@@ -137,6 +157,7 @@ visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="12" unique_id=1370090799]
 transform = Transform3D(0.95081353, 0, 0.30976382, -0.30976382, -4.371139e-08, 0.95081353, 1.3540207e-08, -1, -4.1561382e-08, 0.523252, 3.8155894, 6.131409e-08)
+visible = false
 light_color = Color(1, 0.654902, 0, 1)
 shadow_enabled = true
 spot_range = 8.908498

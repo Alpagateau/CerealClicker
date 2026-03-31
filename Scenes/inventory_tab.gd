@@ -26,12 +26,14 @@ func open():
 	#$MarginContainer.visible = true
 	$MarginContainer/SubViewportContainer.visible = true
 	$Button.text = '<'
+	SignalBus.inventory_open.emit()
 
 func close():
 	#$MarginContainer.visible = false
 	$MarginContainer/SubViewportContainer.visible = false
 	$Button.text = '>'
 	tp.visible = false
+	SignalBus.inventory_close.emit()
 
 func _on_button_pressed() -> void:
 	opened = !opened 

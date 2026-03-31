@@ -46,4 +46,3 @@ text = "Hello Wolrd"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=509481311]
 libraries/ = SubResource("AnimationLibrary_o0ave")
-autoplay = &"Boing"

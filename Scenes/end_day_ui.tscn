@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bxetc4roaq3s" path="res://Scripts/end_day_ui.gd" id="1_dx08j"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx08j"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="EndDayUI" type="Control" unique_id=258286538]
 layout_mode = 3
 anchors_preset = 15
@@ -10,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dx08j")
+opinions = Array[String](["Poopoo", "Okayish", "Funky", "Rad", "The Best Trinket That's Ever Lived"])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=2080928616]
 layout_mode = 1
@@ -18,34 +22,68 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dx08j")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=631303679]
 layout_mode = 2
+mouse_filter = 0
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1282189692]
 layout_mode = 2
-theme_override_font_sizes/font_size = 54
-text = "TRINKET OVERVIEW"
+theme_override_font_sizes/font_size = 70
+text = "END OF THE MORNING"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1330419541]
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1170440632]
+layout_mode = 2
+theme_override_font_sizes/font_size = 38
+text = "Let's see what you have !"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1192560594]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 35
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1330419541]
 layout_mode = 2
 
-[node name="CombNames" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=834250362]
+[node name="CombNames" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=834250362]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ComScores" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1545906114]
+[node name="ComScores" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1545906114]
 layout_mode = 2
 size_flags_horizontal = 10
 
+[node name="Friends" type="Label" parent="PanelContainer/VBoxContainer" unique_id=783822839]
+layout_mode = 2
+theme_override_font_sizes/font_size = 38
+text = "Let's see what you have !"
+horizontal_alignment = 1
+
+[node name="Click" type="Label" parent="PanelContainer/VBoxContainer" unique_id=710282903]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Click here to go to next day !"
+horizontal_alignment = 1
+
 [node name="NextText" type="Timer" parent="." unique_id=256734552]
-wait_time = 5.0
+wait_time = 3.5
 one_shot = true
 
 [node name="NextScore" type="Timer" parent="." unique_id=2106819492]
-wait_time = 0.3
+wait_time = 1.2
 one_shot = true
 
+[node name="Friends" type="Timer" parent="." unique_id=1924196922]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="gui_input" from="PanelContainer/VBoxContainer" to="." method="_on_gui_input"]
 [connection signal="timeout" from="NextText" to="." method="draw_next_name"]
 [connection signal="timeout" from="NextScore" to="." method="draw_next_score"]
+[connection signal="timeout" from="Friends" to="." method="_on_friends_timeout"]

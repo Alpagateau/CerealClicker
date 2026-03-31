@@ -7,11 +7,13 @@
 
 [resource]
 script = ExtResource("2_k343k")
+rarity = 2
 name = "Caddy Keychain"
 descr = "Me when my caddy is super market"
 model = ExtResource("1_q2jje")
 shader = ExtResource("3_q2jje")
 texture = ExtResource("4_q2jje")
 position = Vector3(0, -0.2, 0)
+rotation = Vector3(0, 200, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

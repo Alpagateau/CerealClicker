@@ -5,7 +5,8 @@ const save_path : String = "user://SaveFile.tres"
 var save_data : SaveData = SaveData.new()
 
 func _ready():
-	load_game()
+	#load_game()
+	pass
 
 func save_game():
 	ResourceSaver.save(save_data, save_path)

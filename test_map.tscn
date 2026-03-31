@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://q5sem8ituomc" path="res://main.tscn" id="5_r0pc2"]
 [ext_resource type="Texture2D" uid="uid://f2muik67bqbe" path="res://Models/Textures/cereal_box.png" id="6_khah1"]
 [ext_resource type="PackedScene" uid="uid://fssdsjlya4dp" path="res://Scenes/inventory_tab.tscn" id="6_r0pc2"]
+[ext_resource type="Texture2D" uid="uid://n4dxyfp31aih" path="res://buikslotermeerplein_2k.hdr" id="7_khah1"]
 [ext_resource type="PackedScene" uid="uid://bfscw1ja3uphy" path="res://Scenes/trinket_icon.tscn" id="7_ssfg1"]
 [ext_resource type="PackedScene" uid="uid://b1iuxstcl0tbc" path="res://Scenes/music_player.tscn" id="8_bu3ac"]
 [ext_resource type="PackedScene" uid="uid://ci0cvgsqdfish" path="res://Scenes/trinket_preview.tscn" id="9_5354r"]
@@ -24,7 +25,7 @@ size = Vector3(2.0302048, 2.0776215, 2.05894)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4qc02"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ygvo"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_khah1"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("5_1ygvo")
@@ -42,18 +43,28 @@ shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
 shader_parameter/scale = 0.015
 
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7ckqa"]
+panorama = ExtResource("7_khah1")
+
+[sub_resource type="Sky" id="Sky_olj81"]
+sky_material = SubResource("PanoramaSkyMaterial_7ckqa")
+process_mode = 3
+
 [sub_resource type="Environment" id="Environment_4wuf8"]
-background_mode = 1
+background_mode = 2
 background_color = Color(1, 1, 1, 1)
-background_energy_multiplier = 0.4
-ambient_light_color = Color(0.42720786, 0.9096576, 1, 1)
-ambient_light_energy = 0.2
-tonemap_mode = 2
+sky = SubResource("Sky_olj81")
+ambient_light_source = 3
+ambient_light_energy = 0.0
+tonemap_exposure = 1.57
+adjustment_brightness = 1.25
+adjustment_contrast = 1.11
+adjustment_saturation = 1.08
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gqtbx"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_gqtbx"]
-height = 2.109375
+height = 2.0317383
 radius = 1.0063477
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gqtbx"]
@@ -89,16 +100,16 @@ mesh = SubResource("BoxMesh_4qc02")
 [node name="cereal_box" parent="Box" unique_id=926527861 instance=ExtResource("4_3qa0k")]
 transform = Transform3D(6.9444656e-07, 1.8063384e-14, -16.205494, 4.7683713e-07, -3.240218, 8.5265115e-14, -5.2956944, -2.3841852e-07, -2.1250935e-06, 0, 0.8972169, 0)
 
-[node name="Skeleton3D" parent="Box/cereal_box/Armature" parent_id_path=PackedInt32Array(926527861, 486051768) index="0" unique_id=294390333]
+[node name="Skeleton3D" parent="Box/cereal_box/Armature" parent_id_path=PackedInt32Array(926527861, 1989054343) index="0" unique_id=762394492]
 bones/1/rotation = Quaternion(-2.0325135e-07, 2.1925524e-07, -0.7983939, -0.6021356)
 bones/2/rotation = Quaternion(-1.5765433e-07, -2.2842806e-07, 0.7648497, -0.6442087)
 bones/3/rotation = Quaternion(-0.7112747, -2.350304e-16, 3.4266758e-16, -0.7029142)
 bones/4/rotation = Quaternion(-0.70312154, -9.098252e-07, 8.996554e-07, 0.7110697)
 
-[node name="Cube" parent="Box/cereal_box/Armature/Skeleton3D" index="0" unique_id=1349339627]
-material_override = SubResource("ShaderMaterial_1ygvo")
+[node name="Cube" parent="Box/cereal_box/Armature/Skeleton3D" index="0" unique_id=1521769910]
+material_override = SubResource("ShaderMaterial_khah1")
 
-[node name="AnimationPlayer" parent="Box/cereal_box" index="1" unique_id=1465097198]
+[node name="AnimationPlayer" parent="Box/cereal_box" index="1" unique_id=1875127899]
 autoplay = &"Open"
 speed_scale = 2.0
 
@@ -108,11 +119,6 @@ environment = SubResource("Environment_4wuf8")
 [node name="Collector" type="Node3D" parent="." unique_id=2064487329]
 script = ExtResource("3_s02eq")
 collectables_directory = "res://Collectables/"
-
-[node name="Inventory" type="Node3D" parent="." unique_id=1350627999 node_paths=PackedStringArray("tk_preview", "tk_grd")]
-script = ExtResource("5_qgarv")
-tk_preview = NodePath("../Control/Control")
-tk_grd = NodePath("../Control/IntoryTab")
 
 [node name="Control" type="Control" parent="." unique_id=2141813144]
 layout_mode = 3
@@ -125,16 +131,16 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 
+[node name="MusicPlayer" parent="Control" unique_id=1180631370 instance=ExtResource("8_bu3ac")]
+visible = false
+layout_mode = 1
+
 [node name="IntoryTab" parent="Control" unique_id=2010534918 node_paths=PackedStringArray("inv", "database", "tp") instance=ExtResource("6_r0pc2")]
 layout_mode = 1
 inv = NodePath("../../Inventory")
 database = NodePath("../../Collector")
 default_icon = ExtResource("7_ssfg1")
 tp = NodePath("../Control")
-
-[node name="MusicPlayer" parent="Control" unique_id=1180631370 instance=ExtResource("8_bu3ac")]
-visible = false
-layout_mode = 1
 
 [node name="Control" parent="Control" unique_id=665047551 instance=ExtResource("9_5354r")]
 layout_mode = 1
@@ -156,6 +162,11 @@ audio = NodePath("AudioStreamPlayer3D")
 transform = Transform3D(-4.3711385e-08, -4.440892e-16, 1, 0.15205438, 0.98837215, 6.6465082e-09, -0.98837215, 0.15205438, -4.320312e-08, 3.4373937e-08, 1.8628467, 0.98062336)
 stream = ExtResource("4_dj26u")
 
+[node name="Inventory" type="Node3D" parent="." unique_id=1350627999 node_paths=PackedStringArray("tk_preview", "tk_grd")]
+script = ExtResource("5_qgarv")
+tk_preview = NodePath("../Control/Control")
+tk_grd = NodePath("../Control/IntoryTab")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1541006655]
 
 [node name="Main2" parent="StaticBody3D" unique_id=835413071 instance=ExtResource("5_r0pc2")]
@@ -172,7 +183,7 @@ transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, 
 shape = SubResource("WorldBoundaryShape3D_gqtbx")
 
 [node name="Table" type="CollisionShape3D" parent="StaticBody3D" unique_id=1006357590]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0546875, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01586914, 0)
 shape = SubResource("CylinderShape3D_gqtbx")
 
 [node name="Table2" type="CollisionShape3D" parent="StaticBody3D" unique_id=464371289]
