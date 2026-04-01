@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dihmubf0e6fgj"]
+
+[ext_resource type="PackedScene" uid="uid://clg21i0rp2x83" path="res://Models/trinket_plushie_bunny.glb" id="1_yqq84"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_btupl"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_dnusi"]
+[ext_resource type="Texture2D" uid="uid://y8emwaj6vhp2" path="res://Models/Textures/Trinkets/plushie_bunny_albino.png" id="4_yqq84"]
+
+[resource]
+script = ExtResource("2_btupl")
+rarity = 1
+name = "Albino Bunny Plushie"
+descr = "People see those and call them killers that's so mean :("
+model = ExtResource("1_yqq84")
+shader = ExtResource("3_dnusi")
+texture = ExtResource("4_yqq84")
+rotation = Vector3(20, 200, 0)
+scale = Vector3(0.15, 0.15, 0.15)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

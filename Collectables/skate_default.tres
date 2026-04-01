@@ -12,6 +12,6 @@ descr = "Kicks AND flips"
 model = ExtResource("1_guk0i")
 shader = ExtResource("3_lbt0f")
 texture = ExtResource("4_42u8i")
-rotation = Vector3(20, 0, 0)
+rotation = Vector3(40, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

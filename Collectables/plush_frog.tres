@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://lpjkhq2j2gef"]
+
+[ext_resource type="PackedScene" uid="uid://5tebc1xp0q8h" path="res://Models/trinket_plushie_frog.glb" id="1_y7558"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_ui38s"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_h2acq"]
+[ext_resource type="Texture2D" uid="uid://duj453xshdk48" path="res://Models/trinket_plushie_frog_plushie_frog.png" id="4_ui38s"]
+
+[resource]
+script = ExtResource("2_ui38s")
+name = "Frog Plushie"
+descr = "Ribbit ribbit or something idk I don't speak frogs (lie)"
+model = ExtResource("1_y7558")
+shader = ExtResource("3_h2acq")
+texture = ExtResource("4_ui38s")
+rotation = Vector3(20, 200, 0)
+scale = Vector3(0.15, 0.15, 0.15)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

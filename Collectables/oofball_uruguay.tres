@@ -12,6 +12,6 @@ descr = "Is the OG of being good at football"
 model = ExtResource("1_q74ou")
 shader = ExtResource("3_0yarr")
 texture = ExtResource("4_q74ou")
-rotation = Vector3(20, 0, 0)
+rotation = Vector3(40, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

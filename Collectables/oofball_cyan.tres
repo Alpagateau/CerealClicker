@@ -13,6 +13,6 @@ descr = "Looks like a bus seat now that I think about it..."
 model = ExtResource("1_orxoj")
 shader = ExtResource("3_pwjqd")
 texture = ExtResource("4_orxoj")
-rotation = Vector3(20, 0, 0)
+rotation = Vector3(40, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

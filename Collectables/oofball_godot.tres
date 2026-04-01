@@ -15,6 +15,6 @@ that you'll keep til the very end !"
 model = ExtResource("1_f0dxk")
 shader = ExtResource("3_kxwl1")
 texture = ExtResource("4_f0dxk")
-rotation = Vector3(20, 0, 0)
+rotation = Vector3(40, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

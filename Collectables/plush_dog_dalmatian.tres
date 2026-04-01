@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dr04q30fbdmtb"]
+
+[ext_resource type="PackedScene" uid="uid://bl58h652d1i0g" path="res://Models/trinket_plushie_dog.glb" id="1_0d424"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_mvmqt"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_nod8v"]
+[ext_resource type="Texture2D" uid="uid://dgymykioxafnm" path="res://Models/Textures/Trinkets/plushie_dog_dalmatian.png" id="4_0d424"]
+
+[resource]
+script = ExtResource("2_mvmqt")
+rarity = 1
+name = "Dalmatian Dog Plushie"
+descr = "THERE'S HOW MANY ???"
+model = ExtResource("1_0d424")
+shader = ExtResource("3_nod8v")
+texture = ExtResource("4_0d424")
+rotation = Vector3(20, 200, 0)
+scale = Vector3(0.15, 0.15, 0.15)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

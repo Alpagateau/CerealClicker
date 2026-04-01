@@ -13,6 +13,6 @@ descr = "Youkai extermination machine"
 model = ExtResource("1_5fqgb")
 shader = ExtResource("3_8f51u")
 texture = ExtResource("4_5fqgb")
-rotation = Vector3(20, 0, 0)
+rotation = Vector3(40, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

@@ -13,6 +13,6 @@ descr = "Hell yeah"
 model = ExtResource("1_klbhc")
 shader = ExtResource("3_lhqbx")
 texture = ExtResource("4_swrg3")
-rotation = Vector3(20, 0, 0)
+rotation = Vector3(40, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

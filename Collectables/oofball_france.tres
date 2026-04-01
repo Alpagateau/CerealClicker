@@ -14,6 +14,6 @@ descr = "Can't believe they allow them* in internationnal sport events...
 model = ExtResource("1_33stb")
 shader = ExtResource("3_jxfrl")
 texture = ExtResource("4_3ixd1")
-rotation = Vector3(20, 0, 0)
+rotation = Vector3(40, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

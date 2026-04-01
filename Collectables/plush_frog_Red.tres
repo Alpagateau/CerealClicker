@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dts4apr5pgky4"]
+
+[ext_resource type="PackedScene" uid="uid://5tebc1xp0q8h" path="res://Models/trinket_plushie_frog.glb" id="1_0ypyu"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_litc4"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_7h0hi"]
+[ext_resource type="Texture2D" uid="uid://bm0qotw1rvqr" path="res://Models/Textures/Trinkets/plushie_frog_red.png" id="4_0ypyu"]
+
+[resource]
+script = ExtResource("2_litc4")
+rarity = 1
+name = "Red Frog Plushie"
+descr = "Ok this one goes kinda hard"
+model = ExtResource("1_0ypyu")
+shader = ExtResource("3_7h0hi")
+texture = ExtResource("4_0ypyu")
+rotation = Vector3(20, 200, 0)
+scale = Vector3(0.15, 0.15, 0.15)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

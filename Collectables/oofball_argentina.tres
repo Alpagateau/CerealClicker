@@ -12,6 +12,6 @@ descr = "Is very good at football"
 model = ExtResource("1_pu1do")
 shader = ExtResource("3_med0a")
 texture = ExtResource("4_pu1do")
-rotation = Vector3(20, 0, 0)
+rotation = Vector3(40, 0, 0)
 scale = Vector3(0.25, 0.25, 0.25)
 metadata/_custom_type_script = "uid://c5scos8dmblg"

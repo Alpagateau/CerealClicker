@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://dhv0wom1amjlc"]
+
+[ext_resource type="PackedScene" uid="uid://dykf3moaxq5l7" path="res://Models/trinket_plushie_chicken.glb" id="1_bg8gp"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_sybnv"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_w05wu"]
+[ext_resource type="Texture2D" uid="uid://cf8d6h5tobf4x" path="res://Models/Textures/Trinkets/plushie_chicken.png" id="4_sybnv"]
+
+[resource]
+script = ExtResource("2_sybnv")
+name = "Chicken Plushie"
+descr = "Crossed the road ! Good for them good for them"
+model = ExtResource("1_bg8gp")
+shader = ExtResource("3_w05wu")
+texture = ExtResource("4_sybnv")
+rotation = Vector3(20, 200, 0)
+scale = Vector3(0.15, 0.15, 0.15)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

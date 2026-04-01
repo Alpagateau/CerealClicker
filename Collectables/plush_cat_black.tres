@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://08usj2geyv8q"]
+
+[ext_resource type="PackedScene" uid="uid://c8xg7jetmlr55" path="res://Models/trinket_plushie_cat.glb" id="1_duabv"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_xmgx0"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_xqubo"]
+[ext_resource type="Texture2D" uid="uid://111g78xi3g3r" path="res://Models/Textures/Trinkets/plushie_cat_black.png" id="4_duabv"]
+
+[resource]
+script = ExtResource("2_xmgx0")
+rarity = 1
+name = "Black Cat Plushie"
+descr = "Inform masses of fluff (positive)"
+model = ExtResource("1_duabv")
+shader = ExtResource("3_xqubo")
+texture = ExtResource("4_duabv")
+rotation = Vector3(20, 200, 0)
+scale = Vector3(0.15, 0.15, 0.15)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

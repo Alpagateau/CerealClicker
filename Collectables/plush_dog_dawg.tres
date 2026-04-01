@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://copm7471pb4ss"]
+
+[ext_resource type="PackedScene" uid="uid://bl58h652d1i0g" path="res://Models/trinket_plushie_dog.glb" id="1_w4ebs"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_w5vdx"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_vm5v4"]
+[ext_resource type="Texture2D" uid="uid://ns4ihre5ujfh" path="res://Models/Textures/Trinkets/plushie_dog_dawg.png" id="4_w4ebs"]
+
+[resource]
+script = ExtResource("2_w5vdx")
+rarity = 2
+name = "Dawg Plushie"
+descr = "Is really cool and awesome and epic and based"
+model = ExtResource("1_w4ebs")
+shader = ExtResource("3_vm5v4")
+texture = ExtResource("4_w4ebs")
+rotation = Vector3(20, 200, 0)
+scale = Vector3(0.15, 0.15, 0.15)
+metadata/_custom_type_script = "uid://c5scos8dmblg"
