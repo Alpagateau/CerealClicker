@@ -6,7 +6,7 @@
 script = ExtResource("1_irvno")
 
 [node name="Timer" type="Timer" parent="." unique_id=1275377742]
-wait_time = 10.0
+wait_time = 70.0
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

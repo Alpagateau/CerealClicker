@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://cco8qcjvyc3iy"]
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://b7h3wsyp22bd0"]
 
 [ext_resource type="PackedScene" uid="uid://clg21i0rp2x83" path="res://Models/trinket_plushie_bunny.glb" id="1_8hm1h"]
 [ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_n6y0b"]
@@ -12,6 +12,6 @@ descr = "The third gender"
 model = ExtResource("1_8hm1h")
 shader = ExtResource("3_a3cvj")
 texture = ExtResource("4_n6y0b")
-rotation = Vector3(20, 0, 0)
-scale = Vector3(0.25, 0.25, 0.25)
+rotation = Vector3(20, 200, 0)
+scale = Vector3(0.15, 0.15, 0.15)
 metadata/_custom_type_script = "uid://c5scos8dmblg"
