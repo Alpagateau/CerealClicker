@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://o58qbbr7e1lb"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_5fqgb"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_m7wjs"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_8f51u"]
+[ext_resource type="Texture2D" uid="uid://cyortq4qfgsej" path="res://Models/Textures/Trinkets/oofball_yinyangred.png" id="4_5fqgb"]
+
+[resource]
+script = ExtResource("2_m7wjs")
+rarity = 1
+name = "Blessed Yin Yang Oofball"
+descr = "Youkai extermination machine"
+model = ExtResource("1_5fqgb")
+shader = ExtResource("3_8f51u")
+texture = ExtResource("4_5fqgb")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"

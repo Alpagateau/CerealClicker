@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Collectable" format=3 uid="uid://bqdm7nx2rnfr"]
+
+[ext_resource type="PackedScene" uid="uid://caorva37m70ar" path="res://Models/trinket_oofball.glb" id="1_bm55j"]
+[ext_resource type="Script" uid="uid://c5scos8dmblg" path="res://Scripts/Collectable.gd" id="2_tdvkd"]
+[ext_resource type="Material" uid="uid://bj05j1ku0ebyj" path="res://Shader/vertex_grid_tex.tres" id="3_638lo"]
+[ext_resource type="Texture2D" uid="uid://tn4akxunkwdk" path="res://Models/Textures/Trinkets/oofball_yinyang.png" id="4_bm55j"]
+
+[resource]
+script = ExtResource("2_tdvkd")
+rarity = 1
+name = "Yin Yang Oofball"
+descr = "Can obliterate it's very own wielder on contact"
+model = ExtResource("1_bm55j")
+shader = ExtResource("3_638lo")
+texture = ExtResource("4_bm55j")
+rotation = Vector3(20, 0, 0)
+scale = Vector3(0.25, 0.25, 0.25)
+metadata/_custom_type_script = "uid://c5scos8dmblg"
