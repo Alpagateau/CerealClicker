@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://fssdsjlya4dp"]
 
 [ext_resource type="Script" uid="uid://5y2f2r7q5cpy" path="res://Scenes/inventory_tab.gd" id="1_52mpa"]
+[ext_resource type="Texture2D" uid="uid://dvcgj7dcsiqx4" path="res://UI/UI_thebiggestspritesheetthatseverlived.png" id="3_wnie4"]
+[ext_resource type="AudioStream" uid="uid://dd8o43j5annj5" path="res://Sound/SFX/SFX_Swipe2__u_r9am5j3c5j-swipe-132084.mp3" id="4_dmhrg"]
+[ext_resource type="AudioStream" uid="uid://cgi61n1qxhuvw" path="res://Sound/SFX/SFX_Swish__freesound_community-swish-sound-94707.mp3" id="5_205yv"]
 [ext_resource type="PackedScene" uid="uid://c73hr8x671k44" path="res://UI/custom_tab_view.tscn" id="5_dmhrg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnie4"]
+size = Vector2(16, 63.666664)
 
 [node name="Control" type="Control" unique_id=2010534918 node_paths=PackedStringArray("custom_tab")]
 layout_mode = 3
@@ -49,15 +55,37 @@ render_target_update_mode = 4
 position = Vector2(576, 536)
 scale = Vector2(2, 2)
 
-[node name="Button" type="Button" parent="." unique_id=234783931]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -85.0
-offset_right = 33.0
-offset_bottom = 85.0
-grow_vertical = 2
-text = ">"
+[node name="Close" type="Sprite2D" parent="." unique_id=517677698]
+position = Vector2(24.000002, 377)
+scale = Vector2(3, 3)
+texture = ExtResource("3_wnie4")
+region_enabled = true
+region_rect = Rect2(384, 192, 16, 64)
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Area2D" type="Area2D" parent="Close" unique_id=784697976]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Close/Area2D" unique_id=1459593763]
+position = Vector2(-9.536743e-07, -0.16667175)
+shape = SubResource("RectangleShape2D_wnie4")
+
+[node name="Open" type="Sprite2D" parent="." unique_id=240417680]
+position = Vector2(24.000002, 377)
+scale = Vector2(3, 3)
+texture = ExtResource("3_wnie4")
+region_enabled = true
+region_rect = Rect2(384, 128, 16, 64)
+
+[node name="Area2D" type="Area2D" parent="Open" unique_id=795576125]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Open/Area2D" unique_id=1728383629]
+position = Vector2(-9.536743e-07, -0.16667175)
+shape = SubResource("RectangleShape2D_wnie4")
+
+[node name="SwooshIn" type="AudioStreamPlayer" parent="." unique_id=1195164599]
+stream = ExtResource("4_dmhrg")
+
+[node name="SwooshOut" type="AudioStreamPlayer" parent="." unique_id=440212924]
+stream = ExtResource("5_205yv")
+
+[connection signal="input_event" from="Close/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Open/Area2D" to="." method="_on_area_2d_input_event"]

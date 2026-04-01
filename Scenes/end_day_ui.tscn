@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://bbd3fovm21skx"]
 
 [ext_resource type="Script" uid="uid://bxetc4roaq3s" path="res://Scripts/end_day_ui.gd" id="1_dx08j"]
+[ext_resource type="Texture2D" uid="uid://c4cv1xk2bqeqm" path="res://UI/Global_BG.png" id="2_wmy5x"]
+[ext_resource type="AudioStream" uid="uid://cyt0gsj4pejoj" path="res://Sound/kick_02i.wav" id="3_v6rc4"]
+[ext_resource type="AudioStream" uid="uid://bsts3ct1v4ask" path="res://Sound/SFX/SFX_OrchestralBoom_alexis_gaming_cam-tv-show-hiter-351567.mp3" id="3_wmy5x"]
+[ext_resource type="AudioStream" uid="uid://6uv7a7nd61r3" path="res://Sound/SFX/SFX_ItemGot__alexis_gaming_cam-item-collected-1-367087.mp3" id="4_wmy5x"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx08j"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v6rc4"]
+texture = ExtResource("2_wmy5x")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_un7mn"]
 
 [node name="EndDayUI" type="Control" unique_id=258286538]
 layout_mode = 3
@@ -22,11 +28,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_dx08j")
+theme_override_styles/panel = SubResource("StyleBoxTexture_v6rc4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=631303679]
 layout_mode = 2
 mouse_filter = 0
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=468814972]
+layout_mode = 2
+theme_override_constants/separation = 48
+theme_override_styles/separator = SubResource("StyleBoxEmpty_un7mn")
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1282189692]
 layout_mode = 2
@@ -40,11 +51,16 @@ theme_override_font_sizes/font_size = 38
 text = "Let's see what you have !"
 horizontal_alignment = 1
 
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=1381731648]
+layout_mode = 2
+theme_override_constants/separation = 48
+theme_override_styles/separator = SubResource("StyleBoxEmpty_un7mn")
+
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1192560594]
 layout_mode = 2
-theme_override_constants/margin_left = 35
+theme_override_constants/margin_left = 200
 theme_override_constants/margin_top = 35
-theme_override_constants/margin_right = 35
+theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 35
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1330419541]
@@ -61,8 +77,20 @@ size_flags_horizontal = 10
 [node name="Friends" type="Label" parent="PanelContainer/VBoxContainer" unique_id=783822839]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
-text = "Let's see what you have !"
+text = "Your friends think your trinket is"
 horizontal_alignment = 1
+
+[node name="Friends2" type="Label" parent="PanelContainer/VBoxContainer" unique_id=602796897]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.45999998, 0.45999998, 1)
+theme_override_font_sizes/font_size = 70
+text = "GOOD"
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="PanelContainer/VBoxContainer" unique_id=755770995]
+layout_mode = 2
+theme_override_constants/separation = 48
+theme_override_styles/separator = SubResource("StyleBoxEmpty_un7mn")
 
 [node name="Click" type="Label" parent="PanelContainer/VBoxContainer" unique_id=710282903]
 layout_mode = 2
@@ -71,16 +99,33 @@ text = "Click here to go to next day !"
 horizontal_alignment = 1
 
 [node name="NextText" type="Timer" parent="." unique_id=256734552]
-wait_time = 3.5
+wait_time = 2.5
 one_shot = true
 
 [node name="NextScore" type="Timer" parent="." unique_id=2106819492]
-wait_time = 1.2
+wait_time = 0.8
 one_shot = true
 
 [node name="Friends" type="Timer" parent="." unique_id=1924196922]
-wait_time = 2.0
+wait_time = 1.6999999999999995
 one_shot = true
+
+[node name="Sound1" type="AudioStreamPlayer" parent="." unique_id=159465275]
+stream = ExtResource("3_v6rc4")
+volume_db = -10.0
+bus = &"VFX"
+
+[node name="Sound2" type="AudioStreamPlayer" parent="." unique_id=590116906]
+stream = ExtResource("4_wmy5x")
+volume_db = -10.0
+pitch_scale = 0.8
+bus = &"VFX"
+
+[node name="Sound3" type="AudioStreamPlayer" parent="." unique_id=969044476]
+stream = ExtResource("3_wmy5x")
+volume_db = -10.0
+pitch_scale = 0.8
+bus = &"VFX"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="gui_input" from="PanelContainer/VBoxContainer" to="." method="_on_gui_input"]

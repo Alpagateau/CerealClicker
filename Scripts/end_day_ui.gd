@@ -1,6 +1,9 @@
 extends Control
 class_name EndDayUI
 
+var ALL_COMBINATION = [
+]
+
 var combinations : Array[TrinketCombination]
 @export_dir var combination_file
 @export var inv : Inventory
@@ -33,7 +36,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if !$Friends.is_stopped():
 		current_opinion = randi() % len(opinions)
-		$PanelContainer/VBoxContainer/Friends.text = basic_str + "\n" + opinions[current_opinion]
+		$PanelContainer/VBoxContainer/Friends.text = basic_str
+		$PanelContainer/VBoxContainer/Friends2.text = opinions[current_opinion]
 	if Input.is_action_just_pressed("Esc"):
 		if $NextScore.is_stopped() && $NextText.is_stopped() && scores == [] && $Friends.is_stopped():
 			visible = false
@@ -58,10 +62,13 @@ func draw_next_name():
 	#scores.pop_back()
 	$NextText.start()
 	$NextScore.start()
+	$Sound1.play()
+	$Sound2.play()
 
 func draw_friends():
 	$Friends.start()
 	$PanelContainer/VBoxContainer/Friends.visible = true
+	$PanelContainer/VBoxContainer/Friends2.visible = true
 
 func draw_next_score():
 	if scores == []:
@@ -69,6 +76,8 @@ func draw_next_score():
 	var new_label : Label = label.instantiate()
 	new_label.text = str(scores[-1][1])
 	scores.pop_back()
+	$Sound1.play()
+	$Sound2.play()
 	$PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/ComScores.add_child(new_label)
 
 func calc_score() -> Array:
@@ -109,27 +118,18 @@ func calc_score() -> Array:
 	return score
 
 func get_all_combination():
-	var dir = DirAccess.open(combination_file)
-	if !dir:
-		return 
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
 	combinations = []
-	while file_name != "":
-		# Do somethin
-		var full = dir.get_current_dir(true) + "/"+ file_name
-		if ResourceLoader.exists(full):
-			var res = ResourceLoader.load(full)
-			if res is TrinketCombination:
-				var c : TrinketCombination = res
-				combinations += [c]
-				print("> Loaded Combination ", c.name)
-		file_name = dir.get_next()
+	for res in ALL_COMBINATION:
+		if res is TrinketCombination:
+			var c : TrinketCombination = res
+			combinations += [c]
+			print("> Loaded Combination ", c.name)
 
 
 func _on_day_cycle_day_end() -> void:
 	visible = true
 	$PanelContainer/VBoxContainer/Friends.visible = false
+	$PanelContainer/VBoxContainer/Friends2.visible = false
 	$PanelContainer/VBoxContainer/Click.visible = false
 	animate_screen()
 	pass # Replace with function body.
@@ -137,6 +137,9 @@ func _on_day_cycle_day_end() -> void:
 
 func _on_friends_timeout() -> void:
 	$PanelContainer/VBoxContainer/Click.visible = true
+	$Sound1.play()
+	$Sound2.play()
+	$Sound3.play(0.2)
 	pass # Replace with function body.
 
 

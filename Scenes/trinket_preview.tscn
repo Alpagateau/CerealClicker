@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cplmanyf1e8tb" path="res://UI/UI_ItemGotBanner3.png" id="2_yy0i6"]
 [ext_resource type="Shader" uid="uid://b3ubfndp718gm" path="res://Shader/band.gdshader" id="3_rsynw"]
 [ext_resource type="Shader" uid="uid://14ij22oeiyfx" path="res://Shader/trinket_preview_halo.gdshader" id="3_yy0i6"]
+[ext_resource type="AudioStream" uid="uid://bsts3ct1v4ask" path="res://Sound/SFX/SFX_OrchestralBoom_alexis_gaming_cam-tv-show-hiter-351567.mp3" id="5_l37bu"]
+[ext_resource type="AudioStream" uid="uid://6uv7a7nd61r3" path="res://Sound/SFX/SFX_ItemGot__alexis_gaming_cam-item-collected-1-367087.mp3" id="6_gw0n8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yy0i6"]
 shader = ExtResource("3_rsynw")
@@ -151,5 +153,15 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer2/SubViewportContainer/SubViewport" unique_id=1687398180]
 libraries/ = SubResource("AnimationLibrary_rsynw")
 autoplay = &"rotate"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=292923827]
+stream = ExtResource("5_l37bu")
+volume_db = -10.0
+bus = &"VFX"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1320997808]
+stream = ExtResource("6_gw0n8")
+volume_db = -5.0
+bus = &"VFX"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

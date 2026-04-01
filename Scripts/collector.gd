@@ -1,6 +1,55 @@
 extends Node3D
 class_name Collector
 
+const ALL_COLLECTABLES = [
+	preload("res://Collectables/card_banditkeeper.tres"),
+	preload("res://Collectables/card_beekeeper.tres"),
+	preload("res://Collectables/card_gambelus.tres"),
+	preload("res://Collectables/card_janus.tres"),
+	preload("res://Collectables/card_moonkeeper.tres"),
+	preload("res://Collectables/card_prota.tres"),
+	preload("res://Collectables/card_sunkeeper.tres"),
+	preload("res://Collectables/card_zany.tres"),
+	preload("res://Collectables/keychain_banditmask.tres"),
+	preload("res://Collectables/keychain_bluecap.tres"),
+	preload("res://Collectables/keychain_caddy.tres"),
+	preload("res://Collectables/keychain_coolcap.tres"),
+	preload("res://Collectables/keychain_dice.tres"),
+	preload("res://Collectables/keychain_dolphin.tres"),
+	preload("res://Collectables/keychain_fedora.tres"),
+	preload("res://Collectables/keychain_greencap.tres"),
+	preload("res://Collectables/keychain_key.tres"),
+	preload("res://Collectables/keychain_leek.tres"),
+	preload("res://Collectables/keychain_moonmask.tres"),
+	preload("res://Collectables/keychain_orangehorse.tres"),
+	preload("res://Collectables/keychain_pinkhorse.tres"),
+	preload("res://Collectables/keychain_redcap.tres"),
+	preload("res://Collectables/keychain_shatteredmaskb.tres"),
+	preload("res://Collectables/keychain_shatteredmaskm.tres"),
+	preload("res://Collectables/keychain_shatteredmasks.tres"),
+	preload("res://Collectables/keychain_springonion.tres"),
+	preload("res://Collectables/keychain_sunmask.tres"),
+	preload("res://Collectables/oofball_argentina.tres"),
+	preload("res://Collectables/oofball_brazil.tres"),
+	preload("res://Collectables/oofball_cyan.tres"),
+	preload("res://Collectables/oofball_dev.tres"),
+	preload("res://Collectables/oofball_england.tres"),
+	preload("res://Collectables/oofball_france.tres"),
+	preload("res://Collectables/oofball_germany.tres"),
+	preload("res://Collectables/oofball_godot.tres"),
+	preload("res://Collectables/oofball_golden.tres"),
+	preload("res://Collectables/oofball_italy.tres"),
+	preload("res://Collectables/oofball_mango.tres"),
+	preload("res://Collectables/oofball_spain.tres"),
+	preload("res://Collectables/oofball_uruguay.tres"),
+	preload("res://Collectables/rat1.tres"),
+	preload("res://Collectables/rat2.tres"),
+	preload("res://Collectables/skate_default.tres"),
+	preload("res://Collectables/skate_flames.tres"),
+	preload("res://Collectables/skate_mcfly.tres"),
+	preload("res://Collectables/skate_mountaindew.tres")
+]
+
 @export var RarityWeight : Array[int] = [
 	4,
 	3,
@@ -9,7 +58,7 @@ class_name Collector
 ]
 var total_weight : int = 10
 
-@export_dir var collectables_directory 
+const collectables_directory = "res://Collectables/"
 
 var collectables : Dictionary
 
@@ -30,30 +79,19 @@ func print_rarity(r : Constants.Rarity):
 		print("[Empty]")
 
 func get_all_collectables():
-	var dir = DirAccess.open(collectables_directory)
-	if !dir:
-		return 
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
 	collectables[0] = []
 	collectables[1] = []
 	collectables[2] = []
 	collectables[3] = []
-	while file_name != "":
-		# Do somethin
-		var full = dir.get_current_dir(true) + "/"+ file_name
-		if ResourceLoader.exists(full):
-			var res = ResourceLoader.load(full)
-			if res is Collectable:
-				var c : Collectable = res
-				if c.active:
-					print("> Loaded ", c.name)
-					c.file_name = file_name
-					if c.rarity in collectables.keys():
-						collectables[c.rarity] += [c]
-					else:
-						collectables[c.rarity] = [c]
-		file_name = dir.get_next()
+	for res in ALL_COLLECTABLES:
+		if res is Collectable:
+			var c : Collectable = res
+			if c.active:
+				print("> Loaded ", c.name)
+				if c.rarity in collectables.keys():
+					collectables[c.rarity] += [c]
+				else:
+					collectables[c.rarity] = [c]
 	(collectables[0] as Array).sort_custom(func(a, b): return a.file_name.naturalnocasecmp_to(b.file_name) < 0)
 	(collectables[1] as Array).sort_custom(func(a, b): return a.file_name.naturalnocasecmp_to(b.file_name) < 0)
 	(collectables[2] as Array).sort_custom(func(a, b): return a.file_name.naturalnocasecmp_to(b.file_name) < 0)

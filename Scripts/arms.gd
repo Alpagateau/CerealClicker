@@ -23,7 +23,9 @@ func _process(delta: float) -> void:
 
 func _on_box_eating():
 	anim_player.play("Eating")
+	$AudioStreamPlayer3D.pitch_scale = randf_range(0.9, 1.1)
 	$AudioStreamPlayer3D.play()
+	
 
 func _on_box_empty():
 	anim_player.play("Readying")

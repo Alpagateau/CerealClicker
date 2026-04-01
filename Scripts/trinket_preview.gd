@@ -19,6 +19,8 @@ func update_trinket() -> void:
 		$CenterContainer/VBoxContainer/ItemName.text = trinket.name
 		$CenterContainer/VBoxContainer2/DescriptionLabel.text = trinket.descr
 		$CenterContainer/VBoxContainer/RarityLabel.text = Constants.rarity2str(trinket.rarity)
+		$AudioStreamPlayer.play(0.2)
+		$AudioStreamPlayer2.play()
 
 func _process(_delta: float) -> void:
 	if was_hidden && visible:

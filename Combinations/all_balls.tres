@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="TrinketCombination" format=3 uid="uid://blntbw602vq1e"]
 
 [ext_resource type="Script" uid="uid://bjywo53f3kko4" path="res://Scripts/TrinketValuePair.gd" id="1_tnywr"]
-[ext_resource type="Resource" uid="uid://cn4eaq3cet6hi" path="res://Collectables/rat1.tres" id="2_0fnhv"]
-[ext_resource type="Resource" uid="uid://m3arfughr0bs" path="res://Collectables/rat2.tres" id="3_7ws5j"]
+[ext_resource type="Resource" uid="uid://cn4eaq3cet6hi" path="res://build/Collectables/rat1.tres" id="2_0fnhv"]
+[ext_resource type="Resource" uid="uid://m3arfughr0bs" path="res://build/Collectables/rat2.tres" id="3_7ws5j"]
 [ext_resource type="Script" uid="uid://dq7dmgs4rtutb" path="res://Scripts/trinket_combination.gd" id="4_0c8u2"]
 
 [sub_resource type="Resource" id="Resource_nyuki"]

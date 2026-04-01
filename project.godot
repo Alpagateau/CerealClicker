@@ -13,7 +13,10 @@ config_version=5
 config/name="CerealClicker"
 run/main_scene="uid://b4sa5ynuv8cir"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/stretch_mode=4
+boot_splash/image="uid://cvl8alsgbthyw"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=1000
 
 [autoload]
 
@@ -52,3 +55,5 @@ Esc={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

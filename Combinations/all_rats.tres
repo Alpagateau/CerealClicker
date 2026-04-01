@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="TrinketCombination" format=3 uid="uid://cn8vx2jnpume5"]
 
 [ext_resource type="Script" uid="uid://bjywo53f3kko4" path="res://Scripts/TrinketValuePair.gd" id="1_qc7ns"]
-[ext_resource type="Resource" uid="uid://bmgs702lof7f2" path="res://Collectables/oofball_dev.tres" id="3_571wc"]
-[ext_resource type="Resource" uid="uid://1pha0ss4ohuc" path="res://Collectables/oofball_cyan.tres" id="3_chsqa"]
-[ext_resource type="Resource" uid="uid://dff6bav4ow2q3" path="res://Collectables/oofball_godot.tres" id="4_nyuki"]
+[ext_resource type="Resource" uid="uid://bmgs702lof7f2" path="res://build/Collectables/oofball_dev.tres" id="3_571wc"]
+[ext_resource type="Resource" uid="uid://1pha0ss4ohuc" path="res://build/Collectables/oofball_cyan.tres" id="3_chsqa"]
+[ext_resource type="Resource" uid="uid://dff6bav4ow2q3" path="res://build/Collectables/oofball_godot.tres" id="4_nyuki"]
 [ext_resource type="Script" uid="uid://dq7dmgs4rtutb" path="res://Scripts/trinket_combination.gd" id="4_y2qs6"]
-[ext_resource type="Resource" uid="uid://04f6c2ijoied" path="res://Collectables/oofball_mango.tres" id="5_eou7h"]
-[ext_resource type="Resource" uid="uid://dxqel466fofuf" path="res://Collectables/oofball_brazil.tres" id="6_7rlsm"]
-[ext_resource type="Resource" uid="uid://d1fpripn4eeci" path="res://Collectables/oofball_golden.tres" id="7_e0ljy"]
-[ext_resource type="Resource" uid="uid://dcnn0xxg17a0q" path="res://Collectables/oofball_france.tres" id="8_inttf"]
+[ext_resource type="Resource" uid="uid://04f6c2ijoied" path="res://build/Collectables/oofball_mango.tres" id="5_eou7h"]
+[ext_resource type="Resource" uid="uid://dxqel466fofuf" path="res://build/Collectables/oofball_brazil.tres" id="6_7rlsm"]
+[ext_resource type="Resource" uid="uid://d1fpripn4eeci" path="res://build/Collectables/oofball_golden.tres" id="7_e0ljy"]
+[ext_resource type="Resource" uid="uid://dcnn0xxg17a0q" path="res://build/Collectables/oofball_france.tres" id="8_inttf"]
 
 [sub_resource type="Resource" id="Resource_nyuki"]
 script = ExtResource("1_qc7ns")

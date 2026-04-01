@@ -20,19 +20,22 @@ func _ready() -> void:
 	else:
 		close()
 	custom_tab.setup_ready()
-	
 
 func open():
 	#$MarginContainer.visible = true
 	$MarginContainer/SubViewportContainer.visible = true
-	$Button.text = '<'
+	$Open.visible = false
+	$Close.visible = true
+	$SwooshIn.play()
 	SignalBus.inventory_open.emit()
 
 func close():
 	#$MarginContainer.visible = false
 	$MarginContainer/SubViewportContainer.visible = false
-	$Button.text = '>'
+	$Close.visible = false
+	$Open.visible = true
 	tp.visible = false
+	$SwooshOut.play()
 	SignalBus.inventory_close.emit()
 
 func _on_button_pressed() -> void:
@@ -41,3 +44,8 @@ func _on_button_pressed() -> void:
 		open()
 	else:
 		close()
+
+func _on_area_2d_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> void:
+	if Input.is_action_just_pressed("LeftClick"):
+		_on_button_pressed()
+	pass # Replace with function body.

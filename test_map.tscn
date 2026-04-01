@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://23u1outqk32v" path="res://Scripts/clickable.gd" id="1_4qc02"]
 [ext_resource type="Script" uid="uid://dbgn0dx3d10tr" path="res://Scripts/Box.gd" id="1_4wuf8"]
 [ext_resource type="PackedScene" uid="uid://7p38fywpbhv6" path="res://Scenes/empty_box.tscn" id="2_gqtbx"]
+[ext_resource type="Script" uid="uid://dfkeoybp0ohuc" path="res://bgm_school.gd" id="2_icpcy"]
 [ext_resource type="Script" uid="uid://c1g7yaxq66k2v" path="res://Scripts/collector.gd" id="3_s02eq"]
 [ext_resource type="PackedScene" uid="uid://e8kv8u57dks3" path="res://Models/cereal_box.blend" id="4_3qa0k"]
 [ext_resource type="AudioStream" uid="uid://d160l0nydbbkg" path="res://freesound_community-cartoon-bite-39234.mp3" id="4_dj26u"]
@@ -11,21 +12,22 @@
 [ext_resource type="PackedScene" uid="uid://q5sem8ituomc" path="res://main.tscn" id="5_r0pc2"]
 [ext_resource type="Texture2D" uid="uid://f2muik67bqbe" path="res://Models/Textures/cereal_box.png" id="6_khah1"]
 [ext_resource type="PackedScene" uid="uid://fssdsjlya4dp" path="res://Scenes/inventory_tab.tscn" id="6_r0pc2"]
-[ext_resource type="Texture2D" uid="uid://n4dxyfp31aih" path="res://buikslotermeerplein_2k.hdr" id="7_khah1"]
 [ext_resource type="PackedScene" uid="uid://bfscw1ja3uphy" path="res://Scenes/trinket_icon.tscn" id="7_ssfg1"]
-[ext_resource type="PackedScene" uid="uid://b1iuxstcl0tbc" path="res://Scenes/music_player.tscn" id="8_bu3ac"]
 [ext_resource type="PackedScene" uid="uid://ci0cvgsqdfish" path="res://Scenes/trinket_preview.tscn" id="9_5354r"]
 [ext_resource type="PackedScene" uid="uid://bbd3fovm21skx" path="res://Scenes/end_day_ui.tscn" id="10_1wgsg"]
 [ext_resource type="PackedScene" uid="uid://t2lbusobgkda" path="res://Scenes/arms.tscn" id="10_yobqo"]
 [ext_resource type="PackedScene" uid="uid://dyb07xyejojnu" path="res://Scenes/rotating_label.tscn" id="11_7l7f8"]
 [ext_resource type="PackedScene" uid="uid://c611dp4h8bd3n" path="res://Scenes/day_cycle.tscn" id="12_dj26u"]
+[ext_resource type="AudioStream" uid="uid://nqr8fjxkg1bt" path="res://Sound/BGM/BGM_MainTest2__catch22music-rapid-drum-and-bass-full-369486.mp3" id="20_7ckqa"]
+[ext_resource type="AudioStream" uid="uid://csl2vqemlp0rn" path="res://Sound/BGM/BGM_SCHOOL__alexis_gaming_cam-musicsonnerie-collegelycee-355475.mp3" id="21_olj81"]
+[ext_resource type="Script" uid="uid://q3c5g0edbpwn" path="res://bgm_game.gd" id="21_r7dft"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s02eq"]
 size = Vector3(2.0302048, 2.0776215, 2.05894)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4qc02"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_khah1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_olj81"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("5_1ygvo")
@@ -43,23 +45,17 @@ shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
 shader_parameter/scale = 0.015
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7ckqa"]
-panorama = ExtResource("7_khah1")
-
-[sub_resource type="Sky" id="Sky_olj81"]
-sky_material = SubResource("PanoramaSkyMaterial_7ckqa")
-process_mode = 3
-
 [sub_resource type="Environment" id="Environment_4wuf8"]
-background_mode = 2
+background_mode = 3
 background_color = Color(1, 1, 1, 1)
-sky = SubResource("Sky_olj81")
-ambient_light_source = 3
-ambient_light_energy = 0.0
-tonemap_exposure = 1.57
-adjustment_brightness = 1.25
-adjustment_contrast = 1.11
-adjustment_saturation = 1.08
+background_energy_multiplier = 1.1
+ambient_light_source = 2
+ambient_light_color = Color(0.86036915, 0.8603692, 0.8603692, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 1.2
+tonemap_mode = 2
+adjustment_enabled = true
+adjustment_saturation = 1.13
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gqtbx"]
 
@@ -77,6 +73,18 @@ size = Vector3(0.8464981, 2.6493785, 1.633953)
 size = Vector3(0.9569092, 0.9366455, 0.8646774)
 
 [node name="TestMap" type="Node3D" unique_id=1291864704]
+
+[node name="BGM_SCHOOL" type="AudioStreamPlayer" parent="." unique_id=157464686]
+stream = ExtResource("21_olj81")
+volume_db = -80.0
+autoplay = true
+script = ExtResource("2_icpcy")
+
+[node name="BGM_GAME" type="AudioStreamPlayer" parent="." unique_id=1690521964]
+stream = ExtResource("20_7ckqa")
+volume_db = -80.0
+autoplay = true
+script = ExtResource("21_r7dft")
 
 [node name="Box" type="Node3D" parent="." unique_id=1934348202 node_paths=PackedStringArray("box_animator")]
 script = ExtResource("1_4wuf8")
@@ -107,7 +115,7 @@ bones/3/rotation = Quaternion(-0.7112747, -2.350304e-16, 3.4266758e-16, -0.70291
 bones/4/rotation = Quaternion(-0.70312154, -9.098252e-07, 8.996554e-07, 0.7110697)
 
 [node name="Cube" parent="Box/cereal_box/Armature/Skeleton3D" index="0" unique_id=1521769910]
-material_override = SubResource("ShaderMaterial_khah1")
+material_override = SubResource("ShaderMaterial_olj81")
 
 [node name="AnimationPlayer" parent="Box/cereal_box" index="1" unique_id=1875127899]
 autoplay = &"Open"
@@ -118,9 +126,11 @@ environment = SubResource("Environment_4wuf8")
 
 [node name="Collector" type="Node3D" parent="." unique_id=2064487329]
 script = ExtResource("3_s02eq")
-collectables_directory = "res://Collectables/"
+RarityWeight = Array[int]([6, 3, 2])
 
-[node name="Control" type="Control" parent="." unique_id=2141813144]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1254290406]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=2141813144]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,25 +141,21 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 
-[node name="MusicPlayer" parent="Control" unique_id=1180631370 instance=ExtResource("8_bu3ac")]
-visible = false
+[node name="IntoryTab" parent="CanvasLayer/Control" unique_id=2010534918 node_paths=PackedStringArray("inv", "database", "tp") instance=ExtResource("6_r0pc2")]
 layout_mode = 1
-
-[node name="IntoryTab" parent="Control" unique_id=2010534918 node_paths=PackedStringArray("inv", "database", "tp") instance=ExtResource("6_r0pc2")]
-layout_mode = 1
-inv = NodePath("../../Inventory")
-database = NodePath("../../Collector")
+inv = NodePath("../../../Inventory")
+database = NodePath("../../../Collector")
 default_icon = ExtResource("7_ssfg1")
 tp = NodePath("../Control")
 
-[node name="Control" parent="Control" unique_id=665047551 instance=ExtResource("9_5354r")]
+[node name="Control" parent="CanvasLayer/Control" unique_id=665047551 instance=ExtResource("9_5354r")]
 layout_mode = 1
 
-[node name="EndDayUI" parent="Control" unique_id=258286538 node_paths=PackedStringArray("inv") instance=ExtResource("10_1wgsg")]
+[node name="EndDayUI" parent="CanvasLayer/Control" unique_id=258286538 node_paths=PackedStringArray("inv") instance=ExtResource("10_1wgsg")]
 visible = false
 layout_mode = 1
 combination_file = "res://Combinations"
-inv = NodePath("../../Inventory")
+inv = NodePath("../../../Inventory")
 label = ExtResource("11_7l7f8")
 
 [node name="Arms" parent="." unique_id=1790799430 node_paths=PackedStringArray("box", "in_hand", "audio") instance=ExtResource("10_yobqo")]
@@ -164,8 +170,8 @@ stream = ExtResource("4_dj26u")
 
 [node name="Inventory" type="Node3D" parent="." unique_id=1350627999 node_paths=PackedStringArray("tk_preview", "tk_grd")]
 script = ExtResource("5_qgarv")
-tk_preview = NodePath("../Control/Control")
-tk_grd = NodePath("../Control/IntoryTab")
+tk_preview = NodePath("../CanvasLayer/Control/Control")
+tk_grd = NodePath("../CanvasLayer/Control/IntoryTab")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1541006655]
 
@@ -219,6 +225,6 @@ far = 100.0
 [connection signal="box_empty" from="Box" to="Box" method="_on_box_empty"]
 [connection signal="box_empty" from="Box" to="Collector" method="_on_box_box_empty"]
 [connection signal="clicked" from="Box/Clickable" to="Box" method="_on_clickable_clicked"]
-[connection signal="day_end" from="DayCycle" to="Control/EndDayUI" method="_on_day_cycle_day_end"]
+[connection signal="day_end" from="DayCycle" to="CanvasLayer/Control/EndDayUI" method="_on_day_cycle_day_end"]
 
 [editable path="Box/cereal_box"]
